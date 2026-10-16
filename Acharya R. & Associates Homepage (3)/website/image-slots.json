@@ -34,5 +34,71 @@
   "s": 1,
   "x": 0,
   "y": 0
+ },
+ "hero-photo-angled": {
+  "u": "/assets/photos/hero-photo-angled.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-slide-4": {
+  "u": "/assets/photos/hero-slide-4.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-slide-3": {
+  "u": "/assets/photos/hero-slide-3.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-photo": {
+  "u": "/assets/photos/hero-photo-angled.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-photo-full": {
+  "u": "/assets/photos/hero-photo-angled.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-slide-7": {
+  "u": "/assets/photos/hero-slide-7.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-slide-9": {
+  "u": "/assets/photos/hero-slide-9.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-slide-6": {
+  "u": "/assets/photos/hero-slide-6.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-slide-8": {
+  "u": "/assets/photos/hero-slide-8.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-slide-10": {
+  "u": "/assets/photos/hero-slide-10.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "hero-slide-5": {
+  "u": "/assets/photos/hero-slide-5.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
  }
 }
