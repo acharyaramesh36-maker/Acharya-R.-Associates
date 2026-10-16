@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Accounting &amp; Financial Reporting — Acharya R. &amp; Associates, Chartered Accountants, Nepal</title>
+<meta name="description" content="Bookkeeping, financial statement preparation and reporting support aligned with Nepal Financial Reporting Standards.">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="/supabase-config.js"></script>
+<style>
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:#FFFFFF;color:#252A31;font-family:'Public Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0B2345;text-decoration:none}
+a:hover{color:#8E6A1E}
+*:focus-visible{outline:2px solid #C9A04A;outline-offset:3px}
+input,select,textarea,button{font-family:inherit}
+</style>
+<style>.goog-te-banner-frame,.skiptranslate iframe,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}body{top:0!important}.goog-text-highlight{background:none!important;box-shadow:none!important}</style>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,ne',autoDisplay:false},'gt-el');}</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="/nepali-fix.js"></script>
+<style>@keyframes megaIn{from{clip-path:inset(0 0 100% 0);opacity:.4}to{clip-path:inset(0 0 0 0);opacity:1}}@keyframes megaLeft{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}@keyframes megaUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}</style>
+<style>html,body{overflow-x:clip;max-width:100%}img,video,iframe{max-width:100%}@media (max-width:480px){[data-sm-hide]{display:none!important}}@media (max-width:879px){header>div:nth-child(2)>*{flex:1 1 auto!important;min-width:0!important;width:100%}}@media (max-width:599px){footer>div>div:first-child{grid-template-columns:repeat(2,minmax(0,1fr))!important}footer>div>div:first-child>div:first-child{grid-column:1 / -1!important}}</style>
+</helmet>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #DDE1E6" onMouseLeave="{{ closeMenuSoon }}" onMouseEnter="{{ cancelClose }}">
+  <div style="background:#0B2345">
+    <div style="margin:0 auto;padding:0 clamp(20px,3vw,40px);height:38px;display:flex;align-items:center;justify-content:flex-end;gap:0;font:400 13.5px/1 'Public Sans',sans-serif">
+      <div id="gt-el" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none"></div>
+      <div class="notranslate" translate="no" style="position:relative;margin-right:auto" onMouseLeave="{{ langClose }}">
+        <button type="button" aria-haspopup="listbox" aria-expanded="{{ langOpen }}" onClick="{{ langToggle }}" style="display:flex;align-items:center;gap:10px;height:38px;padding:0 4px;background:none;border:0;cursor:pointer;font:500 13px/1 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#FFFFFF">
+          <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#D4B26A" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"></circle><path d="M2.5 12h19M12 2.5c2.8 2.6 4.2 5.8 4.2 9.5s-1.4 6.9-4.2 9.5c-2.8-2.6-4.2-5.8-4.2-9.5s1.4-6.9 4.2-9.5z"></path></svg>
+          Nepal - {{ langCode }}
+          <svg aria-hidden="true" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform:{{ langRot }};transition:transform .3s ease"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg>
+        </button>
+        <sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
+          <ul role="listbox" style="list-style:none;margin:0;padding:6px 0;position:absolute;left:0;top:100%;z-index:80;min-width:180px;background:#FFFFFF;border-top:3px solid #B08A3C;box-shadow:0 16px 36px rgba(7,29,65,.18)">
+            <li><button type="button" role="option" aria-selected="{{ langIsEn }}" onClick="{{ setEn }}" style="display:flex;justify-content:space-between;width:100%;padding:12px 16px;background:none;border:0;cursor:pointer;font:500 14px/1.2 'Public Sans',sans-serif;color:#071D41;text-align:left" style-hover="background:#F2F2F2">English <span style="color:#9A6F1E">EN</span></button></li>
+            <li><button type="button" role="option" aria-selected="{{ langIsNe }}" onClick="{{ setNe }}" style="display:flex;justify-content:space-between;width:100%;padding:12px 16px;background:none;border:0;cursor:pointer;font:500 14px/1.2 'Public Sans',sans-serif;color:#071D41;text-align:left" style-hover="background:#F2F2F2">नेपाली <span style="color:#9A6F1E">NE</span></button></li>
+          </ul>
+        </sc-if>
+      </div>
+      <span style="display:flex;align-items:center;gap:8px;color:#DCE3EC;white-space:nowrap"><span aria-hidden="true" style="color:#D4B26A">Tel:</span><a href="tel:+9779845819811" style="color:#DCE3EC;padding:4px 2px;border-bottom:1px solid transparent;transition:color .25s ease,border-color .25s ease" style-hover="color:#FFFFFF;border-bottom-color:#D4B26A">+977-9845819811</a><span aria-hidden="true" data-sm-hide="" style="color:#8FA0B6">/</span><a data-sm-hide="" href="tel:+9779716393920" style="color:#DCE3EC;padding:4px 2px;border-bottom:1px solid transparent;transition:color .25s ease,border-color .25s ease" style-hover="color:#FFFFFF;border-bottom-color:#D4B26A">9716393920</a></span>
+    </div>
+  </div>
+  <div style="margin:0 auto;padding:0 clamp(20px,3vw,40px);height:84px;display:flex;align-items:center;justify-content:flex-start;gap:{{ hdrGap }}">
+    
+
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <a href="/" aria-label="Acharya R. &amp; Associates — home" style="display:flex;align-items:center;gap:14px;color:#0B2345">
+      
+      <img src="assets/ar-logo-v2.svg" alt="" width="120" height="72" style="display: block; height: 72px; flex: none; object-fit:contain; width: 120px"><span style="display:flex;flex-direction:column;gap:5px">
+        <span style="font:600 {{ hdrNameFs }}/1 'Public Sans',sans-serif;letter-spacing:.12em;color:#0B2345;white-space:nowrap">ACHARYA R. &amp; ASSOCIATES</span>
+        <span style="font:400 11px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8E6A1E;white-space:nowrap">Chartered Accountants</span>
+      </span>
+    </a><nav aria-label="Primary" style="margin-left:auto;display:flex;align-items:center;gap:4px;height:100%">
+        <button type="button" aria-expanded="{{ servicesOpen }}" aria-controls="menu-services" onClick="{{ toggleServices }}" onMouseEnter="{{ openServices }}" style="height:100%;background:none;border:0;border-bottom:{{ servicesBorder }};padding:0 {{ navPadX }};font:500 {{ navFs }}/1 'Public Sans',sans-serif;white-space:nowrap;color:#0B2345;cursor:pointer;display:flex;align-items:center;gap:8px">Services <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B2345" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;transform:{{ servicesRot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg></button>
+        <button type="button" aria-expanded="{{ industriesOpen }}" aria-controls="menu-industries" onClick="{{ toggleIndustries }}" onMouseEnter="{{ openIndustries }}" style="height:100%;background:none;border:0;border-bottom:{{ industriesBorder }};padding:0 {{ navPadX }};font:500 {{ navFs }}/1 'Public Sans',sans-serif;white-space:nowrap;color:#0B2345;cursor:pointer;display:flex;align-items:center;gap:8px">Industries <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B2345" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;transform:{{ industriesRot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg></button>
+        <button type="button" aria-expanded="{{ aboutOpen }}" aria-controls="menu-about" onClick="{{ toggle_about }}" onMouseEnter="{{ open_about }}" style="height:100%;background:none;border:0;border-bottom:{{ aboutBorder }};padding:0 {{ navPadX }};font:500 {{ navFs }}/1 'Public Sans',sans-serif;white-space:nowrap;color:#0B2345;cursor:pointer;display:flex;align-items:center;gap:8px">About Us <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B2345" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;transform:{{ aboutRot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg></button>
+        <button type="button" aria-expanded="{{ careersOpen }}" aria-controls="menu-careers" onClick="{{ toggle_careers }}" onMouseEnter="{{ open_careers }}" style="height:100%;background:none;border:0;border-bottom:{{ careersBorder }};padding:0 {{ navPadX }};font:500 {{ navFs }}/1 'Public Sans',sans-serif;white-space:nowrap;color:#0B2345;cursor:pointer;display:flex;align-items:center;gap:8px">Careers <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B2345" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;transform:{{ careersRot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg></button>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <a href="#contact" onMouseEnter="{{ closeMenu }}" style="margin-left:4px;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:38px;padding:0 {{ ctaPadX }};background:#0B2345;color:#FFFFFF;font:500 13.5px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .3s ease" style-hover="background:#16345F;color:#FFFFFF">Contact Us <span aria-hidden="true" style="color:#D4B26A">→</span></a>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <dc-import name="MobileNav" hint-size="100%,84px" style="flex:1;min-width:0;height:100%"></dc-import>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ servicesOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="menu-services" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeMenuSoon }}" style="position:absolute;left:0;right:0;top:100%;zoom:.8;animation:megaIn .5s cubic-bezier(.22,.7,.2,1) both;background:linear-gradient(to right, #00285A calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32), #F2F2F2 calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32));border-top:0;border-bottom:1px solid #E4DCC8;box-shadow:0 18px 40px rgba(11,35,69,.12);overflow:hidden">
+      <div style="max-width:1536px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:32fr 68fr;align-items:stretch">
+        <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Services</span>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Assurance, tax and advisory work delivered with independence, technical quality and care.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
+          </div>
+        </div>
+        <div style="padding:44px 0 44px clamp(28px,3vw,48px);display:flex;flex-direction:column;gap:28px;animation:megaUp .55s .18s cubic-bezier(.22,.7,.2,1) both">
+          <h3 style="margin:0;font:400 30px/1.1 'Public Sans',sans-serif;letter-spacing:-.01em;color:#00285A">Services</h3>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-content:start">
+            <sc-for list="{{ svcMenu }}" as="m" hint-placeholder-count="4">
+              <a href="{{ m.href }}" onClick="{{ m.go }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
+            </sc-for>
+            <a href="/#services" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">View all services <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ industriesOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="menu-industries" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeMenuSoon }}" style="position:absolute;left:0;right:0;top:100%;zoom:.8;animation:megaIn .5s cubic-bezier(.22,.7,.2,1) both;background:linear-gradient(to right, #00285A calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32), #F2F2F2 calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32));border-top:0;border-bottom:1px solid #E4DCC8;box-shadow:0 18px 40px rgba(11,35,69,.12);overflow:hidden">
+      <div style="max-width:1536px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:32fr 68fr;align-items:stretch">
+        <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Industries</span>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Industry knowledge, independent perspective and practical solutions for the sectors we serve across Nepal.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
+          </div>
+        </div>
+        <div style="padding:44px 0 44px clamp(28px,3vw,48px);display:flex;flex-direction:column;gap:28px;animation:megaUp .55s .18s cubic-bezier(.22,.7,.2,1) both">
+          <h3 style="margin:0;font:400 30px/1.1 'Public Sans',sans-serif;letter-spacing:-.01em;color:#00285A">Industries</h3>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-content:start">
+            <sc-for list="{{ indMenu }}" as="m" hint-placeholder-count="4">
+              <a href="{{ m.href }}" onClick="{{ m.go }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
+            </sc-for>
+            <a href="/#industries" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Discover our industries <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ aboutOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="menu-about" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeMenuSoon }}" style="position:absolute;left:0;right:0;top:100%;zoom:.8;animation:megaIn .5s cubic-bezier(.22,.7,.2,1) both;background:linear-gradient(to right, #00285A calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32), #F2F2F2 calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32));border-top:0;border-bottom:1px solid #E4DCC8;box-shadow:0 18px 40px rgba(11,35,69,.12);overflow:hidden">
+      <div style="max-width:1536px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:32fr 68fr;align-items:stretch">
+        <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">About Us</span>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Acharya R. &amp; Associates is committed to independent, high-quality professional work for organizations across Nepal.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
+          </div>
+        </div>
+        <div style="padding:44px 0 44px clamp(28px,3vw,48px);display:flex;flex-direction:column;gap:28px;animation:megaUp .55s .18s cubic-bezier(.22,.7,.2,1) both">
+          <h3 style="margin:0;font:400 30px/1.1 'Public Sans',sans-serif;letter-spacing:-.01em;color:#00285A">About Us</h3>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-content:start">
+            <sc-for list="{{ aboutMenu }}" as="m" hint-placeholder-count="4">
+              <a href="{{ m.href }}" onClick="{{ closeMenu }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
+            </sc-for>
+            <a href="/about-us" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Learn more about the firm <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ careersOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="menu-careers" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeMenuSoon }}" style="position:absolute;left:0;right:0;top:100%;zoom:.8;animation:megaIn .5s cubic-bezier(.22,.7,.2,1) both;background:linear-gradient(to right, #00285A calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32), #F2F2F2 calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32));border-top:0;border-bottom:1px solid #E4DCC8;box-shadow:0 18px 40px rgba(11,35,69,.12);overflow:hidden">
+      <div style="max-width:1536px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:32fr 68fr;align-items:stretch">
+        <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Careers</span>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">We welcome qualified professionals, articled trainees and students who want to build a career in audit, tax and advisory.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
+          </div>
+        </div>
+        <div style="padding:44px 0 44px clamp(28px,3vw,48px);display:flex;flex-direction:column;gap:28px;animation:megaUp .55s .18s cubic-bezier(.22,.7,.2,1) both">
+          <h3 style="margin:0;font:400 30px/1.1 'Public Sans',sans-serif;letter-spacing:-.01em;color:#00285A">Careers</h3>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-content:start">
+            <sc-for list="{{ careersMenu }}" as="m" hint-placeholder-count="4">
+              <a href="{{ m.href }}" onClick="{{ closeMenu }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
+            </sc-for>
+            <a href="/careers" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Explore careers <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showMobileNav }}" hint-placeholder-val="{{ false }}">
+    <nav id="mobile-nav" aria-label="Mobile" style="position:absolute;left:0;right:0;top:100%;background:#FFFFFF;border-top:2px solid #C9A04A;border-bottom:1px solid #DDE1E6;padding:8px clamp(20px,4vw,48px) 28px;display:flex;flex-direction:column">
+      <a href="/#services" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Services</a>
+      <a href="/#industries" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Industries</a>
+      <a href="/about-us" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">About Us</a>
+      <a href="/careers" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Careers</a>
+      <a href="#contact" onClick="{{ closeMobile }}" style="margin-top:24px;padding:16px 22px;background:#0B2345;color:#FFFFFF;text-align:center;font:500 15px/1 'Public Sans',sans-serif">Contact Us</a>
+    </nav>
+  </sc-if>
+</header>
+<div aria-hidden="true" style="height:{{ hdrSpace }}"></div>
+
+<main>
+  <section id="top" data-screen-label="Accounting &amp; Financial Reporting Hero" style="position:relative;overflow:hidden;background:#071D41;min-height:clamp(560px,46vw,740px);box-sizing:border-box;padding:clamp(28px,3vw,40px) clamp(20px,4vw,48px) clamp(48px,10vw,120px);scroll-margin-top:200px">
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;overflow:hidden;background:#0B2345"><div style="position:absolute;inset:0;opacity:{{ hsO0 }};transform:{{ hsT0 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="accounting-hero" shape="rect" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?fm=jpg&amp;q=82&amp;w=1800&amp;auto=format&amp;fit=crop" placeholder="Hero photo — accountant preparing financial statements" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div><div style="position:absolute;inset:0;opacity:{{ hsO1 }};transform:{{ hsT1 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="accounting-hero-2" shape="rect" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&amp;q=82&amp;w=1800&amp;auto=format&amp;fit=crop" placeholder="Hero photo 2 — team discussion" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div><div style="position:absolute;inset:0;opacity:{{ hsO2 }};transform:{{ hsT2 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="accounting-hero-3" shape="rect" src="https://images.unsplash.com/photo-1626266061368-46a8f578ddd6?fm=jpg&amp;q=82&amp;w=1800&amp;auto=format&amp;fit=crop" placeholder="Hero photo 3 — financial documents" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div>{{ hsVideo }}</div>
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;background:{{ hpScrim }}"></div>
+    <div style="position:absolute;right:clamp(20px,4vw,48px);bottom:clamp(20px,3vw,36px);z-index:2;display:flex;align-items:center;gap:14px;background:rgba(7,29,65,.72);padding:10px 10px 10px 18px">
+      <span style="font:500 14px/1 'Newsreader',serif;letter-spacing:.06em;color:#D4B26A;white-space:nowrap">{{ hsNum }} <span style="color:#8FA0B6">/ {{ hsTot }}</span></span>
+      <div style="display:flex;gap:6px"><sc-for list="{{ hsDots }}" as="d" hint-placeholder-count="3"><button type="button" aria-label="{{ d.label }}" aria-current="{{ d.cur }}" onClick="{{ d.go }}" style="width:{{ d.w }};height:3px;padding:0;border:0;background:{{ d.bg }};cursor:pointer;transition:width .3s,background .3s"></button></sc-for></div>
+      <div style="display:flex;gap:4px"><button type="button" aria-label="Previous slide" onClick="{{ hsPrev }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 16px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">←</button><button type="button" aria-label="{{ hsPauseLabel }}" onClick="{{ hsToggle }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 13px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">{{ hsPauseIcon }}</button><button type="button" aria-label="Next slide" onClick="{{ hsNext }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 16px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">→</button></div>
+    </div>
+    <span aria-hidden="true" style="position:absolute;left:0;bottom:0;width:120px;height:4px;background:#B08A3C;z-index:1"></span>
+    <div style="position:relative;z-index:1;max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,5vw,64px)">
+      <nav aria-label="Breadcrumb" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;font:400 14px/1.4 'Public Sans',sans-serif;color:#B8C3D3"><a href="/" style="color:#B8C3D3" style-hover="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px">Home</a><span aria-hidden="true" style="color:#B08A3C">/</span><a href="/#services" style="color:#B8C3D3" style-hover="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px">Services</a><span aria-hidden="true" style="color:#B08A3C">/</span><span aria-current="page" style="color:#FFFFFF">Accounting &amp; Financial Reporting</span></nav>
+      <div style="display:grid;grid-template-columns:{{ hpCol }};gap:clamp(40px,5vw,80px);align-items:center">
+        <div style="display:flex;flex-direction:column;gap:32px">
+          <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D4B26A;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Accounting &amp; Financial Reporting</span>
+          <h1 style="margin:0;font:400 clamp(44px,5.6vw,76px)/1.02 'Newsreader',serif;letter-spacing:-.025em;color:#FFFFFF;text-wrap:balance">Accounts kept in order, reports <em style="font-style:italic;color:#D4B26A">ready</em> when you need them.</h1>
+          <p style="margin:0;max-width:34em;font:400 clamp(17px,1.4vw,20px)/1.7 'Public Sans',sans-serif;color:#D5DCE6;text-wrap:pretty">We maintain books, prepare financial statements and support management reporting so that your figures are complete, consistent and prepared under Nepal Financial Reporting Standards or the framework that applies to you.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;margin-top:8px"><a href="#contact" style="display:inline-flex;align-items:center;gap:22px;height:58px;padding:0 24px 0 26px;background:#FFFFFF;color:#071D41;font:500 16px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .4s ease,gap .4s ease" style-hover="background:#F2F2F2;color:#071D41;gap:30px">Discuss your accounting needs <span aria-hidden="true" style="color:#9A6F1E">→</span></a><a href="#approach" style="display:inline-flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid #B08A3C;font:500 16px/1 'Public Sans',sans-serif;color:#FFFFFF;white-space:nowrap;transition:gap .4s ease,border-color .4s ease" style-hover="gap:20px;color:#FFFFFF">Explore our approach <span aria-hidden="true" style="color:#D4B26A">→</span></a></div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <div id="ipnav-ph" style="height:68px"><nav aria-label="On this page" style="position:{{ ipNavPos }};top:{{ ipNavTop }};left:0;right:0;z-index:40;background:#FFFFFF;border-bottom:4px solid #D9D0BE;box-shadow:0 1px 0 #E6E1D6">
+    <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,48px);overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+      <ul role="list" style="list-style:none;margin:0;padding:0;display:flex;gap:clamp(28px,4vw,64px);min-width:max-content">
+        <li><a href="#overview" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Overview</a></li>
+        <li><a href="#approach" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Our approach</a></li>
+        <li><a href="#principles" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Key elements</a></li>
+        <li><a href="#industries" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Who we serve</a></li>
+        <li><a href="#insights" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Insights</a></li>
+        <li><a href="#contact" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Contact</a></li>
+      </ul>
+    </div>
+  </nav></div>
+  <section id="overview" data-screen-label="Accounting &amp; Financial Reporting Intro" style="background:#FFFFFF;padding:clamp(40px,8vw,96px) clamp(20px,5vw,72px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,72px)">
+      <h2 style="margin:0;font:700 clamp(40px,5vw,72px)/1.05 'Public Sans',sans-serif;letter-spacing:-.01em;color:#9A6F1E;text-wrap:balance">Why reliable accounts matter</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px clamp(40px,5vw,96px);align-items:start">
+        <p style="margin:0;font:400 clamp(22px,2vw,30px)/1.45 'Public Sans',sans-serif;color:#071D41;text-wrap:pretty">Every financial decision, tax return and audit rests on the quality of the underlying accounting records.</p>
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <div id="intro-more" style="display:flex;flex-direction:column;gap:20px;max-height:{{ inMax }};overflow:hidden;-webkit-mask-image:{{ inMask }};mask-image:{{ inMask }};transition:max-height .7s cubic-bezier(.2,.75,.25,1)">
+            <p style="margin:0;font:400 clamp(17px,1.3vw,20px)/1.75 'Public Sans',sans-serif;letter-spacing:.01em;color:#4A525E;text-wrap:pretty">We set up and maintain records that reflect your transactions accurately, close each period on a consistent basis and prepare statements that management, lenders and auditors can work from with confidence.</p>
+          </div>
+          <button type="button" aria-expanded="{{ inExp }}" aria-controls="intro-more" onClick="{{ inToggle }}" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:0;border:0;background:transparent;font:700 17px/1 'Public Sans',sans-serif;color:#071D41;cursor:pointer" style-hover="color:#9A6F1E">{{ inLbl }}<span aria-hidden="true" style="display:inline-block;transform:{{ inArr }};transition:transform .4s ease">↓</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Accounting &amp; Financial Reporting CTA strip" style="background:#071D41;padding:clamp(32px,3.4vw,48px) clamp(20px,4vw,48px)">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:24px 48px">
+      <div style="display:flex;flex-direction:column;gap:14px;max-width:40em">
+        <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D4B26A;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#C9A04A"></span>Need accounting support?</span>
+        <h2 style="margin:0;font:400 clamp(26px,2.6vw,36px)/1.15 'Newsreader',serif;letter-spacing:-.015em;color:#FFFFFF;text-wrap:balance">Let’s discuss how your books are kept.</h2>
+        <p style="margin:0;font:400 16px/1.6 'Public Sans',sans-serif;color:#C9D2DE;max-width:36em">Tell us about your transaction volumes, systems and reporting needs. We will suggest an arrangement that fits.</p>
+      </div>
+      <a href="#contact" style="display:inline-flex;align-items:center;gap:22px;height:52px;padding:0 22px 0 24px;background:#FFFFFF;color:#071D41;font:500 16px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .4s ease,gap .4s ease" style-hover="background:#F2F2F2;color:#071D41;gap:30px">Contact our team <span aria-hidden="true" style="color:#9A6F1E">→</span></a>
+    </div>
+  </section>
+  <section id="approach" data-screen-label="Accounting &amp; Financial Reporting Approach" style="background:#F2F2F2;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:{{ aSplit }};gap:clamp(40px,6vw,96px);align-items:start">
+      <div style="position:relative;aspect-ratio:4 / 5;width:100%;overflow:hidden;background:#E6DFD1"><image-slot id="accounting-approach" shape="rect" src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?fm=jpg&amp;q=82&amp;w=1600&amp;auto=format&amp;fit=crop" placeholder="Photo — financial reports on a laptop" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+      <div style="display:flex;flex-direction:column;gap:28px;padding-top:clamp(0px,2vw,24px)">
+        <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Our approach</span>
+        <h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41">A disciplined close, every <em style="font-style:italic;color:#9A6F1E">period.</em></h2>
+        <div style="display:flex;flex-direction:column;gap:20px;max-width:36em;font:400 18px/1.75 'Public Sans',sans-serif;color:#3F4855">
+          <p style="margin:0;text-wrap:pretty">We review your chart of accounts, systems and existing procedures, and agree what is recorded, by whom and when.</p>
+          <p style="margin:0;text-wrap:pretty">Each month or quarter we record and reconcile transactions, review balances and prepare management accounts that show how the business is performing.</p>
+          <p style="margin:0;text-wrap:pretty">At year-end we prepare financial statements and supporting schedules in the applicable framework and coordinate with your auditors to keep the audit efficient.</p>
+        </div>
+        <div style="align-self:flex-start"><a href="#contact" style="display:inline-flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid #B08A3C;font:500 16px/1 'Public Sans',sans-serif;color:#071D41;white-space:nowrap;transition:gap .4s ease,border-color .4s ease" style-hover="gap:20px;color:#071D41">Speak with our team <span aria-hidden="true" style="color:#9A6F1E">→</span></a></div>
+      </div>
+    </div>
+  </section>
+  <section id="principles" data-screen-label="Accounting &amp; Financial Reporting Key elements" onMouseEnter="{{ keStop }}" onMouseLeave="{{ keGo }}" style="position:relative;overflow:hidden;background:#FFFFFF;padding:clamp(44px,9vw,108px) clamp(16px,2vw,32px);scroll-margin-top:200px">
+    <div aria-hidden="true" style="position:absolute;left:50%;top:58%;width:min(1500px,120vw);height:80%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(37,99,235,.30),rgba(59,130,246,.14) 50%,rgba(255,255,255,0))"></div>
+    <div aria-hidden="true" style="position:absolute;left:-10%;top:-15%;width:45%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(96,165,250,.22),rgba(255,255,255,0))"></div>
+    <div aria-hidden="true" style="position:absolute;right:-12%;bottom:-20%;width:50%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(30,64,175,.20),rgba(255,255,255,0))"></div>
+    <div style="position:relative;max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(44px,5vw,72px)">
+      <div style="display:grid;grid-template-columns:{{ aTwo }};gap:24px clamp(40px,5vw,80px);align-items:end">
+        <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Key elements</span>
+        <h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41;max-width:16em">What sound accounting support looks like.</h2>
+      </div>
+      <ul role="list" aria-label="Key elements" style="list-style:none;margin:0;padding:0;position:relative;width:100%;height:{{ keH }};perspective:1600px;transform-style:preserve-3d">
+        <sc-for list="{{ ke }}" as="c" hint-placeholder-count="6">
+          <li tabindex="0" aria-current="{{ c.cur }}" onClick="{{ c.on }}" onFocus="{{ c.on }}" style="position:absolute;left:50%;top:0;width:{{ keW }};height:100%;box-sizing:border-box;border-radius:22px;overflow:hidden;z-index:{{ c.z }};opacity:{{ c.o }};pointer-events:{{ c.pe }};transform:{{ c.tf }};border:1px solid rgba(255,255,255,.1);box-shadow:{{ c.sh }};background:#111626;cursor:pointer;display:flex;flex-direction:column;transition:transform .8s cubic-bezier(.2,.75,.25,1),opacity .6s ease,box-shadow .6s ease;outline-offset:4px">
+            <div style="position:relative;flex:1 1 auto;min-height:0;background:#071D41"><image-slot id="{{ c.slot }}" shape="rect" src="{{ c.src }}" placeholder="{{ c.ph }}" style="position:absolute;inset:0;width:100%;height:100%" credit="Photo on Unsplash"></image-slot><div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,14,26,.35) 0%,rgba(10,14,26,0) 30%,rgba(17,22,38,0) 70%,#111626 100%)"></div><span style="position:absolute;top:22px;left:26px;font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#FFFFFF">Element {{ c.num }}</span></div>
+            <div style="padding:clamp(22px,2.2vw,32px) clamp(24px,2.4vw,34px) clamp(26px,2.6vw,36px);display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font:500 clamp(23px,2vw,30px)/1.15 'Public Sans',sans-serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">{{ c.title }}</h3>
+              <p style="margin:0;font:400 16px/1.6 'Public Sans',sans-serif;color:#B4BCCB;text-wrap:pretty">{{ c.desc }}</p>
+            </div>
+            <div aria-hidden="true" style="position:absolute;inset:0;background:#FFFFFF;opacity:{{ c.veil }};pointer-events:none;transition:opacity .8s ease"></div>
+          </li>
+        </sc-for>
+      </ul>
+      <div style="display:flex;align-items:center;justify-content:center;gap:24px">
+        <button type="button" aria-label="Previous element" onClick="{{ kePrev }}" style="width:48px;height:48px;border-radius:50%;border:1px solid #071D41;background:transparent;color:#071D41;font:400 18px/1 'Public Sans',sans-serif;cursor:pointer;transition:border-color .3s ease,color .3s ease" style-hover="background:#071D41;color:#FFFFFF">←</button>
+        <div style="display:flex;align-items:center;gap:8px">
+          <sc-for list="{{ ke }}" as="c" hint-placeholder-count="6"><button type="button" aria-label="{{ c.title }}" onClick="{{ c.on }}" style="width:{{ c.dw }};height:8px;border-radius:4px;border:0;padding:0;background:{{ c.dc }};cursor:pointer;transition:width .4s ease,background .4s ease"></button></sc-for>
+        </div>
+        <button type="button" aria-label="Next element" onClick="{{ keNext }}" style="width:48px;height:48px;border-radius:50%;border:1px solid #071D41;background:transparent;color:#071D41;font:400 18px/1 'Public Sans',sans-serif;cursor:pointer;transition:border-color .3s ease,color .3s ease" style-hover="background:#071D41;color:#FFFFFF">→</button>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="Accounting &amp; Financial Reporting Expectations" style="background:#0B2345;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px)">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:{{ aSplit }};gap:48px clamp(40px,6vw,96px);align-items:start">
+      <div style="display:flex;flex-direction:column;gap:24px">
+        <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D4B26A;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#C9A04A"></span>Working with us</span>
+        <h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#FFFFFF">What you can expect from <em style="font-style:italic;color:#D4B26A">our</em> engagement.</h2>
+        <p style="margin:0;max-width:30em;font:400 18px/1.7 'Public Sans',sans-serif;color:#C9D2DE">Clear routines make the monthly close and the year-end straightforward.</p>
+      </div>
+      <ul role="list" style="list-style:none;margin:0;padding:0;border-top:1px solid rgba(212,178,106,.6)">
+        <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 16px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.16)">
+          <span aria-hidden="true" style="font:400 18px/1.3 'Public Sans',sans-serif;color:#D4B26A">→</span>
+          <span style="display:flex;flex-direction:column;gap:8px"><span style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">An agreed reporting timetable</span><span style="font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3;text-wrap:pretty">Dates for monthly closes, management reports and year-end statements.</span></span>
+        </li>
+        <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 16px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.16)">
+          <span aria-hidden="true" style="font:400 18px/1.3 'Public Sans',sans-serif;color:#D4B26A">→</span>
+          <span style="display:flex;flex-direction:column;gap:8px"><span style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Reconciled balances</span><span style="font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3;text-wrap:pretty">Key accounts reconciled and explained each period.</span></span>
+        </li>
+        <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 16px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.16)">
+          <span aria-hidden="true" style="font:400 18px/1.3 'Public Sans',sans-serif;color:#D4B26A">→</span>
+          <span style="display:flex;flex-direction:column;gap:8px"><span style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Readable reports</span><span style="font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3;text-wrap:pretty">Management accounts presented in a format your team can act on.</span></span>
+        </li>
+        <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 16px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.16)">
+          <span aria-hidden="true" style="font:400 18px/1.3 'Public Sans',sans-serif;color:#D4B26A">→</span>
+          <span style="display:flex;flex-direction:column;gap:8px"><span style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Year-end statements</span><span style="font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3;text-wrap:pretty">Financial statements and notes prepared ahead of audit fieldwork.</span></span>
+        </li>
+        <li style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:4px 16px;padding:26px 0;border-bottom:1px solid rgba(255,255,255,.16)">
+          <span aria-hidden="true" style="font:400 18px/1.3 'Public Sans',sans-serif;color:#D4B26A">→</span>
+          <span style="display:flex;flex-direction:column;gap:8px"><span style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Responsive support</span><span style="font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3;text-wrap:pretty">A named contact for questions about transactions and treatment.</span></span>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section id="industries" data-screen-label="Accounting &amp; Financial Reporting Who we serve" style="background:#FFFFFF;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
+      <div style="display:grid;grid-template-columns:{{ aTwo }};gap:24px clamp(40px,5vw,80px);align-items:end">
+        <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Who we serve</span>
+        <h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41;max-width:16em">Accounting support across diverse organizations.</h2>
+      </div>
+      <ul role="list" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ msCols }};grid-auto-rows:{{ msRow }};grid-auto-flow:dense;gap:clamp(12px,1.4vw,20px)">
+        <sc-for list="{{ msTiles }}" as="t" hint-placeholder-count="7">
+          <li style="grid-column:{{ t.col }};grid-row:{{ t.row }};min-width:0">
+            <a href="{{ t.page }}" style="position:relative;display:block;width:100%;height:100%;overflow:hidden;background:#071D41;color:#FFFFFF" style-hover="color:#FFFFFF">
+              <div style="position:absolute;inset:0;transition:transform 1.2s cubic-bezier(.2,.75,.25,1)" style-hover="transform:scale(1.06)"><image-slot id="{{ t.slot }}" shape="rect" src="{{ t.src }}" placeholder="{{ t.ph }}" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+              <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(7,29,65,0) 35%,rgba(7,29,65,.55) 65%,rgba(7,29,65,.92) 100%)"></div>
+              <span style="position:absolute;top:18px;left:22px;font:italic 400 17px/1 'Newsreader',serif;color:#E6C77F">{{ t.num }}</span>
+              <div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(20px,2.2vw,32px);display:flex;align-items:flex-end;justify-content:space-between;gap:20px;pointer-events:none">
+                <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+                  <h3 style="margin:0;font:400 {{ t.fs }}/1.15 'Newsreader',serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">{{ t.name }}</h3>
+                  <sc-if value="{{ t.showDesc }}" hint-placeholder-val="{{ false }}"><p style="margin:0;max-width:30em;font:400 15.5px/1.55 'Public Sans',sans-serif;color:#E4E8EF;text-wrap:pretty">{{ t.desc }}</p></sc-if>
+                </div>
+                <span aria-hidden="true" style="flex:none;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font:400 18px/1 'Public Sans',sans-serif;color:#FFFFFF">→</span>
+              </div>
+            </a>
+          </li>
+        </sc-for>
+      </ul>
+    </div>
+  </section>
+  <section id="insights" data-screen-label="Accounting &amp; Financial Reporting Insights" style="background:#F2F2F2;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 48px">
+        <div style="display:flex;flex-direction:column;gap:20px"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Insights</span><h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41">Insights &amp; <em style="font-style:italic;color:#9A6F1E">perspectives</em></h2></div>
+        <p style="margin:0;font:400 15px/1.5 'Public Sans',sans-serif;color:#5A6270">Planned articles. Publication dates to be confirmed.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:{{ aIns }};gap:40px 28px">
+        <article style="display:flex;flex-direction:column;gap:18px;background:#FFFFFF;padding-bottom:24px;transition:transform .45s ease" style-hover="transform:translateY(-4px)">
+          <div style="aspect-ratio:4 / 3;overflow:hidden;background:#E6DFD1"><image-slot id="accounting-insight-1" shape="rect" src="https://images.unsplash.com/photo-1549637642-90187f64f420?fm=jpg&amp;q=82&amp;w=900&amp;auto=format&amp;fit=crop" placeholder="Article image" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 22px">
+            <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">NFRS</span>
+            <h3 style="margin:0;font:500 22px/1.25 'Newsreader',serif;color:#071D41;text-wrap:balance">Key considerations when applying Nepal Financial Reporting Standards</h3>
+            <span style="margin-top:6px;font:500 14px/1 'Public Sans',sans-serif;color:#5A6270">Coming soon</span>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:18px;background:#FFFFFF;padding-bottom:24px;transition:transform .45s ease" style-hover="transform:translateY(-4px)">
+          <div style="aspect-ratio:4 / 3;overflow:hidden;background:#E6DFD1"><image-slot id="accounting-insight-2" shape="rect" src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?fm=jpg&amp;q=82&amp;w=900&amp;auto=format&amp;fit=crop" placeholder="Article image" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 22px">
+            <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">Month-end</span>
+            <h3 style="margin:0;font:500 22px/1.25 'Newsreader',serif;color:#071D41;text-wrap:balance">Building a reliable month-end close</h3>
+            <span style="margin-top:6px;font:500 14px/1 'Public Sans',sans-serif;color:#5A6270">Coming soon</span>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:18px;background:#FFFFFF;padding-bottom:24px;transition:transform .45s ease" style-hover="transform:translateY(-4px)">
+          <div style="aspect-ratio:4 / 3;overflow:hidden;background:#E6DFD1"><image-slot id="accounting-insight-3" shape="rect" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?fm=jpg&amp;q=82&amp;w=900&amp;auto=format&amp;fit=crop" placeholder="Article image" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 22px">
+            <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">Inventory</span>
+            <h3 style="margin:0;font:500 22px/1.25 'Newsreader',serif;color:#071D41;text-wrap:balance">Inventory records that stand up at year-end</h3>
+            <span style="margin-top:6px;font:500 14px/1 'Public Sans',sans-serif;color:#5A6270">Coming soon</span>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:18px;background:#FFFFFF;padding-bottom:24px;transition:transform .45s ease" style-hover="transform:translateY(-4px)">
+          <div style="aspect-ratio:4 / 3;overflow:hidden;background:#E6DFD1"><image-slot id="accounting-insight-4" shape="rect" src="https://images.unsplash.com/photo-1551434678-e076c223a692?fm=jpg&amp;q=82&amp;w=900&amp;auto=format&amp;fit=crop" placeholder="Article image" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 22px">
+            <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">Reporting</span>
+            <h3 style="margin:0;font:500 22px/1.25 'Newsreader',serif;color:#071D41;text-wrap:balance">Management accounts that support better decisions</h3>
+            <span style="margin-top:6px;font:500 14px/1 'Public Sans',sans-serif;color:#5A6270">Coming soon</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="contact" data-screen-label="Accounting &amp; Financial Reporting Contact" style="background:#071D41;padding:clamp(48px,10vw,108px) clamp(20px,4vw,48px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:{{ contactCols }};gap:clamp(40px,5vw,88px);align-items:start">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:24px">
+        <span style="width:48px;height:2px;background:#C9A04A"></span>
+        <h2 style="margin:0;font:400 clamp(36px,4vw,58px)/1.08 'Newsreader',serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">Let's discuss your business requirements.</h2>
+        <p style="margin:0;font:400 18px/1.6 'Public Sans',sans-serif;color:#C9D2DE;max-width:30em;text-wrap:pretty">Connect with our team to discuss audit, tax, accounting, and advisory services for your organization.</p>
+        <dl style="margin:16px 0 0;padding-top:28px;border-top:1px solid rgba(201,160,74,.45);display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 28px;font:400 16px/1.5 'Public Sans',sans-serif">
+          <dt style="color:#8FA0B6">Office</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF">Srijan Tole, Samakhushi, Kathmandu, Nepal</dd>
+          <dt style="color:#8FA0B6">Phone</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF"><a href="tel:+9779845819811" style="color:#FFFFFF" style-hover="color:#D4B26A">+977-9845819811</a> / <a href="tel:+9779716393920" style="color:#FFFFFF" style-hover="color:#D4B26A">9716393920</a></dd>
+          <dt style="color:#8FA0B6">Email</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF"><a href="mailto:audit.acharyaca@outlook.com" style="color:#FFFFFF" style-hover="color:#D4B26A">audit.acharyaca@outlook.com</a></dd>
+        </dl>
+      </div>
+      <div style="min-width:0;background:#F2F2F2;padding:clamp(22px,3.5vw,48px);border-top:3px solid #C9A04A">
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submit }}" novalidate="" style="display:flex;flex-direction:column;gap:20px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px">
+              <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Full name *<input value="{{ form.name }}" onChange="{{ onName }}" autocomplete="name" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
+              <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Work email *<input type="email" value="{{ form.email }}" onChange="{{ onEmail }}" autocomplete="email" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Organization<input value="{{ form.org }}" onChange="{{ onOrg }}" autocomplete="organization" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Service of interest
+              <select value="{{ form.service }}" onChange="{{ onService }}" style="height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 12px;font-size:15px;color:#252A31;background:#FFFFFF;border-radius:0">
+                <option value="">Select a service</option>
+                <sc-for list="{{ services }}" as="s" hint-placeholder-count="6"><option value="{{ s.title }}">{{ s.title }}</option></sc-for>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">How can we help?<textarea value="{{ form.message }}" onChange="{{ onMessage }}" rows="4" style="border:1px solid #D9D0BE;background:#FFFFFF;padding:12px 14px;font-size:15px;line-height:1.5;color:#252A31;resize:vertical;border-radius:0"></textarea></label>
+            <sc-if value="{{ hasErr }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font:500 14px/1.4 'Public Sans',sans-serif;color:#A3271F">{{ err }}</p></sc-if>
+            <button type="submit" style="align-self:start;padding:18px 30px;background:#071D41;color:#FFFFFF;border:0;font:500 16px/1 'Public Sans',sans-serif;cursor:pointer;transition:background .4s ease" style-hover="background:#1A3560">Send enquiry</button>
+          </form>
+        </sc-if>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div role="status" style="display:flex;flex-direction:column;gap:16px;padding:24px 0">
+            <span style="width:40px;height:2px;background:#C9A04A"></span>
+            <h3 style="margin:0;font:400 30px/1.2 'Newsreader',serif;color:#0B2345">Thank you, {{ form.name }}.</h3>
+            <p style="margin:0;font:400 15.5px/1.6 'Public Sans',sans-serif;color:#4A525E">Your enquiry has been recorded in this prototype. Once the form is connected, our team will respond by email.</p>
+            <button type="button" onClick="{{ reset }}" style="align-self:start;margin-top:8px;padding:14px 22px;background:none;border:1px solid #0B2345;color:#0B2345;font:500 14px/1 'Public Sans',sans-serif;cursor:pointer">Send another enquiry</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#F8F8F8;color:#00285A;padding:clamp(34px,4.2vw,50px) clamp(20px,4vw,48px) 25px;border-top:1px solid #E6E6E6">
+  <div style="max-width:1536px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:grid;grid-template-columns:{{ footCols }};gap:40px {{ footGap }}">
+      <div style="grid-column:{{ footBrandCol }};display:flex;flex-direction:column;gap:24px;min-width:0">
+        <a href="/" aria-label="Acharya R. &amp; Associates — home" style="display:flex;flex-direction:{{ footLogoDir }};align-items:{{ footLogoAlign }};gap:{{ footLogoGap }};color:#00285A"><img src="assets/ar-logo-v2.svg" alt="" style="display:block;width:{{ footLogoW }};height:auto;flex:none;object-fit:contain"><span style="display:flex;flex-direction:column;gap:10px;min-width:0"><span style="display:flex;flex-direction:column;gap:2px;font:600 {{ footNameFs }}/1.2 'Public Sans',sans-serif;letter-spacing:.1em;color:#00285A"><span class="notranslate" translate="no">ACHARYA R. &amp;</span><span class="notranslate" translate="no">ASSOCIATES</span></span><span style="font:500 11px/1 'Public Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#9A6F1E;white-space:nowrap">Chartered Accountants</span></span></a>
+        
+        <div style="display:flex;align-items:center;gap:16px"><a href="#" aria-label="Facebook" title="Facebook (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 2.9v18.2c0 .5-.4.9-.9.9h-5.2v-7.7h2.6l.4-3h-3V9.4c0-.9.2-1.5 1.5-1.5h1.6V5.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H10.2v3h2.6V22H2.9c-.5 0-.9-.4-.9-.9V2.9c0-.5.4-.9.9-.9h18.2c.5 0 .9.4.9.9z"></path></svg></a><a href="#" aria-label="LinkedIn" title="LinkedIn (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.55h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.05c0-1.2-.02-2.75-1.68-2.75-1.68 0-1.94 1.31-1.94 2.66V21h-4z"></path></svg></a><a href="#" aria-label="Instagram" title="Instagram (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"></path></svg></a></div>
+      </div>
+      <nav aria-label="Footer services" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Services</span>
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6"><a href="{{ s.page }}" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">{{ s.title }}</a></sc-for>
+      </nav>
+      <nav aria-label="Footer industries" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Industries</span>
+        <sc-for list="{{ industries }}" as="i" hint-placeholder-count="7"><a href="{{ i.page }}" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">{{ i.name }}</a></sc-for>
+      </nav>
+      <nav aria-label="Footer resources" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Resources</span>
+        <a href="#" title="Page to be published" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Insights</a>
+        <a href="#" title="Page to be published" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Publications</a>
+        <a href="#" title="Page to be published" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Tax updates</a>
+        <a href="#contact" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Subscribe to insights</a>
+      </nav>
+      <nav aria-label="Footer company" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Company</span>
+        <a href="/about-us" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">About us</a>
+        <a href="/our-team" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Our team</a>
+        <a href="/gallery" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Gallery</a>
+        <a href="/careers" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Careers</a>
+        <a href="/contact-us" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Contact us</a>
+      </nav>
+    </div>
+    <div style="border-top:1px solid #E0E0E0;padding-top:17px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;font:400 11px/1.6 'Public Sans',sans-serif;color:#5A6270">
+      <p style="margin:0;max-width:52em">© {{ year }} Acharya R. &amp; Associates, Chartered Accountants. All rights reserved.<br>Member firm registered with the Institute of Chartered Accountants of Nepal (ICAN) · Firm Registration No. 1536</p>
+      <div style="display:flex;gap:24px">
+        <span title="Page to be published">Privacy Policy</span>
+        <span title="Page to be published">Website Terms</span>
+      </div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;angled&quot;,&quot;split&quot;,&quot;full&quot;],&quot;default&quot;:&quot;angled&quot;,&quot;tsType&quot;:&quot;'angled'|'split'|'full'&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;servicesLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;grid&quot;,&quot;list&quot;],&quot;default&quot;:&quot;grid&quot;,&quot;tsType&quot;:&quot;'grid'|'list'&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+const IND_PAGES = {"Manufacturing & Trading":"/manufacturing-and-trading","Cooperatives & Microfinance":"/cooperatives-and-microfinance","Hospitality & Tourism":"/hospitality-and-tourism","Technology & Digital Businesses":"/technology-and-digital-businesses","SMEs & Family Businesses":"/smes-and-family-businesses","Healthcare & Medical":"/healthcare-and-medical","Education & Institutions":"/education-and-institutions"};
+const SVC_PAGES = {"Audit and Assurance":"/audit-and-assurance","Taxation and Tax Compliance":"/taxation-and-tax-compliance","Accounting and Financial Reporting":"/accounting-and-financial-reporting","Internal Audit and Risk Advisory":"/internal-audit-and-risk-advisory","Business Advisory":"/business-advisory","Due Diligence and Agreed-Upon Procedures":"/due-diligence-and-agreed-upon-procedures"};
+const SERVICES = [
+  ['Audit and Assurance', 'Statutory and independent audits that give boards, regulators and stakeholders confidence in reported financial information.'],
+  ['Taxation and Tax Compliance', 'Income tax, VAT and withholding compliance, return preparation and practical guidance on tax positions under Nepalese law.'],
+  ['Accounting and Financial Reporting', 'Bookkeeping, financial statement preparation and reporting support aligned with applicable Nepal Financial Reporting Standards.'],
+  ['Internal Audit and Risk Advisory', 'Reviews of internal controls, processes and risk management to help management address gaps before they become issues.'],
+  ['Business Advisory', 'Financial analysis, budgeting and structuring support for owners and management teams planning their next decisions.'],
+  ['Due Diligence and Agreed-Upon Procedures', 'Focused financial reviews and procedures performed to an agreed scope for transactions, funders and specific reporting needs.']
+];
+const INDUSTRIES = [
+ [
+  "Manufacturing & Trading",
+  "Auditing, stock verification, costing, financial reporting and tax compliance support for producers, importers and distributors.",
+  "Assembly line workers in a manufacturing plant",
+  "https://images.unsplash.com/photo-1589793463357-5fb813435467?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Remy Gieling",
+  "https://unsplash.com/@gieling"
+ ],
+ [
+  "Cooperatives & Microfinance",
+  "Practical assurance, accounting and compliance support for member-based and community finance organizations.",
+  "Advisers in discussion with clients in a modern office",
+  "https://images.unsplash.com/photo-1758518727707-b023e285b709?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Vitaly Gariev",
+  "https://unsplash.com/@silverkblack"
+ ],
+ [
+  "Hospitality & Tourism",
+  "Audit and Assurance, Accounting, VAT and revenue controls for hotels, travel operators and tourism businesses.",
+  "Boudhanath Stupa, Kathmandu, from above",
+  "https://images.unsplash.com/photo-1605640840605-14ac1855827b?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Raimond Klavins",
+  "https://unsplash.com/@raimondklavins"
+ ],
+ [
+  "Technology & Digital Businesses",
+  "Audit and Assurance, Financial consulting, tax and compliance support for technology & Digital Businesses",
+  "Engineers working with technical equipment",
+  "https://images.unsplash.com/photo-1581091212991-8891c7d4bd9b?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "ThisisEngineering",
+  "https://unsplash.com/@thisisengineering"
+ ],
+ [
+  "SMEs & Family Businesses",
+  "Accounting, compliance and advisory support as owner-managed businesses grow.",
+  "Operator running machinery in a workshop",
+  "https://images.unsplash.com/photo-1598299803204-b73796f43289?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Sam Moghadam",
+  "https://unsplash.com/@sammoghadam"
+ ],
+ [
+  "Healthcare & Medical",
+  "Audit, accounting, tax and compliance support for hospitals, clinics, diagnostic centres and pharmacies.",
+  "Hospital and clinical medical equipment",
+  "https://images.unsplash.com/photo-1697980825665-10b25a70bd1d?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Marcelo Leal",
+  "https://unsplash.com/@marceloleal80"
+ ],
+ [
+  "Education & Institutions",
+  "Audit, financial reporting and compliance support for schools, colleges, universities and training institutes.",
+  "Professor lecturing to students in a classroom",
+  "https://images.unsplash.com/photo-1758270704113-9fb2ac81788f?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Vitaly Gariev",
+  "https://unsplash.com/@silverkblack"
+ ]
+];
+const VALUES = [
+  ['Independence', 'We maintain objectivity in every engagement and do not allow relationships or interests to influence our professional judgment.'],
+  ['Integrity', 'We are straightforward and honest in our work, our reporting and our dealings with clients.'],
+  ['Confidentiality', 'Client information is protected and used only for the purpose for which it was provided.'],
+  ['Technical quality', 'We apply relevant standards carefully and review our work so that conclusions are well supported.'],
+  ['Professional service', 'We communicate clearly, respond promptly and keep clients informed throughout each engagement.']
+];
+const INSIGHTS = [
+  ['Nepal tax updates', 'Preparing for fiscal year-end: a tax compliance checklist', 'A practical sequence of steps for reviewing filings, deadlines and documentation before the year closes.'],
+  ['Accounting and financial reporting', 'Applying NFRS in a growing business: common questions', 'Areas where reporting requirements often change as an organization grows in size and complexity.'],
+  ['Audit and assurance', 'What to expect during a statutory audit engagement', 'How planning, fieldwork and reporting typically unfold, and how management can prepare.'],
+  ['Regulatory compliance', 'Building a practical compliance calendar for your organization', 'A simple framework for tracking statutory filings and renewals across the year.'],
+  ['Business and financial analysis', 'Reading the cash flow statement to support better decisions', 'How operating, investing and financing cash flows reveal what profit figures alone may not.']
+];
+const SVC_IMG = [["audit","Professionals reviewing financial reports at a meeting table","https://images.unsplash.com/photo-1758518730037-a16581a040e8?fm=jpg&q=88&w=2000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["tax","Reviewing documents with a pen and calculator","https://images.unsplash.com/photo-1635859890085-ec8cb5466806?fm=jpg&q=88&w=2000&auto=format&fit=crop","Kelly Sikkema","https://unsplash.com/@kellysikkema"],["accounting","Working through accounts with a calculator at a desk","https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?fm=jpg&q=88&w=2000&auto=format&fit=crop","Towfiqu barbhuiya","https://unsplash.com/@towfiqu999999"],["internal audit","Desk with financial charts and analysis","https://images.unsplash.com/photo-1713947503588-8ff8196dc4a3?fm=jpg&q=88&w=2000&auto=format&fit=crop","Jakub Żerdzicki","https://unsplash.com/@jakubzerdzicki"],["advisory","Business partners in discussion in a modern office","https://images.unsplash.com/photo-1434626881859-194d67b2b86f?fm=jpg&q=88&w=2000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["due diligence","Professional reviewing information on a tablet","https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?fm=jpg&q=88&w=2000&auto=format&fit=crop","Towfiqu barbhuiya","https://unsplash.com/@towfiqu999999"]];
+const SLIDES = [["professionals reviewing reports at a meeting table","https://images.unsplash.com/photo-1568992688065-536aad8a12f6?fm=jpg&q=88&w=3000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["Kathmandu valley skyline","https://images.unsplash.com/photo-1587186846095-f8c531b4683c?fm=jpg&q=88&w=3000&auto=format&fit=crop","Sujitabh Chaudhary","https://unsplash.com/@suzitav"],["business partners in a modern office","https://images.unsplash.com/photo-1573164574572-cb89e39749b4?fm=jpg&q=88&w=3000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["Boudhanath, Kathmandu","https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?fm=jpg&q=88&w=3000&auto=format&fit=crop","Raimond Klavins","https://unsplash.com/@raimondklavins"]];
+const CATS = ['All', 'Nepal tax updates', 'Accounting and financial reporting', 'Audit and assurance', 'Regulatory compliance', 'Business and financial analysis'];
+const BLANK = { name: '', email: '', org: '', service: '', message: '' };
+
+class Component extends DCLogic {
+  state = { slide: 0, menu: null, mobile: false, w: typeof window !== 'undefined' ? window.innerWidth : 1280, ind: 0, cat: 'All', form: { ...BLANK }, sent: false, err: '' };
+  setLang(l) {
+    const host = location.hostname, exp = l === 'en' ? '; expires=Thu, 01 Jan 1970 00:00:00 GMT' : '';
+    const v = l === 'en' ? '' : '/en/' + l;
+    document.cookie = 'googtrans=' + v + '; path=/' + exp;
+    if (host) document.cookie = 'googtrans=' + v + '; path=/; domain=' + host + exp;
+    this.setState({ lang: l, langOpen: false });
+    const sel = document.querySelector('#gt-el select.goog-te-combo');
+    if (sel && l !== 'en') { sel.value = l; sel.dispatchEvent(new Event('change')); setTimeout(() => { if (!document.documentElement.classList.contains('translated-ltr')) location.reload(); }, 900); } else location.reload();
+  }
+  componentDidMount() {
+    this._keT = setInterval(() => { if (!this.keHold && !document.hidden) this.setState(s => ({ keA: ((s.keA || 0) + 1) % (this.keItems || []).length })); }, 3000);
+    fetch('assets/hero-video.mp4', { method: 'HEAD' }).then(r => { if (r.ok && /video/.test(r.headers.get('content-type') || 'video')) this.setState({ hsVidSrc: 'assets/hero-video.mp4' }); }).catch(() => {});
+    this._hsT = setInterval(() => { if (!this.state.hsPause && !document.hidden) this.setState(s => ({ hs: ((s.hs || 0) + 1) % (s.hsVid ? 4 : 3) })); }, 6500);
+    { const m = document.cookie.match(/googtrans=\/en\/(\w+)/); if (m) this.setState({ lang: m[1] }); }
+    this.onS = () => { const h = document.querySelector('header'); const hh = h ? h.offsetHeight : 123; const ph = document.getElementById('ipnav-ph'); const stuck = ph ? ph.getBoundingClientRect().top <= hh : false; if (hh !== this.state.hdrH || stuck !== this.state.navStuck) this.setState({ hdrH: hh, navStuck: stuck }); };
+    window.addEventListener('scroll', this.onS, { passive: true }); window.addEventListener('resize', this.onS); setTimeout(this.onS, 60); setTimeout(this.onS, 600);
+    this.onR = () => this.setState({ w: window.innerWidth });
+    this.onK = e => { if (e.key === 'Escape') this.setState({ menu: null, mobile: false }); };
+    window.addEventListener('resize', this.onR);
+    window.addEventListener('keydown', this.onK);
+    this.timer = setInterval(() => { if (!this.paused && !document.hidden) this.setState(s => ({ slide: (s.slide + 1) % SLIDES.length })); }, 6000);
+  }
+  componentWillUnmount() {
+    clearInterval(this._keT);
+    clearInterval(this._hsT);
+    window.removeEventListener('resize', this.onR);
+    window.removeEventListener('keydown', this.onK);
+    clearInterval(this.timer);
+  }
+  setField = k => e => { const v = e.target.value; this.setState(s => ({ form: { ...s.form, [k]: v }, err: '' })); };
+  hsVals() {
+    const vid = !!this.state.hsVid, n = vid ? 4 : 3, i = (this.state.hs || 0) % n, go = k => this.setState({ hs: (k + n) % n });
+    const o = k => (k === i ? 1 : 0), t = k => (k === i ? 'scale(1.06)' : 'scale(1)');
+    return {
+      hsO0: o(0), hsO1: o(1), hsO2: o(2), hsO3: vid ? o(3) : 0, hsT0: t(0), hsT1: t(1), hsT2: t(2),
+      hsNum: String(i + 1).padStart(2, '0'), hsTot: String(n).padStart(2, '0'),
+      hsDots: Array.from({ length: n }, (_, k) => ({ label: 'Show slide ' + (k + 1), cur: k === i ? 'true' : 'false', w: k === i ? '28px' : '12px', bg: k === i ? '#D4B26A' : 'rgba(255,255,255,.4)', go: () => go(k) })),
+      hsPrev: () => go(i - 1), hsNext: () => go(i + 1),
+      hsToggle: () => this.setState(s => ({ hsPause: !s.hsPause })), hsPauseIcon: this.state.hsPause ? '▶' : 'II', hsPauseLabel: this.state.hsPause ? 'Play slideshow' : 'Pause slideshow',
+      hsVideo: this.state.hsVidSrc ? React.createElement('video', { src: this.state.hsVidSrc, muted: true, loop: true, playsInline: true, autoPlay: true, preload: 'auto', onLoadedData: e => { const v = e.target; v.muted = true; v.play && v.play().catch(() => {}); if (!this.state.hsVid) this.setState({ hsVid: true }); }, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: (this.state.hsVid && ((this.state.hs || 0) % 4) === 3 ? 1 : 0), transition: 'opacity 1.2s ease' } }) : null, hsVidOk: e => { const v = e.target; v.muted = true; v.play && v.play().catch(() => {}); if (!this.state.hsVid) this.setState({ hsVid: true }); }
+    };
+  }
+  inVals() {
+    const o = !!this.state.inOpen;
+    return { inMax: o ? '40em' : '7.2em', inMask: o ? 'none' : 'linear-gradient(180deg,#000 45%,rgba(0,0,0,.15) 100%)', inLbl: o ? 'Read less' : 'Read more', inArr: o ? 'rotate(180deg)' : 'none', inExp: o ? 'true' : 'false',
+      inToggle: () => this.setState(s => ({ inOpen: !s.inOpen })) };
+  }
+  keVals(w) {
+    const a = this.state.keA || 0, n = (this.keItems||[]).length, sm = w < 700;
+    return {
+      keH: sm ? '500px' : 'clamp(480px,60vh,640px)', keW: sm ? '86%' : 'min(38%,540px)',
+      keStop: () => { this.keHold = true; }, keGo: () => { this.keHold = false; },
+      kePrev: () => this.setState(s => ({ keA: ((s.keA || 0) + n - 1) % n })), keNext: () => this.setState(s => ({ keA: ((s.keA || 0) + 1) % n })),
+      ke: (this.keItems||[]).map(({title, desc, src, ph, slot}, i) => {
+        let d = i - a; if (d > n / 2) d -= n; if (d < -n / 2) d += n;
+        const ad = Math.abs(d), on = d === 0;
+        return { title, desc, src, ph, slot, num: String(i + 1).padStart(2, '0'), cur: on ? 'true' : 'false', z: 10 - ad,
+          o: ad > 1 ? 0 : 1, pe: ad > 1 ? 'none' : 'auto', veil: on ? 0 : .35,
+          tf: 'translateX(calc(-50% + ' + (d * (sm ? 64 : 104)) + '%)) translateZ(' + (on ? 0 : -220) + 'px) rotateY(' + (-d * 24) + 'deg)',
+          sh: on ? '0 0 0 1px rgba(59,130,246,.35), 0 0 60px rgba(37,99,235,.35), 0 50px 90px -30px rgba(7,29,65,.55)' : '0 30px 60px -30px rgba(7,29,65,.35)',
+          dw: on ? '28px' : '8px', dc: on ? '#B08A3C' : '#C9CED6', on: () => this.setState({ keA: i }) };
+      })
+    };
+  }
+  msVals(w) {
+    const c = w >= 1000 ? 4 : w >= 640 ? 2 : 1;
+    return {
+      msCols: 'repeat(' + c + ',minmax(0,1fr))', msRow: c === 1 ? '300px' : 'clamp(240px,20vw,300px)',
+      msTiles: INDUSTRIES.map(([name, desc, ph, src], i) => {
+        const big = i === 0, wide = c === 4 && i >= 5;
+        return { name, desc, src, ph: 'Industry photo — ' + ph, slot: 'svc-ind-' + (i + 1), page: IND_PAGES[name] || '/#industries', num: String(i + 1).padStart(2, '0'),
+          col: c === 1 ? 'auto' : (big || wide) ? 'span 2' : 'auto', row: big && c === 4 ? 'span 2' : 'auto', fs: big && c > 1 ? 'clamp(30px,3vw,44px)' : 'clamp(22px,1.8vw,26px)', showDesc: big || c === 1 };
+      })
+    };
+  }
+  renderVals() {
+    this.keItems = [{"title":"Structured records","desc":"A chart of accounts and filing system designed around how your business operates.","src":"https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Structured records","slot":"accounting-ke-1"},{"title":"Regular reconciliation","desc":"Bank, receivable, payable and inventory balances reconciled every period.","src":"https://images.unsplash.com/photo-1521791136064-7986c2920216?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Regular reconciliation","slot":"accounting-ke-2"},{"title":"Reporting framework","desc":"Statements prepared under Nepal Financial Reporting Standards or the applicable basis.","src":"https://images.unsplash.com/photo-1642043175009-5997b3a078d8?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Reporting framework","slot":"accounting-ke-3"},{"title":"Management information","desc":"Periodic reports that show performance, cash position and key balances.","src":"https://images.unsplash.com/photo-1544377193-33dcf4d68fb5?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Management information","slot":"accounting-ke-4"},{"title":"Audit readiness","desc":"Schedules and supporting documents prepared in the form auditors require.","src":"https://images.unsplash.com/photo-1542744173-05336fcc7ad4?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Audit readiness","slot":"accounting-ke-5"},{"title":"Continuity","desc":"Documented procedures so that records stay consistent through staff changes.","src":"https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Continuity","slot":"accounting-ke-6"}];
+    const { menu, mobile, w, ind, cat, form, sent, err, slide } = this.state;
+    const N = SLIDES.length, go = i => this.setState({ slide: (i + N) % N });
+    const wide = w >= 880;
+    const hero = this.props.heroLayout ?? 'angled';
+    const svc = this.props.servicesLayout ?? 'grid';
+    const close = () => this.setState({ menu: null });
+    return { ...this.inVals(), ...this.keVals(this.state.w || 1280), ...this.msVals(this.state.w || 1280),
+      wide, narrow: !wide,
+      isMobile: w < 720, notMobile: w >= 720,
+      indCols: w >= 860 ? 'minmax(0,1fr) minmax(0,1.05fr)' : 'minmax(0,1fr)', indRatio: w >= 860 ? '4 / 5' : '4 / 3',
+      navPadX: w < 1040 ? '6px' : w < 1200 ? '8px' : 'clamp(10px,1vw,16px)', navFs: w < 1040 ? '14.5px' : w < 1200 ? '15px' : '16.5px', hdrLogoW: w < 1040 ? '80px' : w < 1200 ? '96px' : '120px', hdrNameFs: w < 1040 ? '13px' : w < 1200 ? '14.5px' : '17px', hdrGap: w < 1040 ? '14px' : w < 1200 ? '20px' : 'clamp(24px,2.6vw,44px)', ctaPadX: w < 1040 ? '12px' : w < 1200 ? '14px' : '16px',
+      servicesRot: this.state.menu === 'services' ? 'rotate(180deg)' : 'none', industriesRot: this.state.menu === 'industries' ? 'rotate(180deg)' : 'none', aboutRot: this.state.menu === 'about' ? 'rotate(180deg)' : 'none', careersRot: this.state.menu === 'careers' ? 'rotate(180deg)' : 'none',
+      aHero: w >= 960 ? 'minmax(0,7fr) minmax(0,5fr)' : 'minmax(0,1fr)', aHeroRatio: w >= 960 ? '4 / 5' : '3 / 2', aTwo: w >= 900 ? 'minmax(0,4fr) minmax(0,8fr)' : 'minmax(0,1fr)', aSplit: w >= 900 ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)', aGrid: w >= 1000 ? 'repeat(3,minmax(0,1fr))' : w >= 640 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)', aIns: w >= 1100 ? 'repeat(4,minmax(0,1fr))' : w >= 640 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)',
+      ...this.hsVals(), hpW: '100%', hpClip: 'none', hpScrim: w >= 900 ? 'linear-gradient(90deg, rgba(7,29,65,.94) 0%, rgba(7,29,65,.86) 30%, rgba(7,29,65,.55) 52%, rgba(7,29,65,.12) 75%, rgba(7,29,65,0) 100%)' : 'rgba(7,29,65,.82)', hpCol: w >= 900 ? 'minmax(0,46%)' : 'minmax(0,1fr)',
+      hdrSpace: (this.state.hdrH || 123) + 'px', ipNavTop: this.state.navStuck ? (this.state.hdrH || 123) + 'px' : '0px', ipNavPos: this.state.navStuck ? 'fixed' : 'relative',
+      langOpen: !!this.state.langOpen, langRot: this.state.langOpen ? 'rotate(180deg)' : 'none', langCode: (this.state.lang || 'en') === 'ne' ? 'NE' : 'EN', langIsEn: (this.state.lang || 'en') !== 'ne', langIsNe: this.state.lang === 'ne',
+      langToggle: () => this.setState(s => ({ langOpen: !s.langOpen })), langClose: () => this.setState({ langOpen: false }),
+      setEn: () => this.setLang('en'), setNe: () => this.setLang('ne'),
+      footGap: w >= 1180 ? 'clamp(32px,3.6vw,72px)' : '20px',
+      footNameFs: w >= 1180 ? '20px' : '16px',
+      footLogoDir: w >= 860 && w < 1180 ? 'column' : 'row', footLogoAlign: w >= 860 && w < 1180 ? 'flex-start' : 'center', footLogoGap: w >= 860 && w < 1180 ? '14px' : '20px',
+      contactCols: w >= 860 ? 'minmax(0,5fr) minmax(0,6fr)' : 'minmax(0,1fr)',
+      footLogoW: w >= 860 && w < 1100 ? '104px' : '144px',
+      footBrandCol: w < 600 ? '1 / -1' : 'auto',
+      footCols: w >= 1180 ? 'minmax(330px,2fr) minmax(0,1.3fr) minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr)' : w >= 860 ? 'minmax(230px,1.2fr) minmax(0,1.3fr) minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr)' : w >= 600 ? 'repeat(3,minmax(0,1fr))' : 'repeat(2,minmax(0,1fr))',
+      svcCols: w >= 1100 ? 'minmax(0,8fr) minmax(340px,4fr)' : 'minmax(0,1fr)', svcGap: w >= 1100 ? '0 clamp(32px,4vw,64px)' : '36px',
+      svcRuleL: w >= 1100 ? '1px solid #B08A3C' : '0', svcRuleT: w >= 1100 ? '0' : '1px solid #B08A3C', svcPad: w >= 1100 ? 'clamp(96px,9vw,140px) 0 6px clamp(28px,2.6vw,40px)' : '32px 0 0',
+      heroAngledWide: hero === 'angled' && w >= 720, heroAngledNarrow: hero === 'angled' && w < 720,
+      heroSplit: hero === 'split', heroFull: hero === 'full',
+      servicesGrid: svc === 'grid', servicesList: svc === 'list',
+      servicesOpen: wide && menu === 'services', industriesOpen: wide && menu === 'industries',
+      svcMenu: SERVICES.map(([title]) => ({ title, href: SVC_PAGES[title] || '/#services', go: close })),
+      indMenu: INDUSTRIES.map(([title], i) => ({ title, href: IND_PAGES[title] || '/#industries', go: () => this.setState({ ind: i, menu: null }) })),
+      aboutOpen: wide && menu === 'about', careersOpen: wide && menu === 'careers',
+      aboutBorder: menu === 'about' ? '2px solid #C9A04A' : '2px solid transparent', careersBorder: menu === 'careers' ? '2px solid #C9A04A' : '2px solid transparent',
+      open_about: () => this.setState({ menu: 'about' }), open_careers: () => this.setState({ menu: 'careers' }),
+      toggle_about: () => this.setState(s => ({ menu: s.menu === 'about' ? null : 'about' })), toggle_careers: () => this.setState(s => ({ menu: s.menu === 'careers' ? null : 'careers' })),
+      aboutMenu: [['Our firm', 'Who we are and the services we provide.', '/about-us'], ['Our commitments', 'The five principles behind our work.', '/our-commitments'], ['Our team', 'Partners and professionals at the firm.', '/our-team'], ['Gallery', 'Photos and videos from firm events and activities.', '/gallery'], ['Contact us', 'Office details and enquiry form.', '/contact-us']].map(([title, desc, href]) => ({ title, desc, href, go: close })),
+      careersMenu: [['Qualified professionals', 'Roles for chartered accountants and experienced staff.', '/qualified-professionals'], ['Articled trainees', 'Training under ICAN articleship.', '/articled-trainees'], ['Students & internships', 'Placements for students in accounting and finance.', '/students-and-internships'], ['Enquire about careers', 'Send us your details and area of interest.', '/career-enquiry']].map(([title, desc, href]) => ({ title, desc, href, go: close })),
+      servicesBorder: menu === 'services' ? '2px solid #C9A04A' : '2px solid transparent',
+      industriesBorder: menu === 'industries' ? '2px solid #C9A04A' : '2px solid transparent',
+      openServices: () => this.setState({ menu: 'services' }),
+      openIndustries: () => this.setState({ menu: 'industries' }),
+      toggleServices: () => this.setState(s => ({ menu: s.menu === 'services' ? null : 'services' })),
+      toggleIndustries: () => this.setState(s => ({ menu: s.menu === 'industries' ? null : 'industries' })),
+      closeMenu: close,
+      closeMenuSoon: () => { clearTimeout(this.closeT); this.closeT = setTimeout(() => this.setState({ menu: null }), 350); },
+      cancelClose: () => clearTimeout(this.closeT),
+      showMobileNav: !wide && mobile, mobileOpen: mobile, mobileLabel: mobile ? 'Close' : 'Menu',
+      toggleMobile: () => this.setState(s => ({ mobile: !s.mobile })),
+      closeMobile: () => this.setState({ mobile: false }),
+      services: SERVICES.map(([title, desc], i) => ({ page: SVC_PAGES[title],
+        bg: i === this.state.svcH ? '#FFFFFF' : 'transparent', bar: i === this.state.svcH ? '#B08A3C' : 'transparent', hover: () => this.setState({ svcH: i }), unhover: () => this.setState({ svcH: null }),
+        num: String(i + 1).padStart(2, '0'), title, desc,
+        cta: 'Explore ' + SVC_IMG[i][0] + ' services', ph: 'Service photo — ' + SVC_IMG[i][1], src: SVC_IMG[i][2], credit: 'Photo by ' + SVC_IMG[i][3] + ' on Unsplash', href: SVC_IMG[i][4], slot: 'service-' + (i + 1),
+        pick: () => this.setState(s => ({ form: { ...s.form, service: title }, menu: null }))
+      })),
+      industries: INDUSTRIES.map(([name, desc, ph, src, by, href], i) => ({ page: IND_PAGES[name],
+        name, desc, ph: 'Industry photo — ' + ph, alt: ph, src, href, credit: by ? 'Photo by ' + by + ' on Unsplash' : '',
+        mBg: i === ind ? '#FFFFFF' : 'transparent', mBg2: i === ind ? '#F6F3EC' : 'transparent', sBg: i === ind ? 'rgba(255,255,255,.06)' : 'transparent', sColor: i === ind ? '#FFFFFF' : '#A9B6C8', num: String(i + 1).padStart(2, '0'), mBar: i === ind ? '#B88A2A' : 'transparent', mColor: i === ind ? '#0B2345' : '#4A525E', mWeight: i === ind ? 600 : 500, slot: 'industry-' + (i + 1), menuSlot: 'menu-industry-' + (i + 1), hidden: i !== ind,
+        active: i === ind, color: i === ind ? '#0B2345' : '#4A525E', opacity: i === ind ? 1 : 0, pe: i === ind ? 'auto' : 'none',
+        select: () => this.setState({ ind: i }),
+        pick: () => this.setState({ ind: i, menu: null })
+      })),
+      activeIndustryName: INDUSTRIES[ind][0], activeIndustryDesc: INDUSTRIES[ind][1], activeIndustryNum: String(ind + 1).padStart(2, '0'), industryTotal: String(INDUSTRIES.length).padStart(2, '0'), exploreIndustry: () => this.setState({ menu: null }), discussIndustry: () => this.setState(s => ({ form: { ...s.form, message: s.form.message || ('Enquiry regarding ' + INDUSTRIES[ind][0] + '.') } })),
+      team: [1, 2, 3, 4].map(n => ({ slot: 'team-' + n, name: '[Name ' + n + ']', role: n === 1 ? 'Managing Partner' : n === 2 ? 'Partner' : '[Role]' })),
+      values: VALUES.map(([title, desc], i) => { const on = i === this.state.val; return { num: String(i + 1).padStart(2, '0'), title, desc, active: on, bg: on ? '#FFFFFF' : 'transparent', bar: on ? '#B08A3C' : 'transparent', color: on ? '#071D41' : '#5A6270', arrow: on ? 1 : 0, select: () => this.setState({ val: i }), clear: () => this.setState({ val: null }) }; }),
+      cats: CATS.map(name => ({
+        name, active: name === cat,
+        bg: name === cat ? '#0B2345' : '#FFFFFF', fg: name === cat ? '#FFFFFF' : '#0B2345', border: name === cat ? '#0B2345' : '#C9CFD6',
+        pick: () => this.setState({ cat: name })
+      })),
+      insights: INSIGHTS.map(([c, title, desc], i) => ({ cat: c, title, desc, slot: 'insight-' + (i + 1) })).filter(a => cat === 'All' || a.cat === cat),
+      form, sent, notSent: !sent, err, hasErr: !!err,
+      onName: this.setField('name'), onEmail: this.setField('email'), onOrg: this.setField('org'),
+      onService: this.setField('service'), onMessage: this.setField('message'),
+      submit: e => {
+        e.preventDefault();
+        if (!form.name.trim()) return this.setState({ err: 'Please enter your name.' });
+        if (!/^\S+@\S+\.\S+$/.test(form.email)) return this.setState({ err: 'Please enter a valid email address.' });
+        if (this.state.sending) return;
+        const cfg = window.AR_SUPABASE || {};
+        if (!cfg.url || !cfg.key) { console.warn('Supabase not configured (supabase-config.js)'); return this.setState({ sent: true, err: '' }); }
+        this.setState({ sending: true, err: 'Sending…' });
+        fetch(cfg.url.replace(/\/$/, '') + '/rest/v1/' + (cfg.table || 'enquiries'), {
+          method: 'POST',
+          headers: Object.assign({ apikey: cfg.key, 'Content-Type': 'application/json', Prefer: 'return=minimal' }, /^sb_/.test(cfg.key) ? {} : { Authorization: 'Bearer ' + cfg.key }),
+          body: JSON.stringify({ form: "Accounting and Financial Reporting", name: form.name.trim(), email: form.email.trim(), phone: form.phone || null, organization: form.org || null, service: form.service || null, message: form.message || null })
+        }).then(r => { if (!r.ok) throw new Error(r.status); this.setState({ sending: false, sent: true, err: '' }); })
+          .catch(() => this.setState({ sending: false, err: 'Sorry, your message could not be sent. Please try again or call +977-9845819811.' }));
+      },
+      reset: () => this.setState({ sent: false, form: { ...BLANK } }),
+      slides: SLIDES.map(([ph, src, by, href], i) => ({
+        ph: 'Hero photo ' + (i + 1) + ' — ' + ph, src, href, credit: 'Photo by ' + by + ' on Unsplash',
+        slotA: i ? 'hero-slide-' + (i + 1) : 'hero-photo-angled', slotS: i ? 'hero-slide-' + (i + 1) : 'hero-photo', slotF: i ? 'hero-slide-' + (i + 1) : 'hero-photo-full',
+        label: (i + 1) + ' of ' + N, goLabel: 'Show photo ' + (i + 1), active: i === slide, hidden: i !== slide,
+        opacity: i === slide ? 1 : 0, pe: i === slide ? 'auto' : 'none',
+        dot: i === slide ? '#C9A04A' : 'rgba(255,255,255,.35)', dotW: i === slide ? '28px' : '12px',
+        go: () => go(i)
+      })),
+      slideNum: String(slide + 1).padStart(2, '0'), slideTotal: String(N).padStart(2, '0'),
+      prevSlide: () => go(slide - 1), nextSlide: () => go(slide + 1),
+      pauseSlides: () => { this.paused = true; }, resumeSlides: () => { this.paused = false; },
+      year: new Date().getFullYear()
+    };
+  }
+}
+</script>
+</body>
+</html>

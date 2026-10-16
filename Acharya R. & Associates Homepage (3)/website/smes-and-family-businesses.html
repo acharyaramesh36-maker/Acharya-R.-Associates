@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>SMEs &amp; Family Businesses — Industries — Acharya R. &amp; Associates, Nepal</title>
+<meta name="description" content="Accounting, tax, audit and advisory support for small and medium enterprises and family-owned businesses in Nepal.">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+<link rel="apple-touch-icon" href="assets/favicon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;600;700&amp;family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<script src="/supabase-config.js"></script>
+<style>
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:#FFFFFF;color:#252A31;font-family:'Public Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#0B2345;text-decoration:none}
+a:hover{color:#8E6A1E}
+*:focus-visible{outline:2px solid #C9A04A;outline-offset:3px}
+input,select,textarea,button{font-family:inherit}
+</style>
+<style>.goog-te-banner-frame,.skiptranslate iframe,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}body{top:0!important}.goog-text-highlight{background:none!important;box-shadow:none!important}</style>
+<script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,ne',autoDisplay:false},'gt-el');}</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="/nepali-fix.js"></script>
+<style>@keyframes megaIn{from{clip-path:inset(0 0 100% 0);opacity:.4}to{clip-path:inset(0 0 0 0);opacity:1}}@keyframes megaLeft{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}@keyframes megaUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}</style>
+<style>html,body{overflow-x:clip;max-width:100%}img,video,iframe{max-width:100%}@media (max-width:480px){[data-sm-hide]{display:none!important}}@media (max-width:879px){header>div:nth-child(2)>*{flex:1 1 auto!important;min-width:0!important;width:100%}}@media (max-width:599px){footer>div>div:first-child{grid-template-columns:repeat(2,minmax(0,1fr))!important}footer>div>div:first-child>div:first-child{grid-column:1 / -1!important}}</style>
+</helmet>
+
+<header style="position:fixed;top:0;left:0;right:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #DDE1E6" onMouseLeave="{{ closeMenuSoon }}" onMouseEnter="{{ cancelClose }}">
+  <div style="background:#0B2345">
+    <div style="margin:0 auto;padding:0 clamp(20px,3vw,40px);height:38px;display:flex;align-items:center;justify-content:flex-end;gap:0;font:400 13.5px/1 'Public Sans',sans-serif">
+      <div id="gt-el" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none"></div>
+      <div class="notranslate" translate="no" style="position:relative;margin-right:auto" onMouseLeave="{{ langClose }}">
+        <button type="button" aria-haspopup="listbox" aria-expanded="{{ langOpen }}" onClick="{{ langToggle }}" style="display:flex;align-items:center;gap:10px;height:38px;padding:0 4px;background:none;border:0;cursor:pointer;font:500 13px/1 'Public Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#FFFFFF">
+          <svg aria-hidden="true" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#D4B26A" stroke-width="1.6"><circle cx="12" cy="12" r="9.5"></circle><path d="M2.5 12h19M12 2.5c2.8 2.6 4.2 5.8 4.2 9.5s-1.4 6.9-4.2 9.5c-2.8-2.6-4.2-5.8-4.2-9.5s1.4-6.9 4.2-9.5z"></path></svg>
+          Nepal - {{ langCode }}
+          <svg aria-hidden="true" width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="transform:{{ langRot }};transition:transform .3s ease"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg>
+        </button>
+        <sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
+          <ul role="listbox" style="list-style:none;margin:0;padding:6px 0;position:absolute;left:0;top:100%;z-index:80;min-width:180px;background:#FFFFFF;border-top:3px solid #B08A3C;box-shadow:0 16px 36px rgba(7,29,65,.18)">
+            <li><button type="button" role="option" aria-selected="{{ langIsEn }}" onClick="{{ setEn }}" style="display:flex;justify-content:space-between;width:100%;padding:12px 16px;background:none;border:0;cursor:pointer;font:500 14px/1.2 'Public Sans',sans-serif;color:#071D41;text-align:left" style-hover="background:#F2F2F2">English <span style="color:#9A6F1E">EN</span></button></li>
+            <li><button type="button" role="option" aria-selected="{{ langIsNe }}" onClick="{{ setNe }}" style="display:flex;justify-content:space-between;width:100%;padding:12px 16px;background:none;border:0;cursor:pointer;font:500 14px/1.2 'Public Sans',sans-serif;color:#071D41;text-align:left" style-hover="background:#F2F2F2">नेपाली <span style="color:#9A6F1E">NE</span></button></li>
+          </ul>
+        </sc-if>
+      </div>
+      <span style="display:flex;align-items:center;gap:8px;color:#DCE3EC;white-space:nowrap"><span aria-hidden="true" style="color:#D4B26A">Tel:</span><a href="tel:+9779845819811" style="color:#DCE3EC;padding:4px 2px;border-bottom:1px solid transparent;transition:color .25s ease,border-color .25s ease" style-hover="color:#FFFFFF;border-bottom-color:#D4B26A">+977-9845819811</a><span aria-hidden="true" data-sm-hide="" style="color:#8FA0B6">/</span><a data-sm-hide="" href="tel:+9779716393920" style="color:#DCE3EC;padding:4px 2px;border-bottom:1px solid transparent;transition:color .25s ease,border-color .25s ease" style-hover="color:#FFFFFF;border-bottom-color:#D4B26A">9716393920</a></span>
+    </div>
+  </div>
+  <div style="margin:0 auto;padding:0 clamp(20px,3vw,40px);height:84px;display:flex;align-items:center;justify-content:flex-start;gap:{{ hdrGap }}">
+    
+
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <a href="/" aria-label="Acharya R. &amp; Associates — home" style="display:flex;align-items:center;gap:14px;color:#0B2345">
+      
+      <img src="assets/ar-logo-v2.svg" alt="" width="120" height="72" style="display: block; height: 72px; flex: none; object-fit:contain; width: 120px"><span style="display:flex;flex-direction:column;gap:5px">
+        <span style="font:600 {{ hdrNameFs }}/1 'Public Sans',sans-serif;letter-spacing:.12em;color:#0B2345;white-space:nowrap">ACHARYA R. &amp; ASSOCIATES</span>
+        <span style="font:400 11px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#8E6A1E;white-space:nowrap">Chartered Accountants</span>
+      </span>
+    </a><nav aria-label="Primary" style="margin-left:auto;display:flex;align-items:center;gap:4px;height:100%">
+        <button type="button" aria-expanded="{{ servicesOpen }}" aria-controls="menu-services" onClick="{{ toggleServices }}" onMouseEnter="{{ openServices }}" style="height:100%;background:none;border:0;border-bottom:{{ servicesBorder }};padding:0 {{ navPadX }};font:500 {{ navFs }}/1 'Public Sans',sans-serif;white-space:nowrap;color:#0B2345;cursor:pointer;display:flex;align-items:center;gap:8px">Services <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B2345" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;transform:{{ servicesRot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg></button>
+        <button type="button" aria-expanded="{{ industriesOpen }}" aria-controls="menu-industries" onClick="{{ toggleIndustries }}" onMouseEnter="{{ openIndustries }}" style="height:100%;background:none;border:0;border-bottom:{{ industriesBorder }};padding:0 {{ navPadX }};font:500 {{ navFs }}/1 'Public Sans',sans-serif;white-space:nowrap;color:#0B2345;cursor:pointer;display:flex;align-items:center;gap:8px">Industries <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B2345" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;transform:{{ industriesRot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg></button>
+        <button type="button" aria-expanded="{{ aboutOpen }}" aria-controls="menu-about" onClick="{{ toggle_about }}" onMouseEnter="{{ open_about }}" style="height:100%;background:none;border:0;border-bottom:{{ aboutBorder }};padding:0 {{ navPadX }};font:500 {{ navFs }}/1 'Public Sans',sans-serif;white-space:nowrap;color:#0B2345;cursor:pointer;display:flex;align-items:center;gap:8px">About Us <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B2345" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;transform:{{ aboutRot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg></button>
+        <button type="button" aria-expanded="{{ careersOpen }}" aria-controls="menu-careers" onClick="{{ toggle_careers }}" onMouseEnter="{{ open_careers }}" style="height:100%;background:none;border:0;border-bottom:{{ careersBorder }};padding:0 {{ navPadX }};font:500 {{ navFs }}/1 'Public Sans',sans-serif;white-space:nowrap;color:#0B2345;cursor:pointer;display:flex;align-items:center;gap:8px">Careers <svg aria-hidden="true" width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#0B2345" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex:none;margin-top:1px;transform:{{ careersRot }};transition:transform .35s cubic-bezier(.2,.7,.2,1)"><path d="M2.5 4.5 6 8l3.5-3.5"></path></svg></button>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
+      <a href="#contact" onMouseEnter="{{ closeMenu }}" style="margin-left:4px;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:38px;padding:0 {{ ctaPadX }};background:#0B2345;color:#FFFFFF;font:500 13.5px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .3s ease" style-hover="background:#16345F;color:#FFFFFF">Contact Us <span aria-hidden="true" style="color:#D4B26A">→</span></a>
+    </sc-if>
+    <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
+      <dc-import name="MobileNav" hint-size="100%,84px" style="flex:1;min-width:0;height:100%"></dc-import>
+    </sc-if>
+  </div>
+
+  <sc-if value="{{ servicesOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="menu-services" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeMenuSoon }}" style="position:absolute;left:0;right:0;top:100%;zoom:.8;animation:megaIn .5s cubic-bezier(.22,.7,.2,1) both;background:linear-gradient(to right, #00285A calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32), #F2F2F2 calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32));border-top:0;border-bottom:1px solid #E4DCC8;box-shadow:0 18px 40px rgba(11,35,69,.12);overflow:hidden">
+      <div style="max-width:1536px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:32fr 68fr;align-items:stretch">
+        <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Services</span>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Assurance, tax and advisory work delivered with independence, technical quality and care.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
+          </div>
+        </div>
+        <div style="padding:44px 0 44px clamp(28px,3vw,48px);display:flex;flex-direction:column;gap:28px;animation:megaUp .55s .18s cubic-bezier(.22,.7,.2,1) both">
+          <h3 style="margin:0;font:400 30px/1.1 'Public Sans',sans-serif;letter-spacing:-.01em;color:#00285A">Services</h3>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-content:start">
+            <sc-for list="{{ svcMenu }}" as="m" hint-placeholder-count="4">
+              <a href="{{ m.href }}" onClick="{{ m.go }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
+            </sc-for>
+            <a href="/#services" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">View all services <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ industriesOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="menu-industries" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeMenuSoon }}" style="position:absolute;left:0;right:0;top:100%;zoom:.8;animation:megaIn .5s cubic-bezier(.22,.7,.2,1) both;background:linear-gradient(to right, #00285A calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32), #F2F2F2 calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32));border-top:0;border-bottom:1px solid #E4DCC8;box-shadow:0 18px 40px rgba(11,35,69,.12);overflow:hidden">
+      <div style="max-width:1536px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:32fr 68fr;align-items:stretch">
+        <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Industries</span>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Industry knowledge, independent perspective and practical solutions for the sectors we serve across Nepal.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
+          </div>
+        </div>
+        <div style="padding:44px 0 44px clamp(28px,3vw,48px);display:flex;flex-direction:column;gap:28px;animation:megaUp .55s .18s cubic-bezier(.22,.7,.2,1) both">
+          <h3 style="margin:0;font:400 30px/1.1 'Public Sans',sans-serif;letter-spacing:-.01em;color:#00285A">Industries</h3>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-content:start">
+            <sc-for list="{{ indMenu }}" as="m" hint-placeholder-count="4">
+              <a href="{{ m.href }}" onClick="{{ m.go }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
+            </sc-for>
+            <a href="/#industries" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Discover our industries <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ aboutOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="menu-about" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeMenuSoon }}" style="position:absolute;left:0;right:0;top:100%;zoom:.8;animation:megaIn .5s cubic-bezier(.22,.7,.2,1) both;background:linear-gradient(to right, #00285A calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32), #F2F2F2 calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32));border-top:0;border-bottom:1px solid #E4DCC8;box-shadow:0 18px 40px rgba(11,35,69,.12);overflow:hidden">
+      <div style="max-width:1536px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:32fr 68fr;align-items:stretch">
+        <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">About Us</span>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Acharya R. &amp; Associates is committed to independent, high-quality professional work for organizations across Nepal.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
+          </div>
+        </div>
+        <div style="padding:44px 0 44px clamp(28px,3vw,48px);display:flex;flex-direction:column;gap:28px;animation:megaUp .55s .18s cubic-bezier(.22,.7,.2,1) both">
+          <h3 style="margin:0;font:400 30px/1.1 'Public Sans',sans-serif;letter-spacing:-.01em;color:#00285A">About Us</h3>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-content:start">
+            <sc-for list="{{ aboutMenu }}" as="m" hint-placeholder-count="4">
+              <a href="{{ m.href }}" onClick="{{ closeMenu }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
+            </sc-for>
+            <a href="/about-us" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Learn more about the firm <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ careersOpen }}" hint-placeholder-val="{{ false }}">
+    <div id="menu-careers" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ closeMenuSoon }}" style="position:absolute;left:0;right:0;top:100%;zoom:.8;animation:megaIn .5s cubic-bezier(.22,.7,.2,1) both;background:linear-gradient(to right, #00285A calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32), #F2F2F2 calc((100% - min(100%, 1536px)) / 2 + clamp(20px, 4vw, 48px) + (min(100%, 1536px) - 2 * clamp(20px, 4vw, 48px)) * .32));border-top:0;border-bottom:1px solid #E4DCC8;box-shadow:0 18px 40px rgba(11,35,69,.12);overflow:hidden">
+      <div style="max-width:1536px;margin:0 auto;padding:0 clamp(20px,4vw,48px);display:grid;grid-template-columns:32fr 68fr;align-items:stretch">
+        <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
+          <div style="display:flex;flex-direction:column;gap:28px">
+            <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Careers</span>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">We welcome qualified professionals, articled trainees and students who want to build a career in audit, tax and advisory.</p>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:24px">
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
+            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
+          </div>
+        </div>
+        <div style="padding:44px 0 44px clamp(28px,3vw,48px);display:flex;flex-direction:column;gap:28px;animation:megaUp .55s .18s cubic-bezier(.22,.7,.2,1) both">
+          <h3 style="margin:0;font:400 30px/1.1 'Public Sans',sans-serif;letter-spacing:-.01em;color:#00285A">Careers</h3>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 48px;align-content:start">
+            <sc-for list="{{ careersMenu }}" as="m" hint-placeholder-count="4">
+              <a href="{{ m.href }}" onClick="{{ closeMenu }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
+            </sc-for>
+            <a href="/careers" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Explore careers <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ showMobileNav }}" hint-placeholder-val="{{ false }}">
+    <nav id="mobile-nav" aria-label="Mobile" style="position:absolute;left:0;right:0;top:100%;background:#FFFFFF;border-top:2px solid #C9A04A;border-bottom:1px solid #DDE1E6;padding:8px clamp(20px,4vw,48px) 28px;display:flex;flex-direction:column">
+      <a href="/#services" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Services</a>
+      <a href="/#industries" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Industries</a>
+      <a href="/about-us" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">About Us</a>
+      <a href="/careers" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Careers</a>
+      <a href="#contact" onClick="{{ closeMobile }}" style="margin-top:24px;padding:16px 22px;background:#0B2345;color:#FFFFFF;text-align:center;font:500 15px/1 'Public Sans',sans-serif">Contact Us</a>
+    </nav>
+  </sc-if>
+</header>
+<div aria-hidden="true" style="height:{{ hdrSpace }}"></div>
+
+<main>
+  <section id="top" data-screen-label="SMEs &amp; Family Businesses Hero" style="position:relative;overflow:hidden;background:#071D41;min-height:clamp(560px,46vw,740px);box-sizing:border-box;padding:clamp(28px,3vw,40px) clamp(20px,4vw,48px) clamp(48px,10vw,120px);scroll-margin-top:200px">
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;overflow:hidden;background:#0B2345"><div style="position:absolute;inset:0;opacity:{{ hsO0 }};transform:{{ hsT0 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="sme-hero" shape="rect" src="https://images.unsplash.com/photo-1598299803204-b73796f43289?fm=jpg&amp;q=88&amp;w=2200&amp;auto=format&amp;fit=crop" placeholder="Hero photo — SMEs &amp; Family Businesses" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div><div style="position:absolute;inset:0;opacity:{{ hsO1 }};transform:{{ hsT1 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="sme-hero-2" shape="rect" src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?fm=jpg&amp;q=82&amp;w=1800&amp;auto=format&amp;fit=crop" placeholder="Hero photo 2 — team discussion" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div><div style="position:absolute;inset:0;opacity:{{ hsO2 }};transform:{{ hsT2 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="sme-hero-3" shape="rect" src="https://images.unsplash.com/photo-1707902665498-a202981fb5ac?fm=jpg&amp;q=82&amp;w=1800&amp;auto=format&amp;fit=crop" placeholder="Hero photo 3 — financial documents" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div>{{ hsVideo }}</div>
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;background:{{ hpScrim }}"></div>
+    <div style="position:absolute;right:clamp(20px,4vw,48px);bottom:clamp(20px,3vw,36px);z-index:2;display:flex;align-items:center;gap:14px;background:rgba(7,29,65,.72);padding:10px 10px 10px 18px">
+      <span style="font:500 14px/1 'Newsreader',serif;letter-spacing:.06em;color:#D4B26A;white-space:nowrap">{{ hsNum }} <span style="color:#8FA0B6">/ {{ hsTot }}</span></span>
+      <div style="display:flex;gap:6px"><sc-for list="{{ hsDots }}" as="d" hint-placeholder-count="3"><button type="button" aria-label="{{ d.label }}" aria-current="{{ d.cur }}" onClick="{{ d.go }}" style="width:{{ d.w }};height:3px;padding:0;border:0;background:{{ d.bg }};cursor:pointer;transition:width .3s,background .3s"></button></sc-for></div>
+      <div style="display:flex;gap:4px"><button type="button" aria-label="Previous slide" onClick="{{ hsPrev }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 16px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">←</button><button type="button" aria-label="{{ hsPauseLabel }}" onClick="{{ hsToggle }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 13px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">{{ hsPauseIcon }}</button><button type="button" aria-label="Next slide" onClick="{{ hsNext }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 16px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">→</button></div>
+    </div>
+    <span aria-hidden="true" style="position:absolute;left:0;bottom:0;width:120px;height:4px;background:#B08A3C;z-index:1"></span>
+    <div style="position:relative;z-index:1;max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,5vw,56px)">
+      <nav aria-label="Breadcrumb" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;font:400 14px/1.4 'Public Sans',sans-serif;color:#B8C3D3"><a href="/" style="color:#B8C3D3" style-hover="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px">Home</a><span aria-hidden="true" style="color:#B08A3C">/</span><a href="/#industries" style="color:#B8C3D3" style-hover="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px">Industries</a><span aria-hidden="true" style="color:#B08A3C">/</span><span aria-current="page" style="color:#FFFFFF">SMEs &amp; Family Businesses</span></nav>
+      <div style="display:grid;grid-template-columns:{{ hpCol }};gap:28px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D4B26A;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Industries</span>
+          <h1 style="margin:0;font:400 clamp(48px,6.4vw,88px)/.98 'Newsreader',serif;letter-spacing:-.03em;color:#FFFFFF;text-wrap:balance">SMEs <em style="font-style:italic;color:#D4B26A">&amp;</em> Family Businesses</h1>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:28px">
+          <p style="margin:0;max-width:34em;font:400 clamp(17px,1.35vw,19px)/1.7 'Public Sans',sans-serif;color:#D5DCE6;text-wrap:pretty">Small and medium enterprises and family-owned businesses often run with lean finance teams and owners who wear many hats. We help them keep proper books, meet tax and statutory obligations, and build the financial information and governance they need to grow and to pass the business on.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px"><a href="#contact" style="display:inline-flex;align-items:center;gap:22px;height:58px;padding:0 24px 0 26px;background:#FFFFFF;color:#071D41;font:500 16px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .4s ease,gap .4s ease" style-hover="background:#F2F2F2;color:#071D41;gap:30px">Talk to our team <span aria-hidden="true" style="color:#9A6F1E">→</span></a><a href="#help" style="display:inline-flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid #B08A3C;font:500 16px/1 'Public Sans',sans-serif;color:#FFFFFF;white-space:nowrap;transition:gap .4s ease,border-color .4s ease" style-hover="gap:20px;color:#FFFFFF">Explore our services <span aria-hidden="true" style="color:#D4B26A">→</span></a></div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <div id="ipnav-ph" style="height:68px"><nav aria-label="On this page" style="position:{{ ipNavPos }};top:{{ ipNavTop }};left:0;right:0;z-index:40;background:#FFFFFF;border-bottom:4px solid #D9D0BE;box-shadow:0 1px 0 #E6E1D6">
+    <div style="max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,48px);overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch">
+      <ul role="list" style="list-style:none;margin:0;padding:0;display:flex;gap:clamp(28px,4vw,64px);min-width:max-content">
+        <li><a href="#overview" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Overview</a></li>
+        <li><a href="#challenges" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Challenges</a></li>
+        <li><a href="#approach" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Our approach</a></li>
+        <li><a href="#help" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">How we can help</a></li>
+        <li><a href="#insights" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Insights</a></li>
+        <li><a href="#contact" style="display:block;padding:24px 0 20px;border-bottom:3px solid transparent;font:600 17px/1 'Public Sans',sans-serif;color:#1F4A8C;white-space:nowrap;transition:color .25s ease,border-color .25s ease" style-hover="color:#071D41;border-bottom-color:#B08A3C">Contact</a></li>
+      </ul>
+    </div>
+  </nav></div>
+  <section id="overview" data-screen-label="SMEs &amp; Family Businesses Perspective" style="background:#F5F6F8;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(64px,8vw,120px)">
+      <div style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(28px,3vw,40px) clamp(32px,4vw,64px);align-items:center">
+        <div style="position:relative;z-index:2;flex:0 1 auto;display:flex;flex-direction:column;gap:clamp(24px,2.6vw,40px)">
+          <h2 style="position:relative;z-index:3;margin:0;font:600 clamp(48px,6vw,104px)/.92 'Antonio','Oswald',sans-serif;letter-spacing:-.005em;text-transform:uppercase;color:#071D41;white-space:nowrap">Industry<br>perspective</h2>
+          <span style="max-width:14em;font:600 13px/1.6 'Public Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#4A525E">SMEs &amp; Family Businesses</span>
+          <span aria-hidden="true" style="width:56px;height:2px;background:#B08A3C"></span>
+        </div>
+        <div style="position:relative;flex:1 1 440px;min-width:0;padding:0 0 clamp(24px,3vw,48px) 0">
+          <div aria-hidden="true" style="position:absolute;right:0;bottom:0;width:38%;height:62%;background:#D5DEEA"></div>
+          <div style="position:relative;width:94%;aspect-ratio:16 / 10;overflow:hidden;background:#E6DFD1"><image-slot id="smes-perspective" shape="rect" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?fm=jpg&amp;q=80&amp;w=1000&amp;auto=format&amp;fit=crop" placeholder="Photo — industry setting" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:clamp(36px,4vw,56px)">
+        <h3 style="margin:0;max-width:24em;font:600 clamp(30px,3.4vw,50px)/1.08 'Antonio','Oswald',sans-serif;text-transform:uppercase;color:#071D41;text-wrap:balance">In an owner-managed business, good financial information frees the owner to focus on running the business.</h3>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:32px clamp(40px,5vw,80px)">
+          <p style="margin:0;font:500 clamp(17px,1.4vw,20px)/1.6 'Public Sans',sans-serif;color:#071D41;text-wrap:pretty">Many SMEs keep records primarily for tax, which leaves owners without timely information on profitability, cash and receivables.</p>
+          <div style="display:flex;flex-direction:column;gap:20px;padding-left:clamp(20px,2.4vw,40px);border-left:1px solid #C9CED6">
+            <p style="margin:0;font:400 16.5px/1.75 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">As the business grows, lenders, partners and new family members expect formal accounts, clear policies and separation between business and personal finances.</p>
+            <p style="margin:0;font:400 16.5px/1.75 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">Succession and ownership changes raise questions about valuation, structure and governance that are best addressed well in advance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="challenges" data-screen-label="SMEs &amp; Family Businesses Challenges" style="position:relative;overflow:hidden;background:#040A18;padding:clamp(44px,9vw,108px) clamp(12px,2vw,32px);scroll-margin-top:200px" onMouseEnter="{{ kcStop }}" onMouseLeave="{{ kcGo }}">
+    <div aria-hidden="true" style="position:absolute;left:50%;top:60%;width:min(1600px,130vw);height:85%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(37,99,235,.45),rgba(29,78,216,.18) 50%,rgba(4,10,24,0))"></div>
+    <div aria-hidden="true" style="position:absolute;left:-12%;top:-20%;width:50%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(96,165,250,.22),rgba(4,10,24,0))"></div>
+    <div aria-hidden="true" style="position:absolute;right:-14%;bottom:-25%;width:55%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(59,130,246,.25),rgba(4,10,24,0))"></div>
+    <div style="position:relative;max-width:1440px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:clamp(44px,5vw,72px)">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;text-align:center;max-width:46em">
+        <span style="font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#FFC94D">Key challenges</span>
+        <h2 style="margin:0;font:400 clamp(34px,3.8vw,54px)/1.08 'Newsreader',serif;letter-spacing:-.02em;color:#FFFFFF;text-wrap:balance">Where owner judgement meets <em style="font-style:italic;color:#D4B26A">formal reporting.</em></h2>
+      </div>
+      <ul role="list" aria-label="Key challenges" style="list-style:none;margin:0;padding:0;position:relative;width:100%;height:{{ kcH }};perspective:1800px;transform-style:preserve-3d">
+        <sc-for list="{{ kcCards }}" as="c" hint-placeholder-count="6">
+          <li tabindex="0" aria-current="{{ c.cur }}" onClick="{{ c.on }}" onFocus="{{ c.on }}" onMouseMove="{{ c.mm }}" onMouseLeave="{{ c.ml }}" style="position:absolute;left:50%;top:0;width:{{ kcW }};height:100%;box-sizing:border-box;border-radius:28px;overflow:hidden;z-index:{{ c.z }};opacity:{{ c.o }};pointer-events:{{ c.pe }};transform:{{ c.tf }};border:{{ c.bd }};box-shadow:{{ c.sh }};background:linear-gradient(160deg,rgba(40,36,30,.92),rgba(12,12,14,.96));backdrop-filter:blur(14px);cursor:pointer;transition:transform .8s cubic-bezier(.2,.75,.25,1),opacity .6s ease,box-shadow .6s ease,border-color .6s ease;outline:none">
+            <div style="position:absolute;left:0;right:0;top:0;height:60%;opacity:{{ c.imgO }};filter:{{ c.imgF }};transition:opacity .6s ease,filter .6s ease"><image-slot id="{{ c.slot }}" shape="rect" src="{{ c.src }}" placeholder="Photo — challenge" style="position:absolute;inset:0;width:100%;height:100%" credit="Photo on Unsplash"></image-slot><div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(14,13,12,.25) 0%,rgba(14,13,12,.55) 50%,#151310 100%)"></div></div>
+            <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;opacity:var(--go,0);transition:opacity .4s ease;background:radial-gradient(260px circle at var(--mx,70%) var(--my,25%),rgba(255,190,70,.38),rgba(255,150,20,.08) 45%,rgba(0,0,0,0) 70%)"></div>
+            <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.10),rgba(255,255,255,0) 40%)"></div>
+            <div style="position:relative;height:100%;box-sizing:border-box;padding:clamp(28px,2.6vw,40px);display:flex;flex-direction:column;gap:18px">
+              <h3 style="margin:auto 0 0;font:500 clamp(24px,2.1vw,32px)/1.15 'Public Sans',sans-serif;letter-spacing:-.01em;color:{{ c.tc }};text-wrap:balance;transition:color .6s ease">{{ c.title }}</h3>
+              <p style="margin:0 0 auto;font:400 clamp(15px,1.1vw,17px)/1.6 'Public Sans',sans-serif;color:{{ c.dc }};text-wrap:pretty;transition:color .6s ease">{{ c.desc }}</p>
+            </div>
+          </li>
+        </sc-for>
+      </ul>
+      <div style="display:flex;align-items:center;gap:24px">
+        <button type="button" aria-label="Previous challenge" onClick="{{ kcPrev }}" style="width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.04);color:#FFFFFF;font:400 20px/1 'Public Sans',sans-serif;cursor:pointer;transition:border-color .3s ease,box-shadow .3s ease,color .3s ease" style-hover="border-color:#FFC94D;color:#FFC94D;box-shadow:0 0 24px rgba(255,170,40,.45)">←</button>
+        <span style="min-width:72px;text-align:center;font:500 14px/1 'Public Sans',sans-serif;letter-spacing:.12em;color:#FFFFFF">{{ kcCount }}</span>
+        <button type="button" aria-label="Next challenge" onClick="{{ kcNext }}" style="width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.04);color:#FFFFFF;font:400 20px/1 'Public Sans',sans-serif;cursor:pointer;transition:border-color .3s ease,box-shadow .3s ease,color .3s ease" style-hover="border-color:#FFC94D;color:#FFC94D;box-shadow:0 0 24px rgba(255,170,40,.45)">→</button>
+      </div>
+    </div>
+  </section>
+  <section id="approach" data-screen-label="SMEs &amp; Family Businesses Approach" style="background:#FFFFFF;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:{{ aSplit }};gap:clamp(40px,6vw,96px);align-items:center">
+      <div style="position:relative;aspect-ratio:4 / 5;width:100%;overflow:hidden;background:#E6DFD1"><image-slot id="sme-approach" shape="rect" src="https://images.unsplash.com/photo-1560264280-88b68371db39?fm=jpg&amp;q=82&amp;w=1600&amp;auto=format&amp;fit=crop" placeholder="Photo — owner and adviser in discussion" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+      <div style="display:flex;flex-direction:column;gap:28px">
+        <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Our approach</span>
+        <h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41">Practical support for <em style="font-style:italic;color:#9A6F1E">owner-managed</em> businesses.</h2>
+        <div style="display:flex;flex-direction:column;gap:20px;max-width:36em;font:400 18px/1.75 'Public Sans',sans-serif;color:#3F4855">
+          <p style="margin:0;text-wrap:pretty">We take time to understand the business, the family or owners behind it and their plans for the future.</p>
+          <p style="margin:0;text-wrap:pretty">We can maintain your books, prepare tax filings and financial statements, or support your in-house team with reviews and year-end work.</p>
+          <p style="margin:0;text-wrap:pretty">When larger decisions arise, from bank financing to restructuring or succession, we provide analysis and advice in plain language.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="help" data-screen-label="SMEs &amp; Family Businesses How we can help" style="background:linear-gradient(180deg,#F2F2F2 0,#F2F2F2 62%,#FFFFFF 62%);padding:clamp(44px,9vw,108px) clamp(16px,2vw,32px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(48px,6vw,80px)">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:24px 48px">
+        <div style="display:flex;flex-direction:column;gap:20px">
+          <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Services</span>
+          <h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41">How we can <em style="font-style:italic;color:#9A6F1E">help</em></h2>
+        </div>
+        <span aria-hidden="true" style="width:2px;height:72px;background:#C9A04A"></span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(20px,2.2vw,32px);align-items:start">
+        <ul role="list" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:clamp(20px,2.2vw,32px)">
+          <li style="position:relative;min-height:clamp(420px,38vw,540px);display:flex;overflow:hidden;background:#071D41">
+            <div style="position:absolute;inset:0"><image-slot id="smes-help-1" shape="rect" src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?fm=jpg&amp;q=82&amp;w=1400&amp;auto=format&amp;fit=crop" placeholder="Photo — Audit and Assurance" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+            <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,65,.25) 0%,rgba(7,29,65,.82) 100%)"></div>
+            <div style="position:relative;margin-top:auto;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px">
+              <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#FFFFFF">Service 01</span>
+              <h3 style="margin:0;max-width:12em;font:400 clamp(28px,2.6vw,38px)/1.12 'Newsreader',serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">Audit and Assurance</h3>
+              <span aria-hidden="true" style="width:36px;height:2px;background:#C9A04A"></span>
+              <p style="margin:0;max-width:26em;font:400 15.5px/1.6 'Public Sans',sans-serif;color:#FFFFFF;text-wrap:pretty">Statutory audits proportionate to the size and nature of the business.</p>
+              <a href="/audit-and-assurance" style="position:relative;align-self:flex-start;display:inline-flex;align-items:center;gap:12px;height:42px;padding:0 18px;border:1px solid #FFFFFF;font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FFFFFF;white-space:nowrap;transition:background .3s ease,color .3s ease" style-hover="background:#FFFFFF;color:#071D41">View service <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);min-height:clamp(220px,18vw,260px);background:#FFFFFF;overflow:hidden">
+            <div style="padding:clamp(24px,2.6vw,36px);display:flex;flex-direction:column;justify-content:center;gap:14px">
+              <span style="font:italic 400 16px/1 'Newsreader',serif;color:#9A6F1E">03</span>
+              <h3 style="margin:0;font:400 clamp(21px,1.8vw,26px)/1.2 'Newsreader',serif;color:#071D41;text-wrap:balance"><a href="/accounting-and-financial-reporting" style="color:#071D41" style-hover="color:#9A6F1E">Accounting and Financial Reporting</a></h3>
+              <span aria-hidden="true" style="width:32px;height:2px;background:#C9A04A"></span>
+              <p style="margin:0;font:400 14.5px/1.55 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">Outsourced bookkeeping, management accounts and year-end statements.</p>
+              <a href="/accounting-and-financial-reporting" style="align-self:flex-start;margin-top:4px;display:inline-flex;align-items:center;gap:10px;height:38px;padding:0 16px;border:1px solid #071D41;font:600 11.5px/1 'Public Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071D41;white-space:nowrap;transition:background .3s ease,color .3s ease" style-hover="background:#071D41;color:#FFFFFF">View service <span aria-hidden="true">→</span></a>
+            </div>
+            <div style="position:relative;background:#E6DFD1"><image-slot id="smes-help-3" shape="rect" src="https://images.unsplash.com/photo-1709880945165-d2208c6ad2ec?fm=jpg&amp;q=82&amp;w=1400&amp;auto=format&amp;fit=crop" placeholder="Photo — Accounting and Financial Reporting" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          </li>
+          <li style="position:relative;min-height:clamp(420px,38vw,540px);display:flex;overflow:hidden;background:#071D41">
+            <div style="position:absolute;inset:0"><image-slot id="smes-help-5" shape="rect" src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9?fm=jpg&amp;q=82&amp;w=1400&amp;auto=format&amp;fit=crop" placeholder="Photo — Business Advisory" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+            <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,65,.25) 0%,rgba(7,29,65,.82) 100%)"></div>
+            <div style="position:relative;margin-top:auto;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px">
+              <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#FFFFFF">Service 05</span>
+              <h3 style="margin:0;max-width:12em;font:400 clamp(28px,2.6vw,38px)/1.12 'Newsreader',serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">Business Advisory</h3>
+              <span aria-hidden="true" style="width:36px;height:2px;background:#C9A04A"></span>
+              <p style="margin:0;max-width:26em;font:400 15.5px/1.6 'Public Sans',sans-serif;color:#FFFFFF;text-wrap:pretty">Budgeting, financing proposals, restructuring and succession planning.</p>
+              <a href="/business-advisory" style="position:relative;align-self:flex-start;display:inline-flex;align-items:center;gap:12px;height:42px;padding:0 18px;border:1px solid #FFFFFF;font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FFFFFF;white-space:nowrap;transition:background .3s ease,color .3s ease" style-hover="background:#FFFFFF;color:#071D41">View service <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+        </ul>
+        <div style="padding-top:clamp(0px,6vw,96px)"><ul role="list" style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:clamp(20px,2.2vw,32px)">
+          <li style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);min-height:clamp(220px,18vw,260px);background:#FFFFFF;overflow:hidden">
+            <div style="padding:clamp(24px,2.6vw,36px);display:flex;flex-direction:column;justify-content:center;gap:14px">
+              <span style="font:italic 400 16px/1 'Newsreader',serif;color:#9A6F1E">02</span>
+              <h3 style="margin:0;font:400 clamp(21px,1.8vw,26px)/1.2 'Newsreader',serif;color:#071D41;text-wrap:balance"><a href="/taxation-and-tax-compliance" style="color:#071D41" style-hover="color:#9A6F1E">Taxation and Tax Compliance</a></h3>
+              <span aria-hidden="true" style="width:32px;height:2px;background:#C9A04A"></span>
+              <p style="margin:0;font:400 14.5px/1.55 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">Income tax, VAT and TDS compliance and advice.</p>
+              <a href="/taxation-and-tax-compliance" style="align-self:flex-start;margin-top:4px;display:inline-flex;align-items:center;gap:10px;height:38px;padding:0 16px;border:1px solid #071D41;font:600 11.5px/1 'Public Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071D41;white-space:nowrap;transition:background .3s ease,color .3s ease" style-hover="background:#071D41;color:#FFFFFF">View service <span aria-hidden="true">→</span></a>
+            </div>
+            <div style="position:relative;background:#E6DFD1"><image-slot id="smes-help-2" shape="rect" src="https://images.unsplash.com/photo-1554224154-22dec7ec8818?fm=jpg&amp;q=82&amp;w=1400&amp;auto=format&amp;fit=crop" placeholder="Photo — Taxation and Tax Compliance" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          </li>
+          <li style="position:relative;min-height:clamp(420px,38vw,540px);display:flex;overflow:hidden;background:#071D41">
+            <div style="position:absolute;inset:0"><image-slot id="smes-help-4" shape="rect" src="https://images.unsplash.com/photo-1551434678-e076c223a692?fm=jpg&amp;q=82&amp;w=1400&amp;auto=format&amp;fit=crop" placeholder="Photo — Internal Audit and Risk Advisory" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+            <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,29,65,.25) 0%,rgba(7,29,65,.82) 100%)"></div>
+            <div style="position:relative;margin-top:auto;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px">
+              <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#FFFFFF">Service 04</span>
+              <h3 style="margin:0;max-width:12em;font:400 clamp(28px,2.6vw,38px)/1.12 'Newsreader',serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">Internal Audit and Risk Advisory</h3>
+              <span aria-hidden="true" style="width:36px;height:2px;background:#C9A04A"></span>
+              <p style="margin:0;max-width:26em;font:400 15.5px/1.6 'Public Sans',sans-serif;color:#FFFFFF;text-wrap:pretty">Practical reviews of key controls and processes.</p>
+              <a href="/internal-audit-and-risk-advisory" style="position:relative;align-self:flex-start;display:inline-flex;align-items:center;gap:12px;height:42px;padding:0 18px;border:1px solid #FFFFFF;font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#FFFFFF;white-space:nowrap;transition:background .3s ease,color .3s ease" style-hover="background:#FFFFFF;color:#071D41">View service <span aria-hidden="true">→</span></a>
+            </div>
+          </li>
+          <li style="display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);min-height:clamp(220px,18vw,260px);background:#FFFFFF;overflow:hidden">
+            <div style="padding:clamp(24px,2.6vw,36px);display:flex;flex-direction:column;justify-content:center;gap:14px">
+              <span style="font:italic 400 16px/1 'Newsreader',serif;color:#9A6F1E">06</span>
+              <h3 style="margin:0;font:400 clamp(21px,1.8vw,26px)/1.2 'Newsreader',serif;color:#071D41;text-wrap:balance"><a href="/due-diligence-and-agreed-upon-procedures" style="color:#071D41" style-hover="color:#9A6F1E">Due Diligence and Agreed-Upon Procedures</a></h3>
+              <span aria-hidden="true" style="width:32px;height:2px;background:#C9A04A"></span>
+              <p style="margin:0;font:400 14.5px/1.55 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">Financial reviews for partners, lenders or buyers.</p>
+              <a href="/due-diligence-and-agreed-upon-procedures" style="align-self:flex-start;margin-top:4px;display:inline-flex;align-items:center;gap:10px;height:38px;padding:0 16px;border:1px solid #071D41;font:600 11.5px/1 'Public Sans',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#071D41;white-space:nowrap;transition:background .3s ease,color .3s ease" style-hover="background:#071D41;color:#FFFFFF">View service <span aria-hidden="true">→</span></a>
+            </div>
+            <div style="position:relative;background:#E6DFD1"><image-slot id="smes-help-6" shape="rect" src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?fm=jpg&amp;q=82&amp;w=1400&amp;auto=format&amp;fit=crop" placeholder="Photo — Due Diligence and Agreed-Upon Procedures" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          </li>
+        </ul></div>
+      </div>
+    </div>
+  </section>
+  <section data-screen-label="SMEs &amp; Family Businesses Expertise" style="background:#0B2345;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px)">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(48px,6vw,80px)">
+      <div style="display:flex;flex-direction:column;gap:28px;max-width:52em">
+        <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D4B26A;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#C9A04A"></span>Industry understanding</span>
+        <h2 style="margin:0;font:400 clamp(38px,4.8vw,66px)/1.04 'Newsreader',serif;letter-spacing:-.025em;color:#FFFFFF;text-wrap:balance">Understanding the people behind the <em style="font-style:italic;color:#D4B26A">business.</em></h2>
+      </div>
+      <dl style="margin:0;display:grid;grid-template-columns:{{ aGrid }};gap:40px clamp(32px,4vw,56px)">
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Business model</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">How the business earns its income and where its margins lie.</dd></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Ownership</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">The roles and expectations of owners and family members.</dd></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Operational processes</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">Purchasing, sales, payroll and cash handling.</dd></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Reporting risks</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">Completeness of records and owner-related transactions.</dd></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Regulatory environment</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">Tax, company law and sector-specific requirements.</dd></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Management objectives</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">Growth, financing and long-term ownership plans.</dd></div>
+      </dl>
+    </div>
+  </section>
+  <section data-screen-label="SMEs &amp; Family Businesses Who we serve" onMouseEnter="{{ wcStop }}" onMouseLeave="{{ wcGo }}" style="position:relative;overflow:hidden;background:#FFFFFF;padding:clamp(44px,9vw,108px) clamp(16px,2vw,32px)">
+    <div aria-hidden="true" style="position:absolute;left:50%;top:58%;width:min(1500px,120vw);height:80%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(closest-side,rgba(37,99,235,.30),rgba(59,130,246,.14) 50%,rgba(255,255,255,0))"></div>
+    <div aria-hidden="true" style="position:absolute;left:-10%;top:-15%;width:45%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(96,165,250,.22),rgba(255,255,255,0))"></div>
+    <div aria-hidden="true" style="position:absolute;right:-12%;bottom:-20%;width:50%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(30,64,175,.20),rgba(255,255,255,0))"></div>
+    <div style="position:relative;max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(44px,5vw,72px)">
+      <div style="display:grid;grid-template-columns:{{ aTwo }};gap:24px clamp(40px,5vw,80px);align-items:end"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Who we serve</span><h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41;max-width:16em">Organizations across the <em style="font-style:italic;color:#9A6F1E">sector.</em></h2></div>
+      <ul role="list" aria-label="Who we serve" style="list-style:none;margin:0;padding:0;position:relative;width:100%;height:{{ wcH }};perspective:1600px;transform-style:preserve-3d">
+        <sc-for list="{{ wc }}" as="c" hint-placeholder-count="6">
+          <li tabindex="0" aria-current="{{ c.cur }}" onClick="{{ c.on }}" onFocus="{{ c.on }}" style="position:absolute;left:50%;top:0;width:{{ wcW }};height:100%;box-sizing:border-box;border-radius:22px;overflow:hidden;z-index:{{ c.z }};opacity:{{ c.o }};pointer-events:{{ c.pe }};transform:{{ c.tf }};border:1px solid rgba(255,255,255,.1);box-shadow:{{ c.sh }};background:#111626;cursor:pointer;display:flex;flex-direction:column;transition:transform .8s cubic-bezier(.2,.75,.25,1),opacity .6s ease,box-shadow .6s ease;outline-offset:4px">
+            <div style="position:relative;flex:1 1 auto;min-height:0;background:#071D41"><image-slot id="{{ c.slot }}" shape="rect" src="{{ c.src }}" placeholder="{{ c.ph }}" style="position:absolute;inset:0;width:100%;height:100%" credit="Photo on Unsplash"></image-slot><div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(10,14,26,.35) 0%,rgba(10,14,26,0) 30%,rgba(17,22,38,0) 70%,#111626 100%)"></div><span style="position:absolute;top:22px;left:26px;font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.24em;text-transform:uppercase;color:#FFFFFF">Sector {{ c.num }}</span></div>
+            <div style="padding:clamp(22px,2.2vw,32px) clamp(24px,2.4vw,34px) clamp(26px,2.6vw,36px);display:flex;flex-direction:column;gap:12px">
+              <h3 style="margin:0;font:500 clamp(23px,2vw,30px)/1.15 'Public Sans',sans-serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">{{ c.title }}</h3>
+              <p style="margin:0;font:400 16px/1.6 'Public Sans',sans-serif;color:#B4BCCB;text-wrap:pretty">{{ c.desc }}</p>
+              <a href="/contact-us" style="align-self:flex-start;margin-top:6px;display:inline-flex;align-items:center;gap:8px;font:500 15px/1 'Public Sans',sans-serif;color:#D4B26A" style-hover="color:#FFFFFF">Talk to us <span aria-hidden="true">→</span></a>
+            </div>
+            <div aria-hidden="true" style="position:absolute;inset:0;background:#FFFFFF;opacity:{{ c.veil }};pointer-events:none;transition:opacity .8s ease"></div>
+          </li>
+        </sc-for>
+      </ul>
+      <div style="display:flex;align-items:center;justify-content:center;gap:24px">
+        <button type="button" aria-label="Previous sector" onClick="{{ wcPrev }}" style="width:48px;height:48px;border-radius:50%;border:1px solid #071D41;background:transparent;color:#071D41;font:400 18px/1 'Public Sans',sans-serif;cursor:pointer;transition:border-color .3s ease,color .3s ease" style-hover="background:#071D41;color:#FFFFFF">←</button>
+        <div style="display:flex;align-items:center;gap:8px">
+          <sc-for list="{{ wc }}" as="c" hint-placeholder-count="6"><button type="button" aria-label="{{ c.title }}" onClick="{{ c.on }}" style="width:{{ c.dw }};height:8px;border-radius:4px;border:0;padding:0;background:{{ c.dc }};cursor:pointer;transition:width .4s ease,background .4s ease"></button></sc-for>
+        </div>
+        <button type="button" aria-label="Next sector" onClick="{{ wcNext }}" style="width:48px;height:48px;border-radius:50%;border:1px solid #071D41;background:transparent;color:#071D41;font:400 18px/1 'Public Sans',sans-serif;cursor:pointer;transition:border-color .3s ease,color .3s ease" style-hover="background:#071D41;color:#FFFFFF">→</button>
+      </div>
+    </div>
+  </section>
+  <section id="industries" data-screen-label="SMEs &amp; Family Businesses Other industries" style="background:#F2F2F2;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,4vw,56px)">
+      <div style="display:flex;flex-direction:column;gap:20px"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Industries</span><h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41">Explore other <em style="font-style:italic;color:#9A6F1E">industries</em></h2></div>
+      <ul role="list" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ aIns }};gap:12px">
+        <li><a href="/manufacturing-and-trading" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;padding:20px 22px;box-sizing:border-box;background:#FFFFFF;color:#071D41;font:400 21px/1.25 'Newsreader',serif;border-top:3px solid transparent;transition:border-color .35s ease,gap .35s ease" style-hover="border-top-color:#B08A3C;gap:24px;color:#071D41">Manufacturing &amp; Trading<span aria-hidden="true" style="font:400 18px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></a></li>
+        <li><a href="/cooperatives-and-microfinance" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;padding:20px 22px;box-sizing:border-box;background:#FFFFFF;color:#071D41;font:400 21px/1.25 'Newsreader',serif;border-top:3px solid transparent;transition:border-color .35s ease,gap .35s ease" style-hover="border-top-color:#B08A3C;gap:24px;color:#071D41">Cooperatives &amp; Microfinance<span aria-hidden="true" style="font:400 18px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></a></li>
+        <li><a href="/hospitality-and-tourism" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;padding:20px 22px;box-sizing:border-box;background:#FFFFFF;color:#071D41;font:400 21px/1.25 'Newsreader',serif;border-top:3px solid transparent;transition:border-color .35s ease,gap .35s ease" style-hover="border-top-color:#B08A3C;gap:24px;color:#071D41">Hospitality &amp; Tourism<span aria-hidden="true" style="font:400 18px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></a></li>
+        <li><a href="/technology-and-digital-businesses" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;padding:20px 22px;box-sizing:border-box;background:#FFFFFF;color:#071D41;font:400 21px/1.25 'Newsreader',serif;border-top:3px solid transparent;transition:border-color .35s ease,gap .35s ease" style-hover="border-top-color:#B08A3C;gap:24px;color:#071D41">Technology &amp; Digital Businesses<span aria-hidden="true" style="font:400 18px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></a></li>
+        <li><span aria-current="page" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;padding:20px 22px;box-sizing:border-box;background:#071D41;color:#FFFFFF;font:400 21px/1.25 'Newsreader',serif;border-top:3px solid #B08A3C">SMEs &amp; Family Businesses<span style="font:600 11px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#D4B26A;white-space:nowrap">Current</span></span></li>
+        <li><a href="/healthcare-and-medical" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;padding:20px 22px;box-sizing:border-box;background:#FFFFFF;color:#071D41;font:400 21px/1.25 'Newsreader',serif;border-top:3px solid transparent;transition:border-color .35s ease,gap .35s ease" style-hover="border-top-color:#B08A3C;gap:24px;color:#071D41">Healthcare &amp; Medical<span aria-hidden="true" style="font:400 18px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></a></li>
+        <li><a href="/education-and-institutions" style="display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:88px;padding:20px 22px;box-sizing:border-box;background:#FFFFFF;color:#071D41;font:400 21px/1.25 'Newsreader',serif;border-top:3px solid transparent;transition:border-color .35s ease,gap .35s ease" style-hover="border-top-color:#B08A3C;gap:24px;color:#071D41">Education &amp; Institutions<span aria-hidden="true" style="font:400 18px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></a></li>
+      </ul>
+    </div>
+  </section>
+  <section id="insights" data-screen-label="SMEs &amp; Family Businesses Insights" style="background:#FFFFFF;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px 48px">
+        <div style="display:flex;flex-direction:column;gap:20px"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Insights</span><h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41;max-width:18em">Insights for <em style="font-style:italic;color:#9A6F1E">SMEs &amp; family businesses</em></h2></div>
+        <p style="margin:0;font:400 15px/1.5 'Public Sans',sans-serif;color:#5A6270">Planned articles. Publication dates to be confirmed.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:{{ aIns }};gap:40px 28px">
+        <article style="display:flex;flex-direction:column;gap:18px;background:#F2F2F2;padding-bottom:24px;transition:transform .45s ease" style-hover="transform:translateY(-4px)">
+          <div style="aspect-ratio:4 / 3;overflow:hidden;background:#E6DFD1"><image-slot id="sme-insight-1" shape="rect" src="https://images.unsplash.com/photo-1713947503588-8ff8196dc4a3?fm=jpg&amp;q=82&amp;w=900&amp;auto=format&amp;fit=crop" placeholder="Article image" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 22px">
+            <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">Records</span>
+            <h3 style="margin:0;font:500 22px/1.25 'Newsreader',serif;color:#071D41;text-wrap:balance">Bookkeeping basics that save time at year-end</h3>
+            <span style="margin-top:6px;font:500 14px/1 'Public Sans',sans-serif;color:#5A6270">Coming soon</span>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:18px;background:#F2F2F2;padding-bottom:24px;transition:transform .45s ease" style-hover="transform:translateY(-4px)">
+          <div style="aspect-ratio:4 / 3;overflow:hidden;background:#E6DFD1"><image-slot id="sme-insight-2" shape="rect" src="https://images.unsplash.com/photo-1434626881859-194d67b2b86f?fm=jpg&amp;q=82&amp;w=900&amp;auto=format&amp;fit=crop" placeholder="Article image" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 22px">
+            <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">Financing</span>
+            <h3 style="margin:0;font:500 22px/1.25 'Newsreader',serif;color:#071D41;text-wrap:balance">Preparing financial information for a bank loan</h3>
+            <span style="margin-top:6px;font:500 14px/1 'Public Sans',sans-serif;color:#5A6270">Coming soon</span>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:18px;background:#F2F2F2;padding-bottom:24px;transition:transform .45s ease" style-hover="transform:translateY(-4px)">
+          <div style="aspect-ratio:4 / 3;overflow:hidden;background:#E6DFD1"><image-slot id="sme-insight-3" shape="rect" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?fm=jpg&amp;q=82&amp;w=900&amp;auto=format&amp;fit=crop" placeholder="Article image" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 22px">
+            <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">Governance</span>
+            <h3 style="margin:0;font:500 22px/1.25 'Newsreader',serif;color:#071D41;text-wrap:balance">Introducing governance in a family business</h3>
+            <span style="margin-top:6px;font:500 14px/1 'Public Sans',sans-serif;color:#5A6270">Coming soon</span>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column;gap:18px;background:#F2F2F2;padding-bottom:24px;transition:transform .45s ease" style-hover="transform:translateY(-4px)">
+          <div style="aspect-ratio:4 / 3;overflow:hidden;background:#E6DFD1"><image-slot id="sme-insight-4" shape="rect" src="https://images.unsplash.com/photo-1549637642-90187f64f420?fm=jpg&amp;q=82&amp;w=900&amp;auto=format&amp;fit=crop" placeholder="Article image" style="width:100%;height:100%" credit="Photo on Unsplash"></image-slot></div>
+          <div style="display:flex;flex-direction:column;gap:12px;padding:0 22px">
+            <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">Succession</span>
+            <h3 style="margin:0;font:500 22px/1.25 'Newsreader',serif;color:#071D41;text-wrap:balance">Starting the succession conversation</h3>
+            <span style="margin-top:6px;font:500 14px/1 'Public Sans',sans-serif;color:#5A6270">Coming soon</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <section id="contact" data-screen-label="SMEs &amp; Family Businesses Contact" style="background:#071D41;padding:clamp(48px,10vw,108px) clamp(20px,4vw,48px);scroll-margin-top:200px">
+    <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:{{ contactCols }};gap:clamp(40px,5vw,88px);align-items:start">
+      <div style="min-width:0;display:flex;flex-direction:column;gap:24px">
+        <span style="width:48px;height:2px;background:#C9A04A"></span>
+        <h2 style="margin:0;font:400 clamp(36px,4vw,58px)/1.08 'Newsreader',serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">Let's discuss your business requirements.</h2>
+        <p style="margin:0;font:400 18px/1.6 'Public Sans',sans-serif;color:#C9D2DE;max-width:30em;text-wrap:pretty">Connect with our team to discuss audit, tax, accounting, and advisory services for your organization.</p>
+        <dl style="margin:16px 0 0;padding-top:28px;border-top:1px solid rgba(201,160,74,.45);display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 28px;font:400 16px/1.5 'Public Sans',sans-serif">
+          <dt style="color:#8FA0B6">Office</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF">Srijan Tole, Samakhushi, Kathmandu, Nepal</dd>
+          <dt style="color:#8FA0B6">Phone</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF"><a href="tel:+9779845819811" style="color:#FFFFFF" style-hover="color:#D4B26A">+977-9845819811</a> / <a href="tel:+9779716393920" style="color:#FFFFFF" style-hover="color:#D4B26A">9716393920</a></dd>
+          <dt style="color:#8FA0B6">Email</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF"><a href="mailto:audit.acharyaca@outlook.com" style="color:#FFFFFF" style-hover="color:#D4B26A">audit.acharyaca@outlook.com</a></dd>
+        </dl>
+      </div>
+      <div style="min-width:0;background:#F2F2F2;padding:clamp(22px,3.5vw,48px);border-top:3px solid #C9A04A">
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
+          <form onSubmit="{{ submit }}" novalidate="" style="display:flex;flex-direction:column;gap:20px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:20px">
+              <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Full name *<input value="{{ form.name }}" onChange="{{ onName }}" autocomplete="name" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
+              <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Work email *<input type="email" value="{{ form.email }}" onChange="{{ onEmail }}" autocomplete="email" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
+            </div>
+            <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Organization<input value="{{ form.org }}" onChange="{{ onOrg }}" autocomplete="organization" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Service of interest
+              <select value="{{ form.service }}" onChange="{{ onService }}" style="height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 12px;font-size:15px;color:#252A31;background:#FFFFFF;border-radius:0">
+                <option value="">Select a service</option>
+                <sc-for list="{{ services }}" as="s" hint-placeholder-count="6"><option value="{{ s.title }}">{{ s.title }}</option></sc-for>
+              </select>
+            </label>
+            <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">How can we help?<textarea value="{{ form.message }}" onChange="{{ onMessage }}" rows="4" style="border:1px solid #D9D0BE;background:#FFFFFF;padding:12px 14px;font-size:15px;line-height:1.5;color:#252A31;resize:vertical;border-radius:0"></textarea></label>
+            <sc-if value="{{ hasErr }}" hint-placeholder-val="{{ false }}"><p role="alert" style="margin:0;font:500 14px/1.4 'Public Sans',sans-serif;color:#A3271F">{{ err }}</p></sc-if>
+            <button type="submit" style="align-self:start;padding:18px 30px;background:#071D41;color:#FFFFFF;border:0;font:500 16px/1 'Public Sans',sans-serif;cursor:pointer;transition:background .4s ease" style-hover="background:#1A3560">Send enquiry</button>
+          </form>
+        </sc-if>
+        <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+          <div role="status" style="display:flex;flex-direction:column;gap:16px;padding:24px 0">
+            <span style="width:40px;height:2px;background:#C9A04A"></span>
+            <h3 style="margin:0;font:400 30px/1.2 'Newsreader',serif;color:#0B2345">Thank you, {{ form.name }}.</h3>
+            <p style="margin:0;font:400 15.5px/1.6 'Public Sans',sans-serif;color:#4A525E">Your enquiry has been recorded in this prototype. Once the form is connected, our team will respond by email.</p>
+            <button type="button" onClick="{{ reset }}" style="align-self:start;margin-top:8px;padding:14px 22px;background:none;border:1px solid #0B2345;color:#0B2345;font:500 14px/1 'Public Sans',sans-serif;cursor:pointer">Send another enquiry</button>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer style="background:#F8F8F8;color:#00285A;padding:clamp(34px,4.2vw,50px) clamp(20px,4vw,48px) 25px;border-top:1px solid #E6E6E6">
+  <div style="max-width:1536px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:grid;grid-template-columns:{{ footCols }};gap:40px {{ footGap }}">
+      <div style="grid-column:{{ footBrandCol }};display:flex;flex-direction:column;gap:24px;min-width:0">
+        <a href="/" aria-label="Acharya R. &amp; Associates — home" style="display:flex;flex-direction:{{ footLogoDir }};align-items:{{ footLogoAlign }};gap:{{ footLogoGap }};color:#00285A"><img src="assets/ar-logo-v2.svg" alt="" style="display:block;width:{{ footLogoW }};height:auto;flex:none;object-fit:contain"><span style="display:flex;flex-direction:column;gap:10px;min-width:0"><span style="display:flex;flex-direction:column;gap:2px;font:600 {{ footNameFs }}/1.2 'Public Sans',sans-serif;letter-spacing:.1em;color:#00285A"><span class="notranslate" translate="no">ACHARYA R. &amp;</span><span class="notranslate" translate="no">ASSOCIATES</span></span><span style="font:500 11px/1 'Public Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#9A6F1E;white-space:nowrap">Chartered Accountants</span></span></a>
+        
+        <div style="display:flex;align-items:center;gap:16px"><a href="#" aria-label="Facebook" title="Facebook (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 2.9v18.2c0 .5-.4.9-.9.9h-5.2v-7.7h2.6l.4-3h-3V9.4c0-.9.2-1.5 1.5-1.5h1.6V5.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H10.2v3h2.6V22H2.9c-.5 0-.9-.4-.9-.9V2.9c0-.5.4-.9.9-.9h18.2c.5 0 .9.4.9.9z"></path></svg></a><a href="#" aria-label="LinkedIn" title="LinkedIn (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.55h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.05c0-1.2-.02-2.75-1.68-2.75-1.68 0-1.94 1.31-1.94 2.66V21h-4z"></path></svg></a><a href="#" aria-label="Instagram" title="Instagram (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"></path></svg></a></div>
+      </div>
+      <nav aria-label="Footer services" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Services</span>
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6"><a href="{{ s.page }}" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">{{ s.title }}</a></sc-for>
+      </nav>
+      <nav aria-label="Footer industries" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Industries</span>
+        <sc-for list="{{ industries }}" as="i" hint-placeholder-count="7"><a href="{{ i.page }}" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">{{ i.name }}</a></sc-for>
+      </nav>
+      <nav aria-label="Footer resources" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Resources</span>
+        <a href="#" title="Page to be published" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Insights</a>
+        <a href="#" title="Page to be published" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Publications</a>
+        <a href="#" title="Page to be published" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Tax updates</a>
+        <a href="#contact" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Subscribe to insights</a>
+      </nav>
+      <nav aria-label="Footer company" style="display:flex;flex-direction:column;gap:12px">
+        <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Company</span>
+        <a href="/about-us" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">About us</a>
+        <a href="/our-team" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Our team</a>
+        <a href="/gallery" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Gallery</a>
+        <a href="/careers" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Careers</a>
+        <a href="/contact-us" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Contact us</a>
+      </nav>
+    </div>
+    <div style="border-top:1px solid #E0E0E0;padding-top:17px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;font:400 11px/1.6 'Public Sans',sans-serif;color:#5A6270">
+      <p style="margin:0;max-width:52em">© {{ year }} Acharya R. &amp; Associates, Chartered Accountants. All rights reserved.<br>Member firm registered with the Institute of Chartered Accountants of Nepal (ICAN) · Firm Registration No. 1536</p>
+      <div style="display:flex;gap:24px">
+        <span title="Page to be published">Privacy Policy</span>
+        <span title="Page to be published">Website Terms</span>
+      </div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;angled&quot;,&quot;split&quot;,&quot;full&quot;],&quot;default&quot;:&quot;angled&quot;,&quot;tsType&quot;:&quot;'angled'|'split'|'full'&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;servicesLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;grid&quot;,&quot;list&quot;],&quot;default&quot;:&quot;grid&quot;,&quot;tsType&quot;:&quot;'grid'|'list'&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+const IND_PAGES = {"Manufacturing & Trading":"/manufacturing-and-trading","Cooperatives & Microfinance":"/cooperatives-and-microfinance","Hospitality & Tourism":"/hospitality-and-tourism","Technology & Digital Businesses":"/technology-and-digital-businesses","SMEs & Family Businesses":"/smes-and-family-businesses","Healthcare & Medical":"/healthcare-and-medical","Education & Institutions":"/education-and-institutions"};
+const SVC_PAGES = {"Audit and Assurance":"/audit-and-assurance","Taxation and Tax Compliance":"/taxation-and-tax-compliance","Accounting and Financial Reporting":"/accounting-and-financial-reporting","Internal Audit and Risk Advisory":"/internal-audit-and-risk-advisory","Business Advisory":"/business-advisory","Due Diligence and Agreed-Upon Procedures":"/due-diligence-and-agreed-upon-procedures"};
+const SERVICES = [
+  ['Audit and Assurance', 'Statutory and independent audits that give boards, regulators and stakeholders confidence in reported financial information.'],
+  ['Taxation and Tax Compliance', 'Income tax, VAT and withholding compliance, return preparation and practical guidance on tax positions under Nepalese law.'],
+  ['Accounting and Financial Reporting', 'Bookkeeping, financial statement preparation and reporting support aligned with applicable Nepal Financial Reporting Standards.'],
+  ['Internal Audit and Risk Advisory', 'Reviews of internal controls, processes and risk management to help management address gaps before they become issues.'],
+  ['Business Advisory', 'Financial analysis, budgeting and structuring support for owners and management teams planning their next decisions.'],
+  ['Due Diligence and Agreed-Upon Procedures', 'Focused financial reviews and procedures performed to an agreed scope for transactions, funders and specific reporting needs.']
+];
+const INDUSTRIES = [
+ [
+  "Manufacturing & Trading",
+  "Auditing, stock verification, costing, financial reporting and tax compliance support for producers, importers and distributors.",
+  "Assembly line workers in a manufacturing plant",
+  "https://images.unsplash.com/photo-1589793463357-5fb813435467?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Remy Gieling",
+  "https://unsplash.com/@gieling"
+ ],
+ [
+  "Cooperatives & Microfinance",
+  "Practical assurance, accounting and compliance support for member-based and community finance organizations.",
+  "Advisers in discussion with clients in a modern office",
+  "https://images.unsplash.com/photo-1758518727707-b023e285b709?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Vitaly Gariev",
+  "https://unsplash.com/@silverkblack"
+ ],
+ [
+  "Hospitality & Tourism",
+  "Audit and Assurance, Accounting, VAT and revenue controls for hotels, travel operators and tourism businesses.",
+  "Boudhanath Stupa, Kathmandu, from above",
+  "https://images.unsplash.com/photo-1605640840605-14ac1855827b?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Raimond Klavins",
+  "https://unsplash.com/@raimondklavins"
+ ],
+ [
+  "Technology & Digital Businesses",
+  "Audit and Assurance, Financial consulting, tax and compliance support for technology & Digital Businesses",
+  "Engineers working with technical equipment",
+  "https://images.unsplash.com/photo-1581091212991-8891c7d4bd9b?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "ThisisEngineering",
+  "https://unsplash.com/@thisisengineering"
+ ],
+ [
+  "SMEs & Family Businesses",
+  "Accounting, compliance and advisory support as owner-managed businesses grow.",
+  "Operator running machinery in a workshop",
+  "https://images.unsplash.com/photo-1633158829875-e5316a358c6f?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Sam Moghadam",
+  "https://unsplash.com/@sammoghadam"
+ ],
+ [
+  "Healthcare & Medical",
+  "Audit, accounting, tax and compliance support for hospitals, clinics, diagnostic centres and pharmacies.",
+  "Hospital and clinical medical equipment",
+  "https://images.unsplash.com/photo-1697980825665-10b25a70bd1d?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Marcelo Leal",
+  "https://unsplash.com/@marceloleal80"
+ ],
+ [
+  "Education & Institutions",
+  "Audit, financial reporting and compliance support for schools, colleges, universities and training institutes.",
+  "Professor lecturing to students in a classroom",
+  "https://images.unsplash.com/photo-1758270704113-9fb2ac81788f?fm=jpg&q=88&w=2000&auto=format&fit=crop",
+  "Vitaly Gariev",
+  "https://unsplash.com/@silverkblack"
+ ]
+];
+const VALUES = [
+  ['Independence', 'We maintain objectivity in every engagement and do not allow relationships or interests to influence our professional judgment.'],
+  ['Integrity', 'We are straightforward and honest in our work, our reporting and our dealings with clients.'],
+  ['Confidentiality', 'Client information is protected and used only for the purpose for which it was provided.'],
+  ['Technical quality', 'We apply relevant standards carefully and review our work so that conclusions are well supported.'],
+  ['Professional service', 'We communicate clearly, respond promptly and keep clients informed throughout each engagement.']
+];
+const INSIGHTS = [
+  ['Nepal tax updates', 'Preparing for fiscal year-end: a tax compliance checklist', 'A practical sequence of steps for reviewing filings, deadlines and documentation before the year closes.'],
+  ['Accounting and financial reporting', 'Applying NFRS in a growing business: common questions', 'Areas where reporting requirements often change as an organization grows in size and complexity.'],
+  ['Audit and assurance', 'What to expect during a statutory audit engagement', 'How planning, fieldwork and reporting typically unfold, and how management can prepare.'],
+  ['Regulatory compliance', 'Building a practical compliance calendar for your organization', 'A simple framework for tracking statutory filings and renewals across the year.'],
+  ['Business and financial analysis', 'Reading the cash flow statement to support better decisions', 'How operating, investing and financing cash flows reveal what profit figures alone may not.']
+];
+const SVC_IMG = [["audit","Professionals reviewing financial reports at a meeting table","https://images.unsplash.com/photo-1758518730037-a16581a040e8?fm=jpg&q=88&w=2000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["tax","Reviewing documents with a pen and calculator","https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?fm=jpg&q=88&w=2000&auto=format&fit=crop","Kelly Sikkema","https://unsplash.com/@kellysikkema"],["accounting","Working through accounts with a calculator at a desk","https://images.unsplash.com/photo-1598432439250-0330f9130e14?fm=jpg&q=88&w=2000&auto=format&fit=crop","Towfiqu barbhuiya","https://unsplash.com/@towfiqu999999"],["internal audit","Desk with financial charts and analysis","https://images.unsplash.com/photo-1529070538774-1843cb3265df?fm=jpg&q=88&w=2000&auto=format&fit=crop","Jakub Żerdzicki","https://unsplash.com/@jakubzerdzicki"],["advisory","Business partners in discussion in a modern office","https://images.unsplash.com/photo-1553877522-43269d4ea984?fm=jpg&q=88&w=2000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["due diligence","Professional reviewing information on a tablet","https://images.unsplash.com/photo-1542744173-8e7e53415bb0?fm=jpg&q=88&w=2000&auto=format&fit=crop","Towfiqu barbhuiya","https://unsplash.com/@towfiqu999999"]];
+const SLIDES = [["professionals reviewing reports at a meeting table","https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?fm=jpg&q=88&w=3000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["Kathmandu valley skyline","https://images.unsplash.com/photo-1587186846095-f8c531b4683c?fm=jpg&q=88&w=3000&auto=format&fit=crop","Sujitabh Chaudhary","https://unsplash.com/@suzitav"],["business partners in a modern office","https://images.unsplash.com/photo-1568992688065-536aad8a12f6?fm=jpg&q=88&w=3000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["Boudhanath, Kathmandu","https://images.unsplash.com/photo-1573164574572-cb89e39749b4?fm=jpg&q=88&w=3000&auto=format&fit=crop","Raimond Klavins","https://unsplash.com/@raimondklavins"]];
+const CATS = ['All', 'Nepal tax updates', 'Accounting and financial reporting', 'Audit and assurance', 'Regulatory compliance', 'Business and financial analysis'];
+const BLANK = { name: '', email: '', org: '', service: '', message: '' };
+
+const WHO = [["Owner-managed companies","Private companies run by their founders.","https://images.unsplash.com/photo-1635859890085-ec8cb5466806?fm=jpg&q=80&w=1000&auto=format&fit=crop","Photo — Owner-managed companies"],["Family-owned businesses","Enterprises owned and managed across generations.","https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?fm=jpg&q=80&w=1000&auto=format&fit=crop","Photo — Family-owned businesses"],["Partnerships and proprietorships","Smaller businesses formalizing their financial records.","https://images.unsplash.com/photo-1606836591695-4d58a73eba1e?fm=jpg&q=80&w=1000&auto=format&fit=crop","Photo — Partnerships and proprietorships"],["Growing enterprises","Businesses preparing for bank financing or new investors.","https://images.unsplash.com/photo-1521737604893-d14cc237f11d?fm=jpg&q=80&w=1000&auto=format&fit=crop","Photo — Growing enterprises"],["Professional practices","Service firms needing accounting and tax support.","https://images.unsplash.com/photo-1554224155-a1487473ffd9?fm=jpg&q=80&w=1000&auto=format&fit=crop","Photo — Professional practices"],["Local manufacturers and traders","Small producers and traders with inventory and credit sales.","https://images.unsplash.com/photo-1554224154-26032ffc0d07?fm=jpg&q=80&w=1000&auto=format&fit=crop","Photo — Local manufacturers and traders"]];
+class Component extends DCLogic {
+  whoRef = React.createRef();
+  state = { slide: 0, menu: null, mobile: false, w: typeof window !== 'undefined' ? window.innerWidth : 1280, ind: 0, cat: 'All', form: { ...BLANK }, sent: false, err: '' };
+  setLang(l) {
+    const host = location.hostname, exp = l === 'en' ? '; expires=Thu, 01 Jan 1970 00:00:00 GMT' : '';
+    const v = l === 'en' ? '' : '/en/' + l;
+    document.cookie = 'googtrans=' + v + '; path=/' + exp;
+    if (host) document.cookie = 'googtrans=' + v + '; path=/; domain=' + host + exp;
+    this.setState({ lang: l, langOpen: false });
+    const sel = document.querySelector('#gt-el select.goog-te-combo');
+    if (sel && l !== 'en') { sel.value = l; sel.dispatchEvent(new Event('change')); setTimeout(() => { if (!document.documentElement.classList.contains('translated-ltr')) location.reload(); }, 900); } else location.reload();
+  }
+  componentDidMount() {
+    this._wcT = setInterval(() => { if (!this.wcHold && !document.hidden) this.setState(s => ({ wcA: ((s.wcA || 0) + 1) % WHO.length })); }, 3000);
+    this._kcT = setInterval(() => { if (!this.kcHold && !document.hidden) this.setState(s => ({ kc: ((s.kc || 0) + 1) % ((this.kcItems || []).length || 6) })); }, 3000);
+    this.whoIO = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { this.setState({ whoSeen: true }); this.whoIO.disconnect(); } }, { threshold: 0.15 });
+    this.whoRef.current && this.whoIO.observe(this.whoRef.current); this.whoFb = setTimeout(() => this.setState({ whoSeen: true }), 6000);
+    this.cvT = setInterval(() => { if (!this.cvHold && !document.hidden) this.setState(s => ({ cvA: ((s.cvA || 0) + 1) % 6 })); }, 4000);
+    fetch('assets/hero-video.mp4', { method: 'HEAD' }).then(r => { if (r.ok && /video/.test(r.headers.get('content-type') || 'video')) this.setState({ hsVidSrc: 'assets/hero-video.mp4' }); }).catch(() => {});
+    this._hsT = setInterval(() => { if (!this.state.hsPause && !document.hidden) this.setState(s => ({ hs: ((s.hs || 0) + 1) % (s.hsVid ? 4 : 3) })); }, 6500);
+    { const m = document.cookie.match(/googtrans=\/en\/(\w+)/); if (m) this.setState({ lang: m[1] }); }
+    this.onS = () => { const h = document.querySelector('header'); const hh = h ? h.offsetHeight : 123; const ph = document.getElementById('ipnav-ph'); const stuck = ph ? ph.getBoundingClientRect().top <= hh : false; if (hh !== this.state.hdrH || stuck !== this.state.navStuck) this.setState({ hdrH: hh, navStuck: stuck }); };
+    window.addEventListener('scroll', this.onS, { passive: true }); window.addEventListener('resize', this.onS); setTimeout(this.onS, 60); setTimeout(this.onS, 600);
+    this.onR = () => this.setState({ w: window.innerWidth });
+    this.onK = e => { if (e.key === 'Escape') this.setState({ menu: null, mobile: false }); };
+    window.addEventListener('resize', this.onR);
+    window.addEventListener('keydown', this.onK);
+    this.timer = setInterval(() => { if (!this.paused && !document.hidden) this.setState(s => ({ slide: (s.slide + 1) % SLIDES.length })); }, 6000);
+  }
+  componentWillUnmount() {
+    clearInterval(this._wcT);
+    clearInterval(this._kcT);
+    this.whoIO && this.whoIO.disconnect(); clearTimeout(this.whoFb); clearInterval(this.cvT);
+    clearInterval(this._hsT);
+    window.removeEventListener('resize', this.onR);
+    window.removeEventListener('keydown', this.onK);
+    clearInterval(this.timer);
+  }
+  setField = k => e => { const v = e.target.value; this.setState(s => ({ form: { ...s.form, [k]: v }, err: '' })); };
+  hsVals() {
+    const vid = !!this.state.hsVid, n = vid ? 4 : 3, i = (this.state.hs || 0) % n, go = k => this.setState({ hs: (k + n) % n });
+    const o = k => (k === i ? 1 : 0), t = k => (k === i ? 'scale(1.06)' : 'scale(1)');
+    return {
+      hsO0: o(0), hsO1: o(1), hsO2: o(2), hsO3: vid ? o(3) : 0, hsT0: t(0), hsT1: t(1), hsT2: t(2),
+      hsNum: String(i + 1).padStart(2, '0'), hsTot: String(n).padStart(2, '0'),
+      hsDots: Array.from({ length: n }, (_, k) => ({ label: 'Show slide ' + (k + 1), cur: k === i ? 'true' : 'false', w: k === i ? '28px' : '12px', bg: k === i ? '#D4B26A' : 'rgba(255,255,255,.4)', go: () => go(k) })),
+      hsPrev: () => go(i - 1), hsNext: () => go(i + 1),
+      hsToggle: () => this.setState(s => ({ hsPause: !s.hsPause })), hsPauseIcon: this.state.hsPause ? '▶' : 'II', hsPauseLabel: this.state.hsPause ? 'Play slideshow' : 'Pause slideshow',
+      hsVideo: this.state.hsVidSrc ? React.createElement('video', { src: this.state.hsVidSrc, muted: true, loop: true, playsInline: true, autoPlay: true, preload: 'auto', onLoadedData: e => { const v = e.target; v.muted = true; v.play && v.play().catch(() => {}); if (!this.state.hsVid) this.setState({ hsVid: true }); }, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: (this.state.hsVid && ((this.state.hs || 0) % 4) === 3 ? 1 : 0), transition: 'opacity 1.2s ease' } }) : null, hsVidOk: e => { const v = e.target; v.muted = true; v.play && v.play().catch(() => {}); if (!this.state.hsVid) this.setState({ hsVid: true }); }
+    };
+  }
+  wcVals(w) {
+    const a = this.state.wcA || 0, n = WHO.length, sm = w < 700;
+    return {
+      wcH: sm ? '500px' : 'clamp(480px,60vh,640px)', wcW: sm ? '86%' : 'min(38%,540px)',
+      wcStop: () => { this.wcHold = true; }, wcGo: () => { this.wcHold = false; },
+      wcPrev: () => this.setState(s => ({ wcA: ((s.wcA || 0) + n - 1) % n })), wcNext: () => this.setState(s => ({ wcA: ((s.wcA || 0) + 1) % n })),
+      wc: WHO.map(([title, desc, src, ph], i) => {
+        let d = i - a; if (d > n / 2) d -= n; if (d < -n / 2) d += n;
+        const ad = Math.abs(d), on = d === 0;
+        return { title, desc, src, ph, slot: 'who-door-' + (i + 1), num: String(i + 1).padStart(2, '0'), cur: on ? 'true' : 'false', z: 10 - ad,
+          o: ad > 1 ? 0 : 1, pe: ad > 1 ? 'none' : 'auto', veil: on ? 0 : .35,
+          tf: 'translateX(calc(-50% + ' + (d * (sm ? 64 : 104)) + '%)) translateZ(' + (on ? 0 : -220) + 'px) rotateY(' + (-d * 24) + 'deg)',
+          sh: on ? '0 0 0 1px rgba(59,130,246,.35), 0 0 60px rgba(37,99,235,.35), 0 50px 90px -30px rgba(7,29,65,.55)' : '0 30px 60px -30px rgba(7,29,65,.35)',
+          dw: on ? '28px' : '8px', dc: on ? '#B08A3C' : '#C9CED6', on: () => this.setState({ wcA: i }) };
+      })
+    };
+  }
+  kcVals(w) {
+    const a = this.state.kc || 0, n = (this.kcItems || []).length, sm = w < 700;
+    const glow = e => { const el = e.currentTarget, r = el.getBoundingClientRect(); el.style.setProperty('--mx', (e.clientX - r.left) + 'px'); el.style.setProperty('--my', (e.clientY - r.top) + 'px'); el.style.setProperty('--go', '1'); };
+    const off = e => e.currentTarget.style.setProperty('--go', '0');
+    return {
+      kcH: sm ? '480px' : 'clamp(460px,58vh,620px)', kcW: sm ? '86%' : 'min(36%,520px)',
+      kcStop: () => { this.kcHold = true; }, kcGo: () => { this.kcHold = false; },
+      kcPrev: () => this.setState(s => ({ kc: ((s.kc || 0) + n - 1) % n })), kcNext: () => this.setState(s => ({ kc: ((s.kc || 0) + 1) % n })),
+      kcCount: String(a + 1).padStart(2, '0') + ' / ' + String(n).padStart(2, '0'),
+      kcCards: (this.kcItems || []).map((c, i) => {
+        let d = i - a; if (d > n / 2) d -= n; if (d < -n / 2) d += n;
+        const ad = Math.abs(d), on = d === 0;
+        return { ...c, num: '0' + (i + 1), z: 10 - ad, o: ad > 2 ? 0 : (ad === 2 ? .35 : 1), pe: ad > 1 ? 'none' : 'auto', cur: on ? 'true' : 'false',
+          tf: 'translateX(calc(-50% + ' + (d * (sm ? 52 : 72)) + '%)) translateZ(' + (-ad * 160) + 'px) rotateY(' + (-d * 26) + 'deg)',
+          bd: on ? '1px solid rgba(255,196,84,.9)' : '1px solid rgba(255,255,255,.16)',
+          sh: on ? '0 0 0 1px rgba(255,190,70,.35), 0 0 40px rgba(255,170,40,.45), 0 0 120px rgba(255,150,20,.25), 0 50px 90px -30px rgba(0,0,0,.9)' : '0 40px 80px -30px rgba(0,0,0,.8)',
+          imgO: on ? .85 : .4, imgF: on ? 'none' : 'saturate(.4)',
+          tile: on ? 'linear-gradient(160deg,#FFC94D,#F29A0E)' : 'rgba(255,255,255,.08)', tileC: on ? '#1A1206' : '#FFFFFF',
+          tc: on ? '#FFFFFF' : 'rgba(255,255,255,.72)', dc: on ? 'rgba(255,255,255,.86)' : 'rgba(255,255,255,.5)',
+          mm: on ? glow : null, ml: on ? off : null, on: () => this.setState({ kc: i }) };
+      })
+    };
+  }
+  renderVals() {
+    this.kcItems = [{"title":"Record keeping","desc":"Maintaining complete books with limited in-house resources.","slot":"smes-kc-1","src":"https://images.unsplash.com/photo-1554224155-6726b3ff858f?fm=jpg&q=82&w=1200&auto=format&fit=crop"},{"title":"Tax compliance","desc":"Meeting income tax, VAT and TDS obligations on time.","slot":"smes-kc-2","src":"https://images.unsplash.com/photo-1600880292203-757bb62b4baf?fm=jpg&q=82&w=1200&auto=format&fit=crop"},{"title":"Cash and credit","desc":"Managing receivables, payables and bank facilities.","slot":"smes-kc-3","src":"https://images.unsplash.com/photo-1552664730-d307ca884978?fm=jpg&q=82&w=1200&auto=format&fit=crop"},{"title":"Business and personal finances","desc":"Separating owner transactions from business accounts.","slot":"smes-kc-4","src":"https://images.unsplash.com/photo-1626266061368-46a8f578ddd6?fm=jpg&q=82&w=1200&auto=format&fit=crop"},{"title":"Governance","desc":"Introducing clear policies, roles and approvals as the business grows.","slot":"smes-kc-5","src":"https://images.unsplash.com/photo-1642043175009-5997b3a078d8?fm=jpg&q=82&w=1200&auto=format&fit=crop"},{"title":"Succession planning","desc":"Preparing for changes in ownership and management.","slot":"smes-kc-6","src":"https://images.unsplash.com/photo-1551288049-bebda4e38f71?fm=jpg&q=82&w=1200&auto=format&fit=crop"}];
+    const { menu, mobile, w, ind, cat, form, sent, err, slide } = this.state;
+    const N = SLIDES.length, go = i => this.setState({ slide: (i + N) % N });
+    const wide = w >= 880;
+    const hero = this.props.heroLayout ?? 'angled';
+    const svc = this.props.servicesLayout ?? 'grid';
+    const close = () => this.setState({ menu: null });
+    return {
+      wide, narrow: !wide,
+      isMobile: w < 720, notMobile: w >= 720,
+      indCols: w >= 860 ? 'minmax(0,1fr) minmax(0,1.05fr)' : 'minmax(0,1fr)', indRatio: w >= 860 ? '4 / 5' : '4 / 3',
+      navPadX: w < 1040 ? '6px' : w < 1200 ? '8px' : 'clamp(10px,1vw,16px)', navFs: w < 1040 ? '14.5px' : w < 1200 ? '15px' : '16.5px', hdrLogoW: w < 1040 ? '80px' : w < 1200 ? '96px' : '120px', hdrNameFs: w < 1040 ? '13px' : w < 1200 ? '14.5px' : '17px', hdrGap: w < 1040 ? '14px' : w < 1200 ? '20px' : 'clamp(24px,2.6vw,44px)', ctaPadX: w < 1040 ? '12px' : w < 1200 ? '14px' : '16px',
+      servicesRot: this.state.menu === 'services' ? 'rotate(180deg)' : 'none', industriesRot: this.state.menu === 'industries' ? 'rotate(180deg)' : 'none', aboutRot: this.state.menu === 'about' ? 'rotate(180deg)' : 'none', careersRot: this.state.menu === 'careers' ? 'rotate(180deg)' : 'none',
+      ...this.kcVals(w), ...this.wcVals(w), aHero: w >= 960 ? 'minmax(0,7fr) minmax(0,5fr)' : 'minmax(0,1fr)', aHeroRatio: w >= 960 ? '4 / 5' : '3 / 2', aTwo: w >= 900 ? 'minmax(0,4fr) minmax(0,8fr)' : 'minmax(0,1fr)', aSplit: w >= 900 ? 'minmax(0,1fr) minmax(0,1fr)' : 'minmax(0,1fr)', aGrid: w >= 1000 ? 'repeat(3,minmax(0,1fr))' : w >= 640 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)', aIns: w >= 1100 ? 'repeat(4,minmax(0,1fr))' : w >= 640 ? 'repeat(2,minmax(0,1fr))' : 'minmax(0,1fr)',
+      indHeroRatio: w >= 900 ? '21 / 9' : '4 / 3',
+      auHeroScrim: w >= 900 ? 'linear-gradient(90deg, rgba(255,255,255,.97) 0%, rgba(255,255,255,.92) 42%, rgba(255,255,255,.55) 70%, rgba(255,255,255,.15) 100%)' : 'rgba(255,255,255,.88)',
+      ...(() => { const a = this.state.cvA || 0; return {whoRef: this.whoRef, whoRatio: w >= 1000 ? '4 / 5' : w >= 640 ? '4 / 4.4' : '4 / 3.4',
+      who: WHO.map(([title, desc, src, ph], i) => { const on = this.state.whoH === i; return { title, desc, src, ph, slot: 'who-cover-' + (i + 1), num: String(i + 1).padStart(2, '0'), d: (i * 0.1).toFixed(2) + 's',
+        o: this.state.whoSeen ? 1 : 0, r: this.state.whoSeen ? 'none' : 'rotateX(40deg) translateY(50px)', 
+        on: () => { if (window.matchMedia && matchMedia('(hover: hover)').matches) this.setState({ whoH: i }); }, off: () => this.setState(s => s.whoH === i ? { whoH: null } : null), tap: () => { if (!(window.matchMedia && matchMedia('(hover: hover)').matches)) this.setState(s => ({ whoH: s.whoH === i ? null : i })); }, cur: i === a ? 'true' : 'false', pick: () => this.setState({ cvA: i }), ...(() => { let d = i - a; if (d > 3) d -= 6; if (d < -3) d += 6; const ad = Math.abs(d); return { cvT: 'translateX(' + (d * (w >= 900 ? 62 : 48)) + '%) translateZ(' + (-ad * 160) + 'px) rotateY(' + (-Math.sign(d) * Math.min(ad, 1) * 48) + 'deg)', cvZ: 10 - ad, cvO: ad > 2 ? 0 : 1, cvDim: ad ? 1 : 0, cvRows: ad ? '0fr' : 'minmax(0,1fr)', cvSh: ad ? 'none' : '0 40px 70px -30px rgba(7,29,65,.6)' }; })() }; }), cvO: this.state.whoSeen ? 1 : 0, cvH: w >= 900 ? '500px' : '440px', cvW: w >= 900 ? '360px' : 'min(78vw,340px)', cvML: w >= 900 ? '-180px' : 'calc(min(78vw,340px) / -2)', cvNum: String(a + 1).padStart(2, '0'), cvPause: () => { this.cvHold = true; }, cvResume: () => { this.cvHold = false; }, cvPrev: () => this.setState({ cvA: (a + 5) % 6 }), cvNext: () => this.setState({ cvA: (a + 1) % 6 }), }; })(), ...this.hsVals(), hpW: '100%', hpClip: 'none', hpScrim: w >= 900 ? 'linear-gradient(90deg, rgba(7,29,65,.94) 0%, rgba(7,29,65,.86) 30%, rgba(7,29,65,.55) 52%, rgba(7,29,65,.12) 75%, rgba(7,29,65,0) 100%)' : 'rgba(7,29,65,.82)', hpCol: w >= 900 ? 'minmax(0,46%)' : 'minmax(0,1fr)',
+      ipTop: w >= 900 ? 'minmax(0,4fr) minmax(0,8fr)' : 'minmax(0,1fr)', ipCols: w >= 1000 ? 'repeat(3,minmax(0,1fr))' : 'minmax(0,1fr)',
+      hdrSpace: (this.state.hdrH || 123) + 'px', ipNavTop: this.state.navStuck ? (this.state.hdrH || 123) + 'px' : '0px', ipNavPos: this.state.navStuck ? 'fixed' : 'relative',
+      langOpen: !!this.state.langOpen, langRot: this.state.langOpen ? 'rotate(180deg)' : 'none', langCode: (this.state.lang || 'en') === 'ne' ? 'NE' : 'EN', langIsEn: (this.state.lang || 'en') !== 'ne', langIsNe: this.state.lang === 'ne',
+      langToggle: () => this.setState(s => ({ langOpen: !s.langOpen })), langClose: () => this.setState({ langOpen: false }),
+      setEn: () => this.setLang('en'), setNe: () => this.setLang('ne'),
+      footGap: w >= 1180 ? 'clamp(32px,3.6vw,72px)' : '20px',
+      footNameFs: w >= 1180 ? '20px' : '16px',
+      footLogoDir: w >= 860 && w < 1180 ? 'column' : 'row', footLogoAlign: w >= 860 && w < 1180 ? 'flex-start' : 'center', footLogoGap: w >= 860 && w < 1180 ? '14px' : '20px',
+      contactCols: w >= 860 ? 'minmax(0,5fr) minmax(0,6fr)' : 'minmax(0,1fr)',
+      footLogoW: w >= 860 && w < 1100 ? '104px' : '144px',
+      footBrandCol: w < 600 ? '1 / -1' : 'auto',
+      footCols: w >= 1180 ? 'minmax(330px,2fr) minmax(0,1.3fr) minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr)' : w >= 860 ? 'minmax(230px,1.2fr) minmax(0,1.3fr) minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr)' : w >= 600 ? 'repeat(3,minmax(0,1fr))' : 'repeat(2,minmax(0,1fr))',
+      svcCols: w >= 1100 ? 'minmax(0,8fr) minmax(340px,4fr)' : 'minmax(0,1fr)', svcGap: w >= 1100 ? '0 clamp(32px,4vw,64px)' : '36px',
+      svcRuleL: w >= 1100 ? '1px solid #B08A3C' : '0', svcRuleT: w >= 1100 ? '0' : '1px solid #B08A3C', svcPad: w >= 1100 ? 'clamp(96px,9vw,140px) 0 6px clamp(28px,2.6vw,40px)' : '32px 0 0',
+      heroAngledWide: hero === 'angled' && w >= 720, heroAngledNarrow: hero === 'angled' && w < 720,
+      heroSplit: hero === 'split', heroFull: hero === 'full',
+      servicesGrid: svc === 'grid', servicesList: svc === 'list',
+      servicesOpen: wide && menu === 'services', industriesOpen: wide && menu === 'industries',
+      svcMenu: SERVICES.map(([title]) => ({ title, href: SVC_PAGES[title] || '/#services', go: close })),
+      indMenu: INDUSTRIES.map(([title], i) => ({ title, href: IND_PAGES[title] || '/#industries', go: () => this.setState({ ind: i, menu: null }) })),
+      aboutOpen: wide && menu === 'about', careersOpen: wide && menu === 'careers',
+      aboutBorder: menu === 'about' ? '2px solid #C9A04A' : '2px solid transparent', careersBorder: menu === 'careers' ? '2px solid #C9A04A' : '2px solid transparent',
+      open_about: () => this.setState({ menu: 'about' }), open_careers: () => this.setState({ menu: 'careers' }),
+      toggle_about: () => this.setState(s => ({ menu: s.menu === 'about' ? null : 'about' })), toggle_careers: () => this.setState(s => ({ menu: s.menu === 'careers' ? null : 'careers' })),
+      aboutMenu: [['Our firm', 'Who we are and the services we provide.', '/about-us'], ['Our commitments', 'The five principles behind our work.', '/our-commitments'], ['Our team', 'Partners and professionals at the firm.', '/our-team'], ['Gallery', 'Photos and videos from firm events and activities.', '/gallery'], ['Contact us', 'Office details and enquiry form.', '/contact-us']].map(([title, desc, href]) => ({ title, desc, href, go: close })),
+      careersMenu: [['Qualified professionals', 'Roles for chartered accountants and experienced staff.', '/qualified-professionals'], ['Articled trainees', 'Training under ICAN articleship.', '/articled-trainees'], ['Students & internships', 'Placements for students in accounting and finance.', '/students-and-internships'], ['Enquire about careers', 'Send us your details and area of interest.', '/career-enquiry']].map(([title, desc, href]) => ({ title, desc, href, go: close })),
+      servicesBorder: menu === 'services' ? '2px solid #C9A04A' : '2px solid transparent',
+      industriesBorder: menu === 'industries' ? '2px solid #C9A04A' : '2px solid transparent',
+      openServices: () => this.setState({ menu: 'services' }),
+      openIndustries: () => this.setState({ menu: 'industries' }),
+      toggleServices: () => this.setState(s => ({ menu: s.menu === 'services' ? null : 'services' })),
+      toggleIndustries: () => this.setState(s => ({ menu: s.menu === 'industries' ? null : 'industries' })),
+      closeMenu: close,
+      closeMenuSoon: () => { clearTimeout(this.closeT); this.closeT = setTimeout(() => this.setState({ menu: null }), 350); },
+      cancelClose: () => clearTimeout(this.closeT),
+      showMobileNav: !wide && mobile, mobileOpen: mobile, mobileLabel: mobile ? 'Close' : 'Menu',
+      toggleMobile: () => this.setState(s => ({ mobile: !s.mobile })),
+      closeMobile: () => this.setState({ mobile: false }),
+      services: SERVICES.map(([title, desc], i) => ({ page: SVC_PAGES[title],
+        bg: i === this.state.svcH ? '#FFFFFF' : 'transparent', bar: i === this.state.svcH ? '#B08A3C' : 'transparent', hover: () => this.setState({ svcH: i }), unhover: () => this.setState({ svcH: null }),
+        num: String(i + 1).padStart(2, '0'), title, desc,
+        cta: 'Explore ' + SVC_IMG[i][0] + ' services', ph: 'Service photo — ' + SVC_IMG[i][1], src: SVC_IMG[i][2], credit: 'Photo by ' + SVC_IMG[i][3] + ' on Unsplash', href: SVC_IMG[i][4], slot: 'service-' + (i + 1),
+        pick: () => this.setState(s => ({ form: { ...s.form, service: title }, menu: null }))
+      })),
+      industries: INDUSTRIES.map(([name, desc, ph, src, by, href], i) => ({ page: IND_PAGES[name],
+        name, desc, ph: 'Industry photo — ' + ph, alt: ph, src, href, credit: by ? 'Photo by ' + by + ' on Unsplash' : '',
+        mBg: i === ind ? '#FFFFFF' : 'transparent', mBg2: i === ind ? '#F6F3EC' : 'transparent', sBg: i === ind ? 'rgba(255,255,255,.06)' : 'transparent', sColor: i === ind ? '#FFFFFF' : '#A9B6C8', num: String(i + 1).padStart(2, '0'), mBar: i === ind ? '#B88A2A' : 'transparent', mColor: i === ind ? '#0B2345' : '#4A525E', mWeight: i === ind ? 600 : 500, slot: 'industry-' + (i + 1), menuSlot: 'menu-industry-' + (i + 1), hidden: i !== ind,
+        active: i === ind, color: i === ind ? '#0B2345' : '#4A525E', opacity: i === ind ? 1 : 0, pe: i === ind ? 'auto' : 'none',
+        select: () => this.setState({ ind: i }),
+        pick: () => this.setState({ ind: i, menu: null })
+      })),
+      activeIndustryName: INDUSTRIES[ind][0], activeIndustryDesc: INDUSTRIES[ind][1], activeIndustryNum: String(ind + 1).padStart(2, '0'), industryTotal: String(INDUSTRIES.length).padStart(2, '0'), exploreIndustry: () => this.setState({ menu: null }), discussIndustry: () => this.setState(s => ({ form: { ...s.form, message: s.form.message || ('Enquiry regarding ' + INDUSTRIES[ind][0] + '.') } })),
+      team: [1, 2, 3, 4].map(n => ({ slot: 'team-' + n, name: '[Name ' + n + ']', role: n === 1 ? 'Managing Partner' : n === 2 ? 'Partner' : '[Role]' })),
+      values: VALUES.map(([title, desc], i) => { const on = i === this.state.val; return { num: String(i + 1).padStart(2, '0'), title, desc, active: on, bg: on ? '#FFFFFF' : 'transparent', bar: on ? '#B08A3C' : 'transparent', color: on ? '#071D41' : '#5A6270', arrow: on ? 1 : 0, select: () => this.setState({ val: i }), clear: () => this.setState({ val: null }) }; }),
+      cats: CATS.map(name => ({
+        name, active: name === cat,
+        bg: name === cat ? '#0B2345' : '#FFFFFF', fg: name === cat ? '#FFFFFF' : '#0B2345', border: name === cat ? '#0B2345' : '#C9CFD6',
+        pick: () => this.setState({ cat: name })
+      })),
+      insights: INSIGHTS.map(([c, title, desc], i) => ({ cat: c, title, desc, slot: 'insight-' + (i + 1) })).filter(a => cat === 'All' || a.cat === cat),
+      form, sent, notSent: !sent, err, hasErr: !!err,
+      onName: this.setField('name'), onEmail: this.setField('email'), onOrg: this.setField('org'),
+      onService: this.setField('service'), onMessage: this.setField('message'),
+      submit: e => {
+        e.preventDefault();
+        if (!form.name.trim()) return this.setState({ err: 'Please enter your name.' });
+        if (!/^\S+@\S+\.\S+$/.test(form.email)) return this.setState({ err: 'Please enter a valid email address.' });
+        if (this.state.sending) return;
+        const cfg = window.AR_SUPABASE || {};
+        if (!cfg.url || !cfg.key) { console.warn('Supabase not configured (supabase-config.js)'); return this.setState({ sent: true, err: '' }); }
+        this.setState({ sending: true, err: 'Sending…' });
+        fetch(cfg.url.replace(/\/$/, '') + '/rest/v1/' + (cfg.table || 'enquiries'), {
+          method: 'POST',
+          headers: Object.assign({ apikey: cfg.key, 'Content-Type': 'application/json', Prefer: 'return=minimal' }, /^sb_/.test(cfg.key) ? {} : { Authorization: 'Bearer ' + cfg.key }),
+          body: JSON.stringify({ form: "SMEs and Family Businesses", name: form.name.trim(), email: form.email.trim(), phone: form.phone || null, organization: form.org || null, service: form.service || null, message: form.message || null })
+        }).then(r => { if (!r.ok) throw new Error(r.status); this.setState({ sending: false, sent: true, err: '' }); })
+          .catch(() => this.setState({ sending: false, err: 'Sorry, your message could not be sent. Please try again or call +977-9845819811.' }));
+      },
+      reset: () => this.setState({ sent: false, form: { ...BLANK } }),
+      slides: SLIDES.map(([ph, src, by, href], i) => ({
+        ph: 'Hero photo ' + (i + 1) + ' — ' + ph, src, href, credit: 'Photo by ' + by + ' on Unsplash',
+        slotA: i ? 'hero-slide-' + (i + 1) : 'hero-photo-angled', slotS: i ? 'hero-slide-' + (i + 1) : 'hero-photo', slotF: i ? 'hero-slide-' + (i + 1) : 'hero-photo-full',
+        label: (i + 1) + ' of ' + N, goLabel: 'Show photo ' + (i + 1), active: i === slide, hidden: i !== slide,
+        opacity: i === slide ? 1 : 0, pe: i === slide ? 'auto' : 'none',
+        dot: i === slide ? '#C9A04A' : 'rgba(255,255,255,.35)', dotW: i === slide ? '28px' : '12px',
+        go: () => go(i)
+      })),
+      slideNum: String(slide + 1).padStart(2, '0'), slideTotal: String(N).padStart(2, '0'),
+      prevSlide: () => go(slide - 1), nextSlide: () => go(slide + 1),
+      pauseSlides: () => { this.paused = true; }, resumeSlides: () => { this.paused = false; },
+      year: new Date().getFullYear()
+    };
+  }
+}
+</script>
+</body>
+</html>

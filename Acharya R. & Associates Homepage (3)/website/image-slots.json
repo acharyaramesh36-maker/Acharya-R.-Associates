@@ -1,0 +1,38 @@
+{
+ "team-2": {
+  "u": "/assets/photos/team-2.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "team-1": {
+  "u": "/assets/photos/team-1.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "team-lead-photo": {
+  "u": "/assets/photos/team-lead-photo.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "team-member-1": {
+  "u": "/assets/photos/team-member-1.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "team-member-2": {
+  "u": "/assets/photos/team-member-2.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ },
+ "team-member-3": {
+  "u": "/assets/photos/team-member-3.webp",
+  "s": 1,
+  "x": 0,
+  "y": 0
+ }
+}
