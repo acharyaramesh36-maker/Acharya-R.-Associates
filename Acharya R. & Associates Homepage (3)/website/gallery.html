@@ -76,7 +76,7 @@ input,select,textarea,button{font-family:inherit}
       <a href="#contact" onMouseEnter="{{ closeMenu }}" style="margin-left:4px;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:38px;padding:0 {{ ctaPadX }};background:#0B2345;color:#FFFFFF;font:500 13.5px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .3s ease" style-hover="background:#16345F;color:#FFFFFF">Contact Us <span aria-hidden="true" style="color:#D4B26A">→</span></a>
     </sc-if>
     <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
-      <dc-import name="MobileNav" hint-size="100%,84px" style="flex:1;min-width:0;height:100%"></dc-import>
+      <div style="flex:1;min-width:0;height:100%;display:flex"><dc-import name="MobileNav" hint-size="100%,84px" style="width:100%;height:100%"></dc-import></div>
     </sc-if>
   </div>
 
@@ -437,7 +437,6 @@ class Component extends DCLogic {
     if (location.hash === '#videos') this.setState({ gCat: 'Videos' });
     this._gKey = e => { if (this.state.gOpen == null) return; if (e.key === 'Escape') this.setState({ gOpen: null }); else if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { const n = document.querySelectorAll('#gallery li').length || 1; this.setState(s => ({ gOpen: (s.gOpen + (e.key === 'ArrowRight' ? 1 : n - 1)) % n })); } };
     window.addEventListener('keydown', this._gKey);
-    fetch('assets/hero-video.mp4', { method: 'HEAD' }).then(r => { if (r.ok && /video/.test(r.headers.get('content-type') || 'video')) this.setState({ hsVidSrc: 'assets/hero-video.mp4' }); }).catch(() => {});
     this._hsT = setInterval(() => { if (!this.state.hsPause && !document.hidden) this.setState(s => ({ hs: ((s.hs || 0) + 1) % (s.hsVid ? 4 : 3) })); }, 6500);
     { const m = document.cookie.match(/googtrans=\/en\/(\w+)/); if (m) this.setState({ lang: m[1] }); }
     this.onS = () => { const h = document.querySelector('header'); const hh = h ? h.offsetHeight : 123; const ph = document.getElementById('ipnav-ph'); const stuck = ph ? ph.getBoundingClientRect().top <= hh : false; if (hh !== this.state.hdrH || stuck !== this.state.navStuck) this.setState({ hdrH: hh, navStuck: stuck }); };
@@ -470,11 +469,11 @@ class Component extends DCLogic {
   }
   galVals() {
     const cat = this.state.gCat || 'All';
-    const vids = String(this.props.videoLinks ?? '').split(/\n|;/).map(s => s.trim()).filter(Boolean).map(line => {
+    const vids = [{ cat: 'Videos', title: 'Acharya R. & Associates — Brand film', date: '2026', ratio: '16 / 9', yt: '', mp4: 'assets/brand-film.mp4' }].concat(String(this.props.videoLinks ?? '').split(/\n|;/).map(s => s.trim()).filter(Boolean).map(line => {
       const p = line.split('|').map(s => s.trim()); const url = p[p.length - 1];
       const yt = (url.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/) || [])[1];
       return { cat: p.length > 2 ? p[0] : 'Videos', title: p.length > 1 ? p[p.length - 2] : 'Video', date: '', ratio: '16 / 9', yt, mp4: yt ? '' : url };
-    });
+    }));
     const all = GALLERY.map(([c, t, d, r, src], i) => ({ cat: c, title: t, date: d, ratio: r, src, slot: 'gal-' + (i + 1) })).concat(vids.map((v, i) => ({ ...v, slot: 'gal-v' + (i + 1) })));
     const list = all.filter(x => cat === 'All' || (cat === 'Videos' ? (x.yt || x.mp4) : x.cat === cat));
     const tabs = GAL_CATS.concat(vids.length || cat === 'Videos' ? ['Videos'] : []);
@@ -495,7 +494,7 @@ class Component extends DCLogic {
   renderVals() {
     const { menu, mobile, w, ind, cat, form, sent, err, slide } = this.state;
     const N = SLIDES.length, go = i => this.setState({ slide: (i + N) % N });
-    const wide = w >= 880;
+    const wide = w >= 1000;
     const hero = this.props.heroLayout ?? 'angled';
     const svc = this.props.servicesLayout ?? 'grid';
     const close = () => this.setState({ menu: null });
@@ -582,7 +581,7 @@ class Component extends DCLogic {
         const payload = { form: "Gallery", name: form.name.trim(), email: form.email.trim(), phone: form.phone || null, organization: form.org || null, service: form.service || null, message: form.message || null };
         this.setState({ sending: true, err: 'Sending…' });
         const sb = cfg.url && cfg.key ? fetch(cfg.url.replace(/\/$/, '') + '/rest/v1/' + (cfg.table || 'enquiries'), { method: 'POST', headers: Object.assign({ apikey: cfg.key, 'Content-Type': 'application/json', Prefer: 'return=minimal' }, /^sb_/.test(cfg.key) ? {} : { Authorization: 'Bearer ' + cfg.key }), body: JSON.stringify(payload) }).then(r => { if (!r.ok) throw new Error(r.status); }) : Promise.reject(new Error('no supabase'));
-        const em = fetch('https://formsubmit.co/ajax/audit.acharyaca@outlook.com', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.assign({ _subject: 'New website enquiry — ' + payload.form, _cc: 'acharyaramesh36@gmail.com', _template: 'table', _captcha: 'false' }, payload)) }).then(r => { if (!r.ok) throw new Error(r.status); });
+        const em = fetch('https://formsubmit.co/ajax/audit.acharyaca@outlook.com', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.assign({ _subject: 'New website enquiry — ' + payload.form, _cc: 'acharyaramesh36@gmail.com', _template: 'table', _captcha: 'false' }, payload)) }).then(r => r.json().catch(() => ({}))).then(j => { if (String(j.success) !== 'true') throw new Error(j.message || 'email not sent'); });
         Promise.allSettled([sb, em]).then(rs => { if (rs.some(x => x.status === 'fulfilled')) this.setState({ sending: false, sent: true, err: '' }); else this.setState({ sending: false, err: 'Sorry, your message could not be sent. Please try again or call +977-9845819811.' }); });
       },
       reset: () => this.setState({ sent: false, form: { ...BLANK } }),

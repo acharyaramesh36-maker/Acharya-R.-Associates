@@ -76,7 +76,7 @@ input,select,textarea,button{font-family:inherit}
       <a href="#contact" onMouseEnter="{{ closeMenu }}" style="margin-left:4px;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:38px;padding:0 {{ ctaPadX }};background:#0B2345;color:#FFFFFF;font:500 13.5px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .3s ease" style-hover="background:#16345F;color:#FFFFFF">Contact Us <span aria-hidden="true" style="color:#D4B26A">→</span></a>
     </sc-if>
     <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
-      <dc-import name="MobileNav" hint-size="100%,84px" style="flex:1;min-width:0;height:100%"></dc-import>
+      <div style="flex:1;min-width:0;height:100%;display:flex"><dc-import name="MobileNav" hint-size="100%,84px" style="width:100%;height:100%"></dc-import></div>
     </sc-if>
   </div>
 
@@ -195,12 +195,12 @@ input,select,textarea,button{font-family:inherit}
 
 <main>
   <section id="top" data-screen-label="Due Diligence &amp; Agreed-Upon Procedures Hero" style="position:relative;overflow:hidden;background:#071D41;min-height:clamp(560px,46vw,740px);box-sizing:border-box;padding:clamp(28px,3vw,40px) clamp(20px,4vw,48px) clamp(48px,10vw,120px);scroll-margin-top:200px">
-    <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;overflow:hidden;background:#0B2345"><div style="position:absolute;inset:0;opacity:{{ hsO0 }};transform:{{ hsT0 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="dd-hero" shape="rect" src="https://images.unsplash.com/photo-1711097383282-28097ae16b1d?fm=jpg&amp;q=82&amp;w=1800&amp;auto=format&amp;fit=crop" placeholder="Hero photo — reviewing transaction documents" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div><div style="position:absolute;inset:0;opacity:{{ hsO1 }};transform:{{ hsT1 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="dd-hero-2" shape="rect" src="https://images.unsplash.com/photo-1552664730-d307ca884978?fm=jpg&amp;q=82&amp;w=1800&amp;auto=format&amp;fit=crop" placeholder="Hero photo 2 — team discussion" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div><div style="position:absolute;inset:0;opacity:{{ hsO2 }};transform:{{ hsT2 }};transition:opacity 1.2s ease,transform 7s linear"><image-slot id="dd-hero-3" shape="rect" src="https://images.unsplash.com/photo-1707157284454-553ef0a4ed0d?fm=jpg&amp;q=82&amp;w=1800&amp;auto=format&amp;fit=crop" placeholder="Hero photo 3 — financial documents" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div>{{ hsVideo }}</div>
+    <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;overflow:hidden;background:#0B2345"><sc-for list="{{ slides }}" as="g" hint-placeholder-count="1"><div style="position:absolute;inset:0;opacity:{{ g.opacity }};transition:opacity .8s ease"><image-slot id="{{ g.slotA }}" shape="rect" src="{{ g.src }}" credit-href="{{ g.href }}" placeholder="{{ g.ph }}" style="width:100%;height:100%;display:block" credit="Photo on Unsplash"></image-slot></div></sc-for></div>
     <div aria-hidden="true" style="position:absolute;inset:0;z-index:0;pointer-events:none;background:{{ hpScrim }}"></div>
     <div style="position:absolute;right:clamp(20px,4vw,48px);bottom:clamp(20px,3vw,36px);z-index:2;display:flex;align-items:center;gap:14px;background:rgba(7,29,65,.72);padding:10px 10px 10px 18px">
-      <span style="font:500 14px/1 'Newsreader',serif;letter-spacing:.06em;color:#D4B26A;white-space:nowrap">{{ hsNum }} <span style="color:#8FA0B6">/ {{ hsTot }}</span></span>
-      <div style="display:flex;gap:6px"><sc-for list="{{ hsDots }}" as="d" hint-placeholder-count="3"><button type="button" aria-label="{{ d.label }}" aria-current="{{ d.cur }}" onClick="{{ d.go }}" style="width:{{ d.w }};height:3px;padding:0;border:0;background:{{ d.bg }};cursor:pointer;transition:width .3s,background .3s"></button></sc-for></div>
-      <div style="display:flex;gap:4px"><button type="button" aria-label="Previous slide" onClick="{{ hsPrev }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 16px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">←</button><button type="button" aria-label="{{ hsPauseLabel }}" onClick="{{ hsToggle }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 13px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">{{ hsPauseIcon }}</button><button type="button" aria-label="Next slide" onClick="{{ hsNext }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 16px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">→</button></div>
+      <span style="font:500 14px/1 'Newsreader',serif;letter-spacing:.06em;color:#D4B26A;white-space:nowrap">{{ slideNum }} <span style="color:#8FA0B6">/ {{ slideTotal }}</span></span>
+      <div style="display:flex;gap:6px"><sc-for list="{{ slides }}" as="g" hint-placeholder-count="4"><button type="button" aria-label="{{ g.goLabel }}" aria-current="{{ g.active }}" onClick="{{ g.go }}" style="width:{{ g.dotW }};height:23px;padding:10px 0;box-sizing:border-box;background-clip:content-box;border:0;background-color:{{ g.dot }};cursor:pointer;transition:width .3s"></button></sc-for></div>
+      <div style="display:flex;gap:4px"><button type="button" aria-label="Previous photo" onClick="{{ prevSlide }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 16px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">←</button><button type="button" aria-label="Next photo" onClick="{{ nextSlide }}" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.35);background:transparent;color:#FFFFFF;font:400 16px/1 'Public Sans',sans-serif;cursor:pointer" style-hover="border-color:#C9A04A;color:#D4B26A">→</button></div>
     </div>
     <span aria-hidden="true" style="position:absolute;left:0;bottom:0;width:120px;height:4px;background:#B08A3C;z-index:1"></span>
     <div style="position:relative;z-index:1;max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,5vw,64px)">
@@ -583,7 +583,6 @@ class Component extends DCLogic {
   }
   componentDidMount() {
     this._keT = setInterval(() => { if (!this.keHold && !document.hidden) this.setState(s => ({ keA: ((s.keA || 0) + 1) % (this.keItems || []).length })); }, 3000);
-    fetch('assets/hero-video.mp4', { method: 'HEAD' }).then(r => { if (r.ok && /video/.test(r.headers.get('content-type') || 'video')) this.setState({ hsVidSrc: 'assets/hero-video.mp4' }); }).catch(() => {});
     this._hsT = setInterval(() => { if (!this.state.hsPause && !document.hidden) this.setState(s => ({ hs: ((s.hs || 0) + 1) % (s.hsVid ? 4 : 3) })); }, 6500);
     { const m = document.cookie.match(/googtrans=\/en\/(\w+)/); if (m) this.setState({ lang: m[1] }); }
     this.onS = () => { const h = document.querySelector('header'); const hh = h ? h.offsetHeight : 123; const ph = document.getElementById('ipnav-ph'); const stuck = ph ? ph.getBoundingClientRect().top <= hh : false; if (hh !== this.state.hdrH || stuck !== this.state.navStuck) this.setState({ hdrH: hh, navStuck: stuck }); };
@@ -592,7 +591,7 @@ class Component extends DCLogic {
     this.onK = e => { if (e.key === 'Escape') this.setState({ menu: null, mobile: false }); };
     window.addEventListener('resize', this.onR);
     window.addEventListener('keydown', this.onK);
-    this.timer = setInterval(() => { if (!this.paused && !document.hidden) this.setState(s => ({ slide: (s.slide + 1) % SLIDES.length })); }, 6000);
+    this.timer = setInterval(() => { if (!this.paused && !document.hidden) this.setState(s => ({ slide: (s.slide + 1) % Math.min(5, SLIDES.length) })); }, 6000);
   }
   componentWillUnmount() {
     clearInterval(this._keT);
@@ -611,7 +610,7 @@ class Component extends DCLogic {
       hsDots: Array.from({ length: n }, (_, k) => ({ label: 'Show slide ' + (k + 1), cur: k === i ? 'true' : 'false', w: k === i ? '28px' : '12px', bg: k === i ? '#D4B26A' : 'rgba(255,255,255,.4)', go: () => go(k) })),
       hsPrev: () => go(i - 1), hsNext: () => go(i + 1),
       hsToggle: () => this.setState(s => ({ hsPause: !s.hsPause })), hsPauseIcon: this.state.hsPause ? '▶' : 'II', hsPauseLabel: this.state.hsPause ? 'Play slideshow' : 'Pause slideshow',
-      hsVideo: this.state.hsVidSrc ? React.createElement('video', { src: this.state.hsVidSrc, muted: true, loop: true, playsInline: true, autoPlay: true, preload: 'auto', onLoadedData: e => { const v = e.target; v.muted = true; v.play && v.play().catch(() => {}); if (!this.state.hsVid) this.setState({ hsVid: true }); }, style: { position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: (this.state.hsVid && ((this.state.hs || 0) % 4) === 3 ? 1 : 0), transition: 'opacity 1.2s ease' } }) : null, hsVidOk: e => { const v = e.target; v.muted = true; v.play && v.play().catch(() => {}); if (!this.state.hsVid) this.setState({ hsVid: true }); }
+      hsVideo: null
     };
   }
   inVals() {
@@ -650,8 +649,8 @@ class Component extends DCLogic {
   renderVals() {
     this.keItems = [{"title":"Defined scope","desc":"Procedures and coverage agreed in writing before work begins.","src":"https://images.unsplash.com/photo-1591696205602-2f950c417cb9?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Defined scope","slot":"due-ke-1"},{"title":"Quality of earnings","desc":"Adjustments to reported results to show underlying performance.","src":"https://images.unsplash.com/photo-1657727534676-cac1bb160d64?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Quality of earnings","slot":"due-ke-2"},{"title":"Working capital","desc":"Analysis of receivables, payables and inventory levels.","src":"https://images.unsplash.com/photo-1551836022-d5d88e9218df?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Working capital","slot":"due-ke-3"},{"title":"Liabilities and exposures","desc":"Identification of debt, contingencies and tax risks.","src":"https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Liabilities and exposures","slot":"due-ke-4"},{"title":"Factual reporting","desc":"Agreed-upon procedures reported as findings, without an opinion.","src":"https://images.unsplash.com/photo-1554224155-a1487473ffd9?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Factual reporting","slot":"due-ke-5"},{"title":"Timetable discipline","desc":"Work planned to fit transaction or reporting deadlines.","src":"https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?fm=jpg&q=82&w=1200&auto=format&fit=crop","ph":"Photo — Timetable discipline","slot":"due-ke-6"}];
     const { menu, mobile, w, ind, cat, form, sent, err, slide } = this.state;
-    const N = SLIDES.length, go = i => this.setState({ slide: (i + N) % N });
-    const wide = w >= 880;
+    const N = Math.min(5, SLIDES.length), go = i => this.setState({ slide: (i + N) % N });
+    const wide = w >= 1000;
     const hero = this.props.heroLayout ?? 'angled';
     const svc = this.props.servicesLayout ?? 'grid';
     const close = () => this.setState({ menu: null });
@@ -734,13 +733,13 @@ class Component extends DCLogic {
         const payload = { form: "Due Diligence and Agreed-Upon Procedures", name: form.name.trim(), email: form.email.trim(), phone: form.phone || null, organization: form.org || null, service: form.service || null, message: form.message || null };
         this.setState({ sending: true, err: 'Sending…' });
         const sb = cfg.url && cfg.key ? fetch(cfg.url.replace(/\/$/, '') + '/rest/v1/' + (cfg.table || 'enquiries'), { method: 'POST', headers: Object.assign({ apikey: cfg.key, 'Content-Type': 'application/json', Prefer: 'return=minimal' }, /^sb_/.test(cfg.key) ? {} : { Authorization: 'Bearer ' + cfg.key }), body: JSON.stringify(payload) }).then(r => { if (!r.ok) throw new Error(r.status); }) : Promise.reject(new Error('no supabase'));
-        const em = fetch('https://formsubmit.co/ajax/audit.acharyaca@outlook.com', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.assign({ _subject: 'New website enquiry — ' + payload.form, _cc: 'acharyaramesh36@gmail.com', _template: 'table', _captcha: 'false' }, payload)) }).then(r => { if (!r.ok) throw new Error(r.status); });
+        const em = fetch('https://formsubmit.co/ajax/audit.acharyaca@outlook.com', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.assign({ _subject: 'New website enquiry — ' + payload.form, _cc: 'acharyaramesh36@gmail.com', _template: 'table', _captcha: 'false' }, payload)) }).then(r => r.json().catch(() => ({}))).then(j => { if (String(j.success) !== 'true') throw new Error(j.message || 'email not sent'); });
         Promise.allSettled([sb, em]).then(rs => { if (rs.some(x => x.status === 'fulfilled')) this.setState({ sending: false, sent: true, err: '' }); else this.setState({ sending: false, err: 'Sorry, your message could not be sent. Please try again or call +977-9845819811.' }); });
       },
       reset: () => this.setState({ sent: false, form: { ...BLANK } }),
-      slides: SLIDES.map(([ph, src, by, href], i) => ({
+      slides: SLIDES.slice(0, 5).map(([ph, src, by, href], i) => ({
         ph: 'Hero photo ' + (i + 1) + ' — ' + ph, src, href, credit: 'Photo by ' + by + ' on Unsplash',
-        slotA: i ? 'hero-slide-' + (i + 1) : 'hero-photo-angled', slotS: i ? 'hero-slide-' + (i + 1) : 'hero-photo', slotF: i ? 'hero-slide-' + (i + 1) : 'hero-photo-full',
+        slotA: 'due-diligence-and-agreed-upon-procedures-hero-' + (i + 1), slotS: i ? 'hero-slide-' + (i + 1) : 'hero-photo', slotF: i ? 'hero-slide-' + (i + 1) : 'hero-photo-full',
         label: (i + 1) + ' of ' + N, goLabel: 'Show photo ' + (i + 1), active: i === slide, hidden: i !== slide,
         opacity: i === slide ? 1 : 0, pe: i === slide ? 'auto' : 'none',
         dot: i === slide ? '#C9A04A' : 'rgba(255,255,255,.35)', dotW: i === slide ? '28px' : '12px',

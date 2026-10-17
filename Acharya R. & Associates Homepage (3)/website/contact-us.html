@@ -76,7 +76,7 @@ input,select,textarea,button{font-family:inherit}
       <a href="#contact" onMouseEnter="{{ closeMenu }}" style="margin-left:4px;flex:none;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:38px;padding:0 {{ ctaPadX }};background:#0B2345;color:#FFFFFF;font:500 13.5px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .3s ease" style-hover="background:#16345F;color:#FFFFFF">Contact Us <span aria-hidden="true" style="color:#D4B26A">→</span></a>
     </sc-if>
     <sc-if value="{{ narrow }}" hint-placeholder-val="{{ false }}">
-      <dc-import name="MobileNav" hint-size="100%,84px" style="flex:1;min-width:0;height:100%"></dc-import>
+      <div style="flex:1;min-width:0;height:100%;display:flex"><dc-import name="MobileNav" hint-size="100%,84px" style="width:100%;height:100%"></dc-import></div>
     </sc-if>
   </div>
 
@@ -442,7 +442,7 @@ class Component extends DCLogic {
   renderVals() {
     const { menu, mobile, w, ind, cat, form, sent, err, slide } = this.state;
     const N = SLIDES.length, go = i => this.setState({ slide: (i + N) % N });
-    const wide = w >= 880;
+    const wide = w >= 1000;
     const hero = this.props.heroLayout ?? 'angled';
     const svc = this.props.servicesLayout ?? 'grid';
     const close = () => this.setState({ menu: null });
@@ -528,7 +528,7 @@ class Component extends DCLogic {
         const payload = { form: "Contact Us", name: form.name.trim(), email: form.email.trim(), phone: form.phone || null, organization: form.org || null, service: form.service || null, message: form.message || null };
         this.setState({ sending: true, err: 'Sending…' });
         const sb = cfg.url && cfg.key ? fetch(cfg.url.replace(/\/$/, '') + '/rest/v1/' + (cfg.table || 'enquiries'), { method: 'POST', headers: Object.assign({ apikey: cfg.key, 'Content-Type': 'application/json', Prefer: 'return=minimal' }, /^sb_/.test(cfg.key) ? {} : { Authorization: 'Bearer ' + cfg.key }), body: JSON.stringify(payload) }).then(r => { if (!r.ok) throw new Error(r.status); }) : Promise.reject(new Error('no supabase'));
-        const em = fetch('https://formsubmit.co/ajax/audit.acharyaca@outlook.com', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.assign({ _subject: 'New website enquiry — ' + payload.form, _cc: 'acharyaramesh36@gmail.com', _template: 'table', _captcha: 'false' }, payload)) }).then(r => { if (!r.ok) throw new Error(r.status); });
+        const em = fetch('https://formsubmit.co/ajax/audit.acharyaca@outlook.com', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.assign({ _subject: 'New website enquiry — ' + payload.form, _cc: 'acharyaramesh36@gmail.com', _template: 'table', _captcha: 'false' }, payload)) }).then(r => r.json().catch(() => ({}))).then(j => { if (String(j.success) !== 'true') throw new Error(j.message || 'email not sent'); });
         Promise.allSettled([sb, em]).then(rs => { if (rs.some(x => x.status === 'fulfilled')) this.setState({ sending: false, sent: true, err: '' }); else this.setState({ sending: false, err: 'Sorry, your message could not be sent. Please try again or call +977-9845819811.' }); });
       },
       reset: () => this.setState({ sent: false, form: { ...BLANK } }),
