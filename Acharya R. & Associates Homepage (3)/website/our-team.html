@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&amp;family=Public+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
 <script src="./image-slot.js"></script>
-<script src="/supabase-config.js"></script>
+<script src="supabase-config.js"></script>
 <style>
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
@@ -29,12 +29,12 @@ input,select,textarea,button{font-family:inherit}
 </style>
 <style>.goog-te-banner-frame,.skiptranslate iframe,#goog-gt-tt,.goog-te-balloon-frame{display:none!important}body{top:0!important}.goog-text-highlight{background:none!important;box-shadow:none!important}</style>
 <script>function googleTranslateElementInit(){new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,ne',autoDisplay:false},'gt-el');}</script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<script src="/nepali-fix.js"></script>
-<script src="/nepali-dict.js"></script>
+<script>(function(){function L(){if(window.__gtL)return;window.__gtL=1;var s=document.createElement('script');s.src='https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';document.head.appendChild(s);}window.loadGT=L;if(/googtrans=\/en\/ne/.test(document.cookie))L();})();</script>
+<script src="nepali-fix.js"></script>
+<script src="nepali-dict.js"></script>
 <style>@keyframes megaIn{from{clip-path:inset(0 0 100% 0);opacity:.4}to{clip-path:inset(0 0 0 0);opacity:1}}@keyframes megaLeft{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}@keyframes megaUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}</style>
 <style>html,body{overflow-x:clip;max-width:100%}img,video,iframe{max-width:100%}@media (max-width:480px){[data-sm-hide]{display:none!important}}@media (max-width:879px){header>div:nth-child(2)>*{flex:1 1 auto!important;min-width:0!important;width:100%}}@media (max-width:599px){footer>div>div:first-child{grid-template-columns:repeat(2,minmax(0,1fr))!important}footer>div>div:first-child>div:first-child{grid-column:1 / -1!important}}</style>
-</helmet>
+<script src="ext-links.js"></script></helmet>
 
 <header style="position:fixed;top:0;left:0;right:0;z-index:50;background:#FFFFFF;border-bottom:1px solid #DDE1E6" onMouseLeave="{{ closeMenuSoon }}" onMouseEnter="{{ cancelClose }}">
   <div style="background:#0B2345">
@@ -53,14 +53,14 @@ input,select,textarea,button{font-family:inherit}
           </ul>
         </sc-if>
       </div>
-      <span style="display:flex;align-items:center;gap:8px;color:#DCE3EC;white-space:nowrap"><span aria-hidden="true" style="color:#D4B26A">Tel:</span><a href="tel:+9779845819811" style="color:#DCE3EC;padding:4px 2px;border-bottom:1px solid transparent;transition:color .25s ease,border-color .25s ease" style-hover="color:#FFFFFF;border-bottom-color:#D4B26A">+977-9845819811</a><span aria-hidden="true" data-sm-hide="" style="color:#8FA0B6">/</span><a data-sm-hide="" href="tel:+9779716393920" style="color:#DCE3EC;padding:4px 2px;border-bottom:1px solid transparent;transition:color .25s ease,border-color .25s ease" style-hover="color:#FFFFFF;border-bottom-color:#D4B26A">9716393920</a></span>
+      <span style="display:flex;align-items:center;gap:8px;color:#DCE3EC;white-space:nowrap"><span aria-hidden="true" style="color:#D4B26A">Tel:</span><a href="tel:+9779845819811" style="color:#DCE3EC;padding:4px 2px;border-bottom:1px solid transparent;transition:color .25s ease,border-color .25s ease" style-hover="color:#FFFFFF;border-bottom-color:#D4B26A">+977 9845819811</a><span aria-hidden="true" data-sm-hide="" style="color:#8FA0B6">/</span><a data-sm-hide="" href="tel:+9779716393920" style="color:#DCE3EC;padding:4px 2px;border-bottom:1px solid transparent;transition:color .25s ease,border-color .25s ease" style-hover="color:#FFFFFF;border-bottom-color:#D4B26A">9716393920</a></span>
     </div>
   </div>
   <div style="margin:0 auto;padding:0 clamp(20px,3vw,40px);height:84px;display:flex;align-items:center;justify-content:flex-start;gap:{{ hdrGap }}">
     
 
     <sc-if value="{{ wide }}" hint-placeholder-val="{{ true }}">
-      <a href="/" aria-label="Acharya R. &amp; Associates — home" style="display:flex;align-items:center;gap:14px;color:#0B2345">
+      <a href="index.html" aria-label="Acharya R. &amp; Associates — home" style="display:flex;align-items:center;gap:14px;color:#0B2345">
       
       <img src="assets/ar-logo-v2.svg" alt="" width="120" height="72" style="display: block; height: 72px; flex: none; object-fit:contain; width: 120px"><span style="display:flex;flex-direction:column;gap:5px">
         <span style="font:600 {{ hdrNameFs }}/1 'Public Sans',sans-serif;letter-spacing:.12em;color:#0B2345;white-space:nowrap">ACHARYA R. &amp; ASSOCIATES</span>
@@ -87,10 +87,9 @@ input,select,textarea,button{font-family:inherit}
         <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
           <div style="display:flex;flex-direction:column;gap:28px">
             <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Services</span>
-            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Assurance, tax and advisory work delivered with independence, technical quality and care.</p>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Audit, tax, accounting and advisory services, delivered with independence, technical quality and care.</p>
           </div>
           <div style="display:flex;flex-direction:column;gap:24px">
-            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
             <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
           </div>
         </div>
@@ -100,7 +99,7 @@ input,select,textarea,button{font-family:inherit}
             <sc-for list="{{ svcMenu }}" as="m" hint-placeholder-count="4">
               <a href="{{ m.href }}" onClick="{{ m.go }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
             </sc-for>
-            <a href="/#services" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">View all services <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+            <a href="index.html#services" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">View all services <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
           </div>
         </div>
       </div>
@@ -112,10 +111,9 @@ input,select,textarea,button{font-family:inherit}
         <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
           <div style="display:flex;flex-direction:column;gap:28px">
             <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Industries</span>
-            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Industry knowledge, independent perspective and practical solutions for the sectors we serve across Nepal.</p>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Sector knowledge and practical advice for the industries we serve across Nepal.</p>
           </div>
           <div style="display:flex;flex-direction:column;gap:24px">
-            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
             <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
           </div>
         </div>
@@ -125,7 +123,7 @@ input,select,textarea,button{font-family:inherit}
             <sc-for list="{{ indMenu }}" as="m" hint-placeholder-count="4">
               <a href="{{ m.href }}" onClick="{{ m.go }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
             </sc-for>
-            <a href="/#industries" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Discover our industries <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+            <a href="index.html#industries" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Discover our industries <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
           </div>
         </div>
       </div>
@@ -137,10 +135,9 @@ input,select,textarea,button{font-family:inherit}
         <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
           <div style="display:flex;flex-direction:column;gap:28px">
             <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">About Us</span>
-            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">Acharya R. &amp; Associates is committed to independent, high-quality professional work for organizations across Nepal.</p>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">A firm of Chartered Accountants in Kathmandu, providing independent, high-quality professional services to organisations across Nepal.</p>
           </div>
           <div style="display:flex;flex-direction:column;gap:24px">
-            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
             <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
           </div>
         </div>
@@ -150,7 +147,7 @@ input,select,textarea,button{font-family:inherit}
             <sc-for list="{{ aboutMenu }}" as="m" hint-placeholder-count="4">
               <a href="{{ m.href }}" onClick="{{ closeMenu }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
             </sc-for>
-            <a href="/about-us" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Learn more about the firm <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+            <a href="about-us.html" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Learn more about the firm <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
           </div>
         </div>
       </div>
@@ -162,10 +159,9 @@ input,select,textarea,button{font-family:inherit}
         <div style="animation:megaLeft .6s .08s cubic-bezier(.22,.7,.2,1) both;display:flex;flex-direction:column;justify-content:space-between;gap:48px;padding:40px 0 44px;background:linear-gradient(150deg,#004A97 0%,#00336E 50%,#001E45 100%);margin-left:calc(-1 * clamp(20px,4vw,48px));padding-left:clamp(20px,4vw,48px)">
           <div style="display:flex;flex-direction:column;gap:28px">
             <span style="display:block;padding:16px 12px;background:#04458F;border-left:2px solid #F5B21A;font:600 22px/1 'Public Sans',sans-serif;color:#F5B21A">Careers</span>
-            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">We welcome qualified professionals, articled trainees and students who want to build a career in audit, tax and advisory.</p>
+            <p style="margin:0;padding-right:clamp(20px,2.4vw,36px);font:400 20px/1.6 'Public Sans',sans-serif;letter-spacing:.01em;color:#FFFFFF;text-wrap:pretty">We welcome qualified professionals, articled trainees and students who want to build a career in audit, tax, accounting and advisory.</p>
           </div>
           <div style="display:flex;flex-direction:column;gap:24px">
-            <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Contact us <span aria-hidden="true" style="font-size:24px">→</span></a>
             <a href="#contact" onClick="{{ closeMenu }}" style="display:inline-flex;flex:none;white-space:nowrap;align-items:center;gap:14px;align-self:flex-start;font:400 20px/1 'Public Sans',sans-serif;color:#F5B21A;transition:gap .3s ease" style-hover="color:#FFFFFF;gap:20px">Speak with our team <span aria-hidden="true" style="font-size:24px">→</span></a>
           </div>
         </div>
@@ -175,7 +171,7 @@ input,select,textarea,button{font-family:inherit}
             <sc-for list="{{ careersMenu }}" as="m" hint-placeholder-count="4">
               <a href="{{ m.href }}" onClick="{{ closeMenu }}" style="align-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8" style-hover="color:#00285A;text-decoration:underline;text-decoration-color:#2D5AA8;text-underline-offset:5px">{{ m.title }}</a>
             </sc-for>
-            <a href="/careers" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Explore careers <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
+            <a href="careers.html" onClick="{{ closeMenu }}" style="display:inline-flex;align-items:center;gap:16px;align-self:start;justify-self:start;font:400 20px/1.3 'Public Sans',sans-serif;letter-spacing:.01em;color:#2D5AA8;transition:gap .3s ease" style-hover="color:#00285A;gap:22px">Explore careers <span aria-hidden="true" style="font-size:24px;color:#2D5AA8">→</span></a>
           </div>
         </div>
       </div>
@@ -184,10 +180,10 @@ input,select,textarea,button{font-family:inherit}
 
   <sc-if value="{{ showMobileNav }}" hint-placeholder-val="{{ false }}">
     <nav id="mobile-nav" aria-label="Mobile" style="position:absolute;left:0;right:0;top:100%;background:#FFFFFF;border-top:2px solid #C9A04A;border-bottom:1px solid #DDE1E6;padding:8px clamp(20px,4vw,48px) 28px;display:flex;flex-direction:column">
-      <a href="/#services" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Services</a>
-      <a href="/#industries" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Industries</a>
-      <a href="/about-us" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">About Us</a>
-      <a href="/careers" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Careers</a>
+      <a href="index.html#services" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Services</a>
+      <a href="index.html#industries" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Industries</a>
+      <a href="about-us.html" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">About Us</a>
+      <a href="careers.html" onClick="{{ closeMobile }}" style="padding:18px 0;border-bottom:1px solid #EBEDF0;font:500 17px/1 'Public Sans',sans-serif">Careers</a>
       <a href="#contact" onClick="{{ closeMobile }}" style="margin-top:24px;padding:16px 22px;background:#0B2345;color:#FFFFFF;text-align:center;font:500 15px/1 'Public Sans',sans-serif">Contact Us</a>
     </nav>
   </sc-if>
@@ -205,13 +201,13 @@ input,select,textarea,button{font-family:inherit}
     </div>
     <span aria-hidden="true" style="position:absolute;left:0;bottom:0;width:120px;height:4px;background:#B08A3C;z-index:1"></span>
     <div style="position:relative;z-index:1;max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(36px,5vw,56px)">
-      <nav aria-label="Breadcrumb" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;font:400 14px/1.4 'Public Sans',sans-serif;color:#B8C3D3"><a href="/" style="color:#B8C3D3" style-hover="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px">Home</a><span aria-hidden="true" style="color:#B08A3C">/</span><a href="/about-us" style="color:#B8C3D3" style-hover="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px">About Us</a><span aria-hidden="true" style="color:#B08A3C">/</span><span aria-current="page" style="color:#FFFFFF">Our team</span></nav>
+      <nav aria-label="Breadcrumb" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px;font:400 14px/1.4 'Public Sans',sans-serif;color:#B8C3D3"><a href="index.html" style="color:#B8C3D3" style-hover="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px">Home</a><span aria-hidden="true" style="color:#B08A3C">/</span><a href="about-us.html" style="color:#B8C3D3" style-hover="color:#FFFFFF;text-decoration:underline;text-underline-offset:3px">About Us</a><span aria-hidden="true" style="color:#B08A3C">/</span><span aria-current="page" style="color:#FFFFFF">Our team</span></nav>
       <div style="display:grid;grid-template-columns:{{ hpCol }};gap:clamp(40px,5vw,80px);align-items:center">
         <div style="display:flex;flex-direction:column;gap:32px">
           <span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D4B26A;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Our team</span>
           <h1 style="margin:0;font:400 clamp(44px,5.4vw,74px)/1.02 'Newsreader',serif;letter-spacing:-.025em;color:#FFFFFF;text-wrap:balance">Professional expertise, with a <em style="font-style:italic;color:#D4B26A">personal</em> approach.</h1>
-          <p style="margin:0;max-width:34em;font:400 clamp(17px,1.4vw,20px)/1.7 'Public Sans',sans-serif;color:#D5DCE6;text-wrap:pretty">Our engagements are led by Chartered Accountants who remain involved from planning to reporting, supported by professional staff and articled trainees.</p>
-          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;margin-top:8px"><a href="#people" style="display:inline-flex;align-items:center;gap:22px;height:58px;padding:0 24px 0 26px;background:#FFFFFF;color:#071D41;font:500 16px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .4s ease,gap .4s ease" style-hover="background:#F2F2F2;color:#071D41;gap:30px">Meet the team <span aria-hidden="true" style="color:#9A6F1E">→</span></a><a href="/careers" style="display:inline-flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid #B08A3C;font:500 16px/1 'Public Sans',sans-serif;color:#FFFFFF;white-space:nowrap;transition:gap .4s ease,border-color .4s ease" style-hover="gap:20px;color:#FFFFFF">Careers <span aria-hidden="true" style="color:#D4B26A">→</span></a></div>
+          <p style="margin:0;max-width:34em;font:400 clamp(17px,1.4vw,20px)/1.7 'Public Sans',sans-serif;color:#D5DCE6;text-wrap:pretty">Each engagement is led by a Chartered Accountant who remains involved from planning to reporting, supported by audit associates and articled trainees.</p>
+          <div style="display:flex;flex-wrap:wrap;align-items:center;gap:20px 32px;margin-top:8px"><a href="#people" style="display:inline-flex;align-items:center;gap:22px;height:58px;padding:0 24px 0 26px;background:#FFFFFF;color:#071D41;font:500 16px/1 'Public Sans',sans-serif;white-space:nowrap;transition:background .4s ease,gap .4s ease" style-hover="background:#F2F2F2;color:#071D41;gap:30px">Meet the team <span aria-hidden="true" style="color:#9A6F1E">→</span></a><a href="careers.html" style="display:inline-flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid #B08A3C;font:500 16px/1 'Public Sans',sans-serif;color:#FFFFFF;white-space:nowrap;transition:gap .4s ease,border-color .4s ease" style-hover="gap:20px;color:#FFFFFF">Careers <span aria-hidden="true" style="color:#D4B26A">→</span></a></div>
         </div>
         
       </div>
@@ -232,12 +228,12 @@ input,select,textarea,button{font-family:inherit}
     <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
       <div style="display:grid;grid-template-columns:{{ aTwo }};gap:24px clamp(40px,5vw,80px);align-items:end"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Leadership</span><h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41;max-width:16em">The people who lead our engagements.</h2></div>
       <div style="display:grid;grid-template-columns:{{ tmLead }};gap:clamp(32px,4vw,56px);align-items:start">
-        <figure style="margin:0;aspect-ratio:4 / 5;overflow:hidden;background:#EDE7DA"><image-slot id="team-lead-photo" shape="rect" src="/assets/photos/team-lead-photo.webp" placeholder="Portrait — Ramesh Acharya, Proprietor" style="width:100%;height:100%"></image-slot></figure>
+        <figure style="margin:0;aspect-ratio:4 / 5;overflow:hidden;background:#EDE7DA"><image-slot id="team-lead-photo" shape="rect" src="assets/photos/team-lead-photo.webp" placeholder="Portrait — Ramesh Acharya, Proprietor" style="width:100%;height:100%"></image-slot></figure>
         <div style="display:flex;flex-direction:column;gap:20px;padding-top:8px">
           <span style="font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#7A5A16">Proprietor</span>
           <h3 translate="no" class="notranslate" style="margin:0;font:400 clamp(30px,3vw,42px)/1.1 'Newsreader',serif;color:#071D41">Ramesh Acharya, CA</h3>
           <p style="margin:0;font:400 16px/1.5 'Public Sans',sans-serif;color:#5A6270">Chartered Accountant · Qualified with ICAI and ICAN<br>Certificate of Practice No. 1723 (ICAN)</p>
-          <p style="margin:0;max-width:36em;padding-top:20px;border-top:1px solid #D9D0BE;font:400 17px/1.75 'Public Sans',sans-serif;color:#4A525E">Ramesh Acharya leads the firm’s audit, assurance, taxation and advisory engagements. Having qualified as a Chartered Accountant with both the Institute of Chartered Accountants of India and the Institute of Chartered Accountants of Nepal, he brings a grounding in both professional frameworks to statutory audits, tax compliance, financial reporting and internal control reviews. He remains directly involved in each engagement, from planning to reporting, and works with clients across manufacturing and trading, cooperatives, hospitality, technology, healthcare, education and owner-managed businesses.</p>
+          <p style="margin:0;max-width:36em;padding-top:20px;border-top:1px solid #D9D0BE;font:400 17px/1.75 'Public Sans',sans-serif;color:#4A525E">Ramesh Acharya leads the firm’s audit, assurance, taxation and advisory engagements. He qualified as a Chartered Accountant with both the Institute of Chartered Accountants of India and the Institute of Chartered Accountants of Nepal, and draws on both professional frameworks in statutory audits, tax compliance, financial reporting and internal control reviews. He stays directly involved in each engagement, from planning to reporting, and works with clients in manufacturing and trading, cooperatives, hospitality, technology, healthcare, education and owner-managed businesses.</p>
         </div>
       </div>
     </div>
@@ -246,10 +242,9 @@ input,select,textarea,button{font-family:inherit}
     <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(40px,5vw,64px)">
       <div style="display:grid;grid-template-columns:{{ aTwo }};gap:24px clamp(40px,5vw,80px);align-items:end"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Our people</span><h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41;max-width:16em">Professionals and trainees.</h2></div>
       <div style="display:grid;grid-template-columns:{{ aIns }};gap:40px 24px">
-        <figure style="margin:0;display:flex;flex-direction:column;gap:14px"><div style="aspect-ratio:3 / 4;overflow:hidden;background:#EDE7DA"><image-slot id="team-member-1" shape="rect" src="/assets/photos/team-member-1.webp" placeholder="Team photo" style="width:100%;height:100%"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid #071D41"><span translate="no" class="notranslate" style="font:500 21px/1.2 'Newsreader',serif;color:#071D41">Sohail Khadka, CA</span><span style="font:400 14px/1.4 'Public Sans',sans-serif;color:#5A6270">Senior Audit Associate</span><span style="margin-top:4px;font:400 14.5px/1.6 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">A Chartered Accountant qualified with ICAI, Sohail supports the firm’s statutory audit and assurance engagements.</span></figcaption></figure>
-        <figure style="margin:0;display:flex;flex-direction:column;gap:14px"><div style="aspect-ratio:3 / 4;overflow:hidden;background:#EDE7DA"><image-slot id="team-member-2" shape="rect" src="/assets/photos/team-member-2.webp" placeholder="Team photo" style="width:100%;height:100%"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid #071D41"><span style="font:500 21px/1.2 'Newsreader',serif;color:#071D41">Lila Nand Mehta</span><span style="font:400 14px/1.4 'Public Sans',sans-serif;color:#5A6270">Semi-qualified CA, Audit Associate</span><span style="margin-top:4px;font:400 14.5px/1.6 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">Lila Nand brings work experience in audit and assurance, financial consulting and tax consulting.</span></figcaption></figure>
-        <figure style="margin:0;display:flex;flex-direction:column;gap:14px"><div style="aspect-ratio:3 / 4;overflow:hidden;background:#EDE7DA"><image-slot id="team-member-3" shape="rect" src="/assets/photos/team-member-3.webp" placeholder="Team photo" style="width:100%;height:100%"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid #071D41"><span style="font:500 21px/1.2 'Newsreader',serif;color:#071D41">Bhawani Khanal</span><span style="font:400 14px/1.4 'Public Sans',sans-serif;color:#5A6270">Semi-qualified CA, Audit Associate</span><span style="margin-top:4px;font:400 14.5px/1.6 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">Bhawani brings work experience in audit and assurance, financial consulting and tax consulting.</span></figcaption></figure>
-        <figure style="margin:0;display:flex;flex-direction:column;gap:14px"><div style="aspect-ratio:3 / 4;overflow:hidden;background:#EDE7DA"><image-slot id="team-member-4" shape="rect" placeholder="Team photo" style="width:100%;height:100%"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid #071D41"><span style="font:500 21px/1.2 'Newsreader',serif;color:#071D41">Name to be added</span><span style="font:400 14px/1.4 'Public Sans',sans-serif;color:#5A6270">Role and qualification</span></figcaption></figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:14px"><div style="aspect-ratio:3 / 4;overflow:hidden;background:#EDE7DA"><image-slot id="team-member-1" shape="rect" src="assets/photos/team-member-1.webp" placeholder="Team photo" style="width:100%;height:100%"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid #071D41"><span translate="no" class="notranslate" style="font:500 21px/1.2 'Newsreader',serif;color:#071D41">Sohail Khadka, CA</span><span style="font:400 14px/1.4 'Public Sans',sans-serif;color:#5A6270">Senior Audit Associate</span><span style="margin-top:4px;font:400 14.5px/1.6 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">A Chartered Accountant qualified with ICAI, Sohail supports the firm’s statutory audit and assurance engagements.</span></figcaption></figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:14px"><div style="aspect-ratio:3 / 4;overflow:hidden;background:#EDE7DA"><image-slot id="team-member-2" shape="rect" src="assets/photos/team-member-2.webp" placeholder="Team photo" style="width:100%;height:100%"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid #071D41"><span style="font:500 21px/1.2 'Newsreader',serif;color:#071D41">Lila Nand Mehta</span><span style="font:400 14px/1.4 'Public Sans',sans-serif;color:#5A6270">Semi-qualified CA, Audit Associate</span><span style="margin-top:4px;font:400 14.5px/1.6 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">Lila Nand has experience in audit and assurance, financial advisory and tax advisory work.</span></figcaption></figure>
+        <figure style="margin:0;display:flex;flex-direction:column;gap:14px"><div style="aspect-ratio:3 / 4;overflow:hidden;background:#EDE7DA"><image-slot id="team-member-3" shape="rect" src="assets/photos/team-member-3.webp" placeholder="Team photo" style="width:100%;height:100%"></image-slot></div><figcaption style="display:flex;flex-direction:column;gap:6px;padding-top:12px;border-top:1px solid #071D41"><span style="font:500 21px/1.2 'Newsreader',serif;color:#071D41">Bhawani Khanal</span><span style="font:400 14px/1.4 'Public Sans',sans-serif;color:#5A6270">Semi-qualified CA, Audit Associate</span><span style="margin-top:4px;font:400 14.5px/1.6 'Public Sans',sans-serif;color:#4A525E;text-wrap:pretty">Bhawani has experience in audit and assurance, financial advisory and tax advisory work.</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -257,7 +252,7 @@ input,select,textarea,button{font-family:inherit}
     <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(48px,6vw,72px)">
       <div style="display:flex;flex-direction:column;gap:28px;max-width:46em"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#D4B26A;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#C9A04A"></span>How we work</span><h2 style="margin:0;font:400 clamp(38px,4.6vw,64px)/1.04 'Newsreader',serif;letter-spacing:-.025em;color:#FFFFFF;text-wrap:balance">You work directly with the people doing the work.</h2></div>
       <dl style="margin:0;display:grid;grid-template-columns:{{ aGrid }};gap:40px clamp(32px,4vw,56px)">
-        <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Partner involvement</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">A Chartered Accountant leads each engagement and reviews its conclusions.</dd></div>
+        <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Senior involvement</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">A Chartered Accountant leads each engagement and reviews its conclusions.</dd></div>
         <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Continuity</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">We aim to keep the same team on your engagement from year to year.</dd></div>
         <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid rgba(212,178,106,.55)"><dt style="font:500 22px/1.25 'Newsreader',serif;color:#FFFFFF">Accessibility</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;font:400 16px/1.65 'Public Sans',sans-serif;color:#B8C3D3">Questions are answered by someone who knows your file.</dd></div>
       </dl>
@@ -266,16 +261,16 @@ input,select,textarea,button{font-family:inherit}
   <section id="careers" data-screen-label="Team careers" style="background:#FFFFFF;padding:clamp(44px,9vw,108px) clamp(20px,5vw,72px);scroll-margin-top:200px">
     <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:{{ aSplit }};gap:32px clamp(40px,6vw,96px);align-items:end">
       <div style="display:flex;flex-direction:column;gap:24px"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>Careers</span><h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41">Interested in joining us?</h2></div>
-      <div style="display:flex;flex-direction:column;gap:24px"><p style="margin:0;max-width:34em;font:400 18px/1.7 'Public Sans',sans-serif;color:#4A525E">We welcome applications from qualified professionals, articled trainees and students who want to build a career in audit, tax and advisory.</p><div style="align-self:flex-start"><a href="/careers" style="display:inline-flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid #B08A3C;font:500 16px/1 'Public Sans',sans-serif;color:#071D41;white-space:nowrap;transition:gap .4s ease,border-color .4s ease" style-hover="gap:20px;color:#071D41">View careers <span aria-hidden="true" style="color:#9A6F1E">→</span></a></div></div>
+      <div style="display:flex;flex-direction:column;gap:24px"><p style="margin:0;max-width:34em;font:400 18px/1.7 'Public Sans',sans-serif;color:#4A525E">We welcome applications from qualified professionals, articled trainees and students who want to build a career in audit, tax, accounting and advisory.</p><div style="align-self:flex-start"><a href="careers.html" style="display:inline-flex;align-items:center;gap:12px;padding:6px 0;border-bottom:1px solid #B08A3C;font:500 16px/1 'Public Sans',sans-serif;color:#071D41;white-space:nowrap;transition:gap .4s ease,border-color .4s ease" style-hover="gap:20px;color:#071D41">View careers <span aria-hidden="true" style="color:#9A6F1E">→</span></a></div></div>
     </div>
   </section>
   <section id="more" data-screen-label="About links" style="background:#F2F2F2;padding:clamp(32px,4.5vw,64px) clamp(20px,5vw,72px);scroll-margin-top:200px">
     <div style="max-width:1440px;margin:0 auto;display:flex;flex-direction:column;gap:clamp(24px,2.6vw,36px)">
       <div style="display:flex;flex-direction:column;gap:20px"><span style="display:flex;align-self:start;align-items:center;gap:14px;font:600 13px/1 'Public Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#7A5A16;white-space:nowrap"><span aria-hidden="true" style="width:32px;height:1px;background:#B08A3C"></span>About us</span><h2 style="margin:0;font:400 clamp(34px,3.8vw,52px)/1.08 'Newsreader',serif;letter-spacing:-.02em;text-wrap:balance;color:#071D41">More about the firm</h2></div>
       <ul role="list" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:{{ aGrid }};gap:12px">
-        <li><a href="/about-us" style="display:flex;flex-direction:column;gap:12px;min-height:118px;padding:22px 24px;box-sizing:border-box;background:#FFFFFF;color:#071D41;border-top:3px solid transparent;transition:border-color .35s ease" style-hover="border-top-color:#B08A3C;color:#071D41"><span style="display:flex;justify-content:space-between;gap:16px;font:400 26px/1.2 'Newsreader',serif">Our firm<span aria-hidden="true" style="font:400 20px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></span><span style="font:400 16px/1.6 'Public Sans',sans-serif;color:#4A525E">Who we are and how we work.</span></a></li>
-        <li><a href="/our-commitments" style="display:flex;flex-direction:column;gap:12px;min-height:118px;padding:22px 24px;box-sizing:border-box;background:#FFFFFF;color:#071D41;border-top:3px solid transparent;transition:border-color .35s ease" style-hover="border-top-color:#B08A3C;color:#071D41"><span style="display:flex;justify-content:space-between;gap:16px;font:400 26px/1.2 'Newsreader',serif">Our commitments<span aria-hidden="true" style="font:400 20px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></span><span style="font:400 16px/1.6 'Public Sans',sans-serif;color:#4A525E">The principles behind our work.</span></a></li>
-        <li><a href="/contact-us" style="display:flex;flex-direction:column;gap:12px;min-height:118px;padding:22px 24px;box-sizing:border-box;background:#FFFFFF;color:#071D41;border-top:3px solid transparent;transition:border-color .35s ease" style-hover="border-top-color:#B08A3C;color:#071D41"><span style="display:flex;justify-content:space-between;gap:16px;font:400 26px/1.2 'Newsreader',serif">Contact us<span aria-hidden="true" style="font:400 20px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></span><span style="font:400 16px/1.6 'Public Sans',sans-serif;color:#4A525E">Office details and enquiry form.</span></a></li>
+        <li><a href="about-us.html" style="display:flex;flex-direction:column;gap:12px;min-height:118px;padding:22px 24px;box-sizing:border-box;background:#FFFFFF;color:#071D41;border-top:3px solid transparent;transition:border-color .35s ease" style-hover="border-top-color:#B08A3C;color:#071D41"><span style="display:flex;justify-content:space-between;gap:16px;font:400 26px/1.2 'Newsreader',serif">Our firm<span aria-hidden="true" style="font:400 20px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></span><span style="font:400 16px/1.6 'Public Sans',sans-serif;color:#4A525E">Who we are and how we work.</span></a></li>
+        <li><a href="our-commitments.html" style="display:flex;flex-direction:column;gap:12px;min-height:118px;padding:22px 24px;box-sizing:border-box;background:#FFFFFF;color:#071D41;border-top:3px solid transparent;transition:border-color .35s ease" style-hover="border-top-color:#B08A3C;color:#071D41"><span style="display:flex;justify-content:space-between;gap:16px;font:400 26px/1.2 'Newsreader',serif">Our commitments<span aria-hidden="true" style="font:400 20px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></span><span style="font:400 16px/1.6 'Public Sans',sans-serif;color:#4A525E">The principles behind our work.</span></a></li>
+        <li><a href="contact-us.html" style="display:flex;flex-direction:column;gap:12px;min-height:118px;padding:22px 24px;box-sizing:border-box;background:#FFFFFF;color:#071D41;border-top:3px solid transparent;transition:border-color .35s ease" style-hover="border-top-color:#B08A3C;color:#071D41"><span style="display:flex;justify-content:space-between;gap:16px;font:400 26px/1.2 'Newsreader',serif">Contact us<span aria-hidden="true" style="font:400 20px/1 'Public Sans',sans-serif;color:#9A6F1E">→</span></span><span style="font:400 16px/1.6 'Public Sans',sans-serif;color:#4A525E">Office details and enquiry form.</span></a></li>
       </ul>
     </div>
   </section>
@@ -283,11 +278,11 @@ input,select,textarea,button{font-family:inherit}
     <div style="max-width:1440px;margin:0 auto;display:grid;grid-template-columns:{{ contactCols }};gap:clamp(40px,5vw,88px);align-items:start">
       <div style="min-width:0;display:flex;flex-direction:column;gap:24px">
         <span style="width:48px;height:2px;background:#C9A04A"></span>
-        <h2 style="margin:0;font:400 clamp(36px,4vw,58px)/1.08 'Newsreader',serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">Let's discuss your business requirements.</h2>
-        <p style="margin:0;font:400 18px/1.6 'Public Sans',sans-serif;color:#C9D2DE;max-width:30em;text-wrap:pretty">Connect with our team to discuss audit, tax, accounting, and advisory services for your organization.</p>
+        <h2 style="margin:0;font:400 clamp(36px,4vw,58px)/1.08 'Newsreader',serif;letter-spacing:-.01em;color:#FFFFFF;text-wrap:balance">Let's discuss your requirements.</h2>
+        <p style="margin:0;font:400 18px/1.6 'Public Sans',sans-serif;color:#C9D2DE;max-width:30em;text-wrap:pretty">Contact our team to discuss audit, tax, accounting or advisory services for your organisation.</p>
         <dl style="margin:16px 0 0;padding-top:28px;border-top:1px solid rgba(201,160,74,.45);display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 28px;font:400 16px/1.5 'Public Sans',sans-serif">
           <dt style="color:#8FA0B6">Office</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF">Srijan Tole, Samakhushi, Kathmandu, Nepal</dd>
-          <dt style="color:#8FA0B6">Phone</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF"><a href="tel:+9779845819811" style="color:#FFFFFF" style-hover="color:#D4B26A">+977-9845819811</a> / <a href="tel:+9779716393920" style="color:#FFFFFF" style-hover="color:#D4B26A">9716393920</a></dd>
+          <dt style="color:#8FA0B6">Phone</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF"><a href="tel:+9779845819811" style="color:#FFFFFF" style-hover="color:#D4B26A">+977 9845819811</a> / <a href="tel:+9779716393920" style="color:#FFFFFF" style-hover="color:#D4B26A">9716393920</a></dd>
           <dt style="color:#8FA0B6">Email</dt><dd style="margin:0;min-width:0;overflow-wrap:anywhere;color:#FFFFFF"><a href="mailto:audit.acharyaca@outlook.com" style="color:#FFFFFF" style-hover="color:#D4B26A">audit.acharyaca@outlook.com</a></dd>
         </dl>
       </div>
@@ -298,7 +293,7 @@ input,select,textarea,button{font-family:inherit}
               <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Full name *<input value="{{ form.name }}" onChange="{{ onName }}" autocomplete="name" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
               <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Work email *<input type="email" value="{{ form.email }}" onChange="{{ onEmail }}" autocomplete="email" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
             </div>
-            <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Organization<input value="{{ form.org }}" onChange="{{ onOrg }}" autocomplete="organization" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Organisation<input value="{{ form.org }}" onChange="{{ onOrg }}" autocomplete="organization" style="min-width:0;box-sizing:border-box;height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 14px;font-size:15px;color:#252A31;border-radius:0"></label>
             <label style="display:flex;flex-direction:column;gap:8px;font:500 13px/1 'Public Sans',sans-serif;color:#252A31">Service of interest
               <select value="{{ form.service }}" onChange="{{ onService }}" style="height:48px;border:1px solid #D9D0BE;background:#FFFFFF;padding:0 12px;font-size:15px;color:#252A31;background:#FFFFFF;border-radius:0">
                 <option value="">Select a service</option>
@@ -314,7 +309,7 @@ input,select,textarea,button{font-family:inherit}
           <div role="status" style="display:flex;flex-direction:column;gap:16px;padding:24px 0">
             <span style="width:40px;height:2px;background:#C9A04A"></span>
             <h3 style="margin:0;font:400 30px/1.2 'Newsreader',serif;color:#0B2345">Thank you, {{ form.name }}.</h3>
-            <p style="margin:0;font:400 15.5px/1.6 'Public Sans',sans-serif;color:#4A525E">Your enquiry has been recorded in this prototype. Once the form is connected, our team will respond by email.</p>
+            <p style="margin:0;font:400 15.5px/1.6 'Public Sans',sans-serif;color:#4A525E">We have received your enquiry and will reply by email.</p>
             <button type="button" onClick="{{ reset }}" style="align-self:start;margin-top:8px;padding:14px 22px;background:none;border:1px solid #0B2345;color:#0B2345;font:500 14px/1 'Public Sans',sans-serif;cursor:pointer">Send another enquiry</button>
           </div>
         </sc-if>
@@ -327,9 +322,9 @@ input,select,textarea,button{font-family:inherit}
   <div style="max-width:1536px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
     <div style="display:grid;grid-template-columns:{{ footCols }};gap:40px {{ footGap }}">
       <div style="grid-column:{{ footBrandCol }};display:flex;flex-direction:column;gap:24px;min-width:0">
-        <a href="/" aria-label="Acharya R. &amp; Associates — home" style="display:flex;flex-direction:{{ footLogoDir }};align-items:{{ footLogoAlign }};gap:{{ footLogoGap }};color:#00285A"><img src="assets/ar-logo-v2.svg" alt="" style="display:block;width:{{ footLogoW }};height:auto;flex:none;object-fit:contain"><span style="display:flex;flex-direction:column;gap:10px;min-width:0"><span style="display:flex;flex-direction:column;gap:2px;font:600 {{ footNameFs }}/1.2 'Public Sans',sans-serif;letter-spacing:.1em;color:#00285A"><span class="notranslate" translate="no">ACHARYA R. &amp;</span><span class="notranslate" translate="no">ASSOCIATES</span></span><span style="font:500 11px/1 'Public Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#9A6F1E;white-space:nowrap">Chartered Accountants</span></span></a>
+        <a href="index.html" aria-label="Acharya R. &amp; Associates — home" style="display:flex;flex-direction:{{ footLogoDir }};align-items:{{ footLogoAlign }};gap:{{ footLogoGap }};color:#00285A"><img src="assets/ar-logo-v2.svg" alt="" style="display:block;width:{{ footLogoW }};height:auto;flex:none;object-fit:contain"><span style="display:flex;flex-direction:column;gap:10px;min-width:0"><span style="display:flex;flex-direction:column;gap:2px;font:600 {{ footNameFs }}/1.2 'Public Sans',sans-serif;letter-spacing:.1em;color:#00285A"><span class="notranslate" translate="no">ACHARYA R. &amp;</span><span class="notranslate" translate="no">ASSOCIATES</span></span><span style="font:500 11px/1 'Public Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#9A6F1E;white-space:nowrap">Chartered Accountants</span></span></a>
         
-        <div style="display:flex;align-items:center;gap:16px"><a href="#" aria-label="Facebook" title="Facebook (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 2.9v18.2c0 .5-.4.9-.9.9h-5.2v-7.7h2.6l.4-3h-3V9.4c0-.9.2-1.5 1.5-1.5h1.6V5.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H10.2v3h2.6V22H2.9c-.5 0-.9-.4-.9-.9V2.9c0-.5.4-.9.9-.9h18.2c.5 0 .9.4.9.9z"></path></svg></a><a href="#" aria-label="LinkedIn" title="LinkedIn (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1-.02-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.55h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5.05c0-1.2-.02-2.75-1.68-2.75-1.68 0-1.94 1.31-1.94 2.66V21h-4z"></path></svg></a><a href="#" aria-label="Instagram" title="Instagram (link to be supplied)" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"></path></svg></a></div>
+        <div style="display:flex;align-items:center;gap:16px"><a href="https://www.facebook.com/profile.php?id=61593306324998" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 2.9v18.2c0 .5-.4.9-.9.9h-5.2v-7.7h2.6l.4-3h-3V9.4c0-.9.2-1.5 1.5-1.5h1.6V5.2c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H10.2v3h2.6V22H2.9c-.5 0-.9-.4-.9-.9V2.9c0-.5.4-.9.9-.9h18.2c.5 0 .9.4.9.9z"></path></svg></a><a href="https://wa.me/9779716393920" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp" style="display:flex;width:24px;height:24px;align-items:center;justify-content:center;color:#00285A;transition:color .2s ease" style-hover="color:#2D5AA8"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.23 8.23 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48a.92.92 0 0 0-.66.31c-.23.25-.87.85-.87 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.29Z"/></svg></a></div>
       </div>
       <nav aria-label="Footer services" style="display:flex;flex-direction:column;gap:12px">
         <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Services</span>
@@ -348,15 +343,15 @@ input,select,textarea,button{font-family:inherit}
       </nav>
       <nav aria-label="Footer company" style="display:flex;flex-direction:column;gap:12px">
         <span style="font:700 14px/1 'Public Sans',sans-serif;letter-spacing:.02em;text-transform:uppercase;color:#00285A;margin-bottom:6px">Company</span>
-        <a href="/about-us" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">About us</a>
-        <a href="/our-team" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Our team</a>
-        <a href="/gallery" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Gallery</a>
-        <a href="/careers" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Careers</a>
-        <a href="/contact-us" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Contact us</a>
+        <a href="about-us.html" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">About us</a>
+        <a href="our-team.html" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Our team</a>
+        <a href="gallery.html" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Gallery</a>
+        <a href="careers.html" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Careers</a>
+        <a href="contact-us.html" style="font:400 14px/1.45 'Public Sans',sans-serif;letter-spacing:.01em;color:#00285A;padding-left:10px" style-hover="color:#2D5AA8;text-decoration:underline;text-underline-offset:4px">Contact us</a>
       </nav>
     </div>
     <div style="border-top:1px solid #E0E0E0;padding-top:17px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;font:400 11px/1.6 'Public Sans',sans-serif;color:#5A6270">
-      <p style="margin:0;max-width:52em">© {{ year }} Acharya R. &amp; Associates, Chartered Accountants. All rights reserved.<br>Member firm registered with the Institute of Chartered Accountants of Nepal (ICAN) · Firm Registration No. 1536</p>
+      <p style="margin:0;max-width:52em">© {{ year }} Acharya R. &amp; Associates, Chartered Accountants. All rights reserved.<br>Registered with the Institute of Chartered Accountants of Nepal (ICAN) · Firm Registration No. 1536</p>
       <div style="display:flex;gap:24px">
         <span title="Page to be published">Privacy Policy</span>
         <span title="Page to be published">Website Terms</span>
@@ -366,8 +361,8 @@ input,select,textarea,button{font-family:inherit}
 </footer>
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;heroLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;angled&quot;,&quot;split&quot;,&quot;full&quot;],&quot;default&quot;:&quot;angled&quot;,&quot;tsType&quot;:&quot;'angled'|'split'|'full'&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;servicesLayout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;grid&quot;,&quot;list&quot;],&quot;default&quot;:&quot;grid&quot;,&quot;tsType&quot;:&quot;'grid'|'list'&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
-const IND_PAGES = {"Manufacturing & Trading":"/manufacturing-and-trading","Cooperatives & Microfinance":"/cooperatives-and-microfinance","Hospitality & Tourism":"/hospitality-and-tourism","Technology & Digital Businesses":"/technology-and-digital-businesses","SMEs & Family Businesses":"/smes-and-family-businesses","Healthcare & Medical":"/healthcare-and-medical","Education & Institutions":"/education-and-institutions"};
-const SVC_PAGES = {"Audit and Assurance":"/audit-and-assurance","Taxation and Tax Compliance":"/taxation-and-tax-compliance","Accounting and Financial Reporting":"/accounting-and-financial-reporting","Internal Audit and Risk Advisory":"/internal-audit-and-risk-advisory","Business Advisory":"/business-advisory","Due Diligence and Agreed-Upon Procedures":"/due-diligence-and-agreed-upon-procedures"};
+const IND_PAGES = {"Manufacturing & Trading":"manufacturing-and-trading.html","Cooperatives & Microfinance":"cooperatives-and-microfinance.html","Hospitality & Tourism":"hospitality-and-tourism.html","Technology & Digital Businesses":"technology-and-digital-businesses.html","SMEs & Family Businesses":"smes-and-family-businesses.html","Healthcare & Medical":"healthcare-and-medical.html","Education & Institutions":"education-and-institutions.html"};
+const SVC_PAGES = {"Audit and Assurance":"audit-and-assurance.html","Taxation and Tax Compliance":"taxation-and-tax-compliance.html","Accounting and Financial Reporting":"accounting-and-financial-reporting.html","Internal Audit and Risk Advisory":"internal-audit-and-risk-advisory.html","Business Advisory":"business-advisory.html","Due Diligence and Agreed-Upon Procedures":"due-diligence-and-agreed-upon-procedures.html"};
 const SERVICES = [
   ['Audit and Assurance', 'Statutory and independent audits that give boards, regulators and stakeholders confidence in reported financial information.'],
   ['Taxation and Tax Compliance', 'Income tax, VAT and withholding compliance, return preparation and practical guidance on tax positions under Nepalese law.'],
@@ -387,7 +382,7 @@ const INDUSTRIES = [
  ],
  [
   "Cooperatives & Microfinance",
-  "Practical assurance, accounting and compliance support for member-based and community finance organizations.",
+  "Practical assurance, accounting and compliance support for member-based and community finance organisations.",
   "Advisers in discussion with clients in a modern office",
   "https://images.unsplash.com/photo-1758518727707-b023e285b709?fm=jpg&q=88&w=2000&auto=format&fit=crop",
   "Vitaly Gariev",
@@ -435,7 +430,7 @@ const INDUSTRIES = [
  ]
 ];
 const VALUES = [
-  ['Independence', 'We maintain objectivity in every engagement and do not allow relationships or interests to influence our professional judgment.'],
+  ['Independence', 'We maintain objectivity in every engagement and do not allow relationships or interests to influence our professional judgement.'],
   ['Integrity', 'We are straightforward and honest in our work, our reporting and our dealings with clients.'],
   ['Confidentiality', 'Client information is protected and used only for the purpose for which it was provided.'],
   ['Technical quality', 'We apply relevant standards carefully and review our work so that conclusions are well supported.'],
@@ -443,9 +438,9 @@ const VALUES = [
 ];
 const INSIGHTS = [
   ['Nepal tax updates', 'Preparing for fiscal year-end: a tax compliance checklist', 'A practical sequence of steps for reviewing filings, deadlines and documentation before the year closes.'],
-  ['Accounting and financial reporting', 'Applying NFRS in a growing business: common questions', 'Areas where reporting requirements often change as an organization grows in size and complexity.'],
+  ['Accounting and financial reporting', 'Applying NFRS in a growing business: common questions', 'Areas where reporting requirements often change as an organisation grows in size and complexity.'],
   ['Audit and assurance', 'What to expect during a statutory audit engagement', 'How planning, fieldwork and reporting typically unfold, and how management can prepare.'],
-  ['Regulatory compliance', 'Building a practical compliance calendar for your organization', 'A simple framework for tracking statutory filings and renewals across the year.'],
+  ['Regulatory compliance', 'Building a practical compliance calendar for your organisation', 'A simple framework for tracking statutory filings and renewals across the year.'],
   ['Business and financial analysis', 'Reading the cash flow statement to support better decisions', 'How operating, investing and financing cash flows reveal what profit figures alone may not.']
 ];
 const SVC_IMG = [["audit","Professionals reviewing financial reports at a meeting table","https://images.unsplash.com/photo-1758518730037-a16581a040e8?fm=jpg&q=88&w=2000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["tax","Reviewing documents with a pen and calculator","https://images.unsplash.com/photo-1635859890085-ec8cb5466806?fm=jpg&q=88&w=2000&auto=format&fit=crop","Kelly Sikkema","https://unsplash.com/@kellysikkema"],["accounting","Working through accounts with a calculator at a desk","https://images.unsplash.com/photo-1586486855514-8c633cc6fd38?fm=jpg&q=88&w=2000&auto=format&fit=crop","Towfiqu barbhuiya","https://unsplash.com/@towfiqu999999"],["internal audit","Desk with financial charts and analysis","https://images.unsplash.com/photo-1551434678-e076c223a692?fm=jpg&q=88&w=2000&auto=format&fit=crop","Jakub Żerdzicki","https://unsplash.com/@jakubzerdzicki"],["advisory","Business partners in discussion in a modern office","https://images.unsplash.com/photo-1713947503588-8ff8196dc4a3?fm=jpg&q=88&w=2000&auto=format&fit=crop","Vitaly Gariev","https://unsplash.com/@silverkblack"],["due diligence","Professional reviewing information on a tablet","https://images.unsplash.com/photo-1568992688065-536aad8a12f6?fm=jpg&q=88&w=2000&auto=format&fit=crop","Towfiqu barbhuiya","https://unsplash.com/@towfiqu999999"]];
@@ -473,7 +468,7 @@ class Component extends DCLogic {
     this.onK = e => { if (e.key === 'Escape') this.setState({ menu: null, mobile: false }); };
     window.addEventListener('resize', this.onR);
     window.addEventListener('keydown', this.onK);
-    this.timer = setInterval(() => { if (!this.paused && !document.hidden) this.setState(s => ({ slide: (s.slide + 1) % Math.min(5, SLIDES.length) })); }, 6000);
+    this.timer = setInterval(() => { if (!this.paused && !document.hidden) this.setState(s => ({ slide: (s.slide + 1) % Math.min(3, SLIDES.length) })); }, 6000);
   }
   componentWillUnmount() {
     clearInterval(this._hsT);
@@ -496,7 +491,7 @@ class Component extends DCLogic {
   }
   renderVals() {
     const { menu, mobile, w, ind, cat, form, sent, err, slide } = this.state;
-    const N = Math.min(5, SLIDES.length), go = i => this.setState({ slide: (i + N) % N });
+    const N = Math.min(3, SLIDES.length), go = i => this.setState({ slide: (i + N) % N });
     const wide = w >= 1000;
     const hero = this.props.heroLayout ?? 'angled';
     const svc = this.props.servicesLayout ?? 'grid';
@@ -536,8 +531,8 @@ class Component extends DCLogic {
       aboutBorder: '2px solid #C9A04A', careersBorder: menu === 'careers' ? '2px solid #C9A04A' : '2px solid transparent',
       open_about: () => this.setState({ menu: 'about' }), open_careers: () => this.setState({ menu: 'careers' }),
       toggle_about: () => this.setState(s => ({ menu: s.menu === 'about' ? null : 'about' })), toggle_careers: () => this.setState(s => ({ menu: s.menu === 'careers' ? null : 'careers' })),
-      aboutMenu: [['Our firm', 'Who we are and the services we provide.', '/about-us'], ['Our commitments', 'The five principles behind our work.', '/our-commitments'], ['Our team', 'Partners and professionals at the firm.', '/our-team'], ['Gallery', 'Photos and videos from firm events and activities.', '/gallery'], ['Contact us', 'Office details and enquiry form.', '/contact-us']].map(([title, desc, href]) => ({ title, desc, href, go: close })),
-      careersMenu: [['Qualified professionals', 'Roles for chartered accountants and experienced staff.', '/qualified-professionals'], ['Articled trainees', 'Training under ICAN articleship.', '/articled-trainees'], ['Students & internships', 'Placements for students in accounting and finance.', '/students-and-internships'], ['Enquire about careers', 'Send us your details and area of interest.', '/career-enquiry']].map(([title, desc, href]) => ({ title, desc, href, go: close })),
+      aboutMenu: [['Our firm', 'Who we are and the services we provide.', 'about-us.html'], ['Our commitments', 'The five principles behind our work.', 'our-commitments.html'], ['Our team', 'Partners and professionals at the firm.', 'our-team.html'], ['Gallery', 'Photos and videos from firm events and activities.', 'gallery.html'], ['Contact us', 'Office details and enquiry form.', 'contact-us.html']].map(([title, desc, href]) => ({ title, desc, href, go: close })),
+      careersMenu: [['Qualified professionals', 'Roles for Chartered Accountants and experienced staff.', 'qualified-professionals.html'], ['Articled trainees', 'Training under ICAN articleship.', 'articled-trainees.html'], ['Students & internships', 'Placements for students in accounting and finance.', 'students-and-internships.html'], ['Enquire about careers', 'Send us your details and area of interest.', 'career-enquiry.html']].map(([title, desc, href]) => ({ title, desc, href, go: close })),
       servicesBorder: menu === 'services' ? '2px solid #C9A04A' : '2px solid transparent',
       industriesBorder: menu === 'industries' ? '2px solid #C9A04A' : '2px solid transparent',
       openServices: () => this.setState({ menu: 'services' }),
@@ -585,11 +580,11 @@ class Component extends DCLogic {
         this.setState({ sending: true, err: 'Sending…' });
         const sb = cfg.url && cfg.key ? fetch(cfg.url.replace(/\/$/, '') + '/rest/v1/' + (cfg.table || 'enquiries'), { method: 'POST', headers: Object.assign({ apikey: cfg.key, 'Content-Type': 'application/json', Prefer: 'return=minimal' }, /^sb_/.test(cfg.key) ? {} : { Authorization: 'Bearer ' + cfg.key }), body: JSON.stringify(payload) }).then(r => { if (!r.ok) throw new Error(r.status); }) : Promise.reject(new Error('no supabase'));
         const em = fetch('https://formsubmit.co/ajax/audit.acharyaca@outlook.com', { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.assign({ _subject: 'New website enquiry — ' + payload.form, _cc: 'acharyaramesh36@gmail.com', _template: 'table', _captcha: 'false' }, payload)) }).then(r => r.json().catch(() => ({}))).then(j => { if (String(j.success) !== 'true') throw new Error(j.message || 'email not sent'); });
-        Promise.allSettled([sb, em]).then(rs => { if (rs.some(x => x.status === 'fulfilled')) this.setState({ sending: false, sent: true, err: '' }); else this.setState({ sending: false, err: 'Sorry, your message could not be sent. Please try again or call +977-9845819811.' }); });
+        Promise.allSettled([sb, em]).then(rs => { if (rs.some(x => x.status === 'fulfilled')) this.setState({ sending: false, sent: true, err: '' }); else this.setState({ sending: false, err: 'Sorry, your message could not be sent. Please try again or call +977 9845819811.' }); });
       },
       reset: () => this.setState({ sent: false, form: { ...BLANK } }),
-      slides: SLIDES.slice(0, 5).map(([ph, src, by, href], i) => ({
-        ph: 'Hero photo ' + (i + 1) + ' — ' + ph, src, href, credit: 'Photo by ' + by + ' on Unsplash',
+      slides: SLIDES.slice(0, 3).map(([ph, src, by, href], i) => ({
+        ph: 'Hero photo ' + (i + 1) + ' — ' + ph, src: 'assets/photos/our-team-hero-' + (i + 1) + '.webp', href: '', credit: '',
         slotA: 'our-team-hero-' + (i + 1), slotS: i ? 'hero-slide-' + (i + 1) : 'hero-photo', slotF: i ? 'hero-slide-' + (i + 1) : 'hero-photo-full',
         label: (i + 1) + ' of ' + N, goLabel: 'Show photo ' + (i + 1), active: i === slide, hidden: i !== slide,
         opacity: i === slide ? 1 : 0, pe: i === slide ? 'auto' : 'none',

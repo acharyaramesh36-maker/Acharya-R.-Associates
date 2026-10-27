@@ -8,7 +8,7 @@
 <body>
 <x-dc>
 <div style="display:flex;align-items:center;gap:12px;width:100%;min-width:0;height:100%">
-  <a href="/" aria-label="Acharya R. &amp; Associates — home" style="display:flex;align-items:center;gap:10px;min-width:0;color:#0B2345">
+  <a href="index.html" aria-label="Acharya R. &amp; Associates — home" style="display:flex;align-items:center;gap:10px;min-width:0;color:#0B2345">
     <img src="assets/ar-logo-v2.svg" alt="" width="60" height="44" style="display:block;width:60px;height:44px;flex:none;object-fit:contain">
     <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
       <span style="font:600 clamp(11.5px,3.4vw,14px)/1.15 'Public Sans',sans-serif;letter-spacing:.06em;color:#0B2345" class="notranslate" translate="no">ACHARYA R. &amp; ASSOCIATES</span>
@@ -39,9 +39,9 @@
           </sc-if>
         </div>
       </sc-for>
-      <a href="/contact-us" onClick="{{ close }}" style="margin-top:24px;display:flex;align-items:center;justify-content:center;gap:10px;height:52px;background:#0B2345;color:#FFFFFF;font:500 15px/1 'Public Sans',sans-serif" style-hover="background:#16345F;color:#FFFFFF">Contact Us <span aria-hidden="true" style="color:#D4B26A">→</span></a>
+      <a href="contact-us.html" onClick="{{ close }}" style="margin-top:24px;display:flex;align-items:center;justify-content:center;gap:10px;height:52px;background:#0B2345;color:#FFFFFF;font:500 15px/1 'Public Sans',sans-serif" style-hover="background:#16345F;color:#FFFFFF">Contact Us <span aria-hidden="true" style="color:#D4B26A">→</span></a>
       <div style="margin-top:20px;display:flex;flex-direction:column;gap:10px;font:400 15px/1.4 'Public Sans',sans-serif;color:#4A5563">
-        <a href="tel:+9779845819811" style="color:#0B2345">Tel: +977-9845819811</a>
+        <a href="tel:+9779845819811" style="color:#0B2345">Tel: +977 9845819811</a>
         <a href="tel:+9779716393920" style="color:#0B2345">Tel: +977-9716393920</a>
       </div>
     </nav>
@@ -51,10 +51,10 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:390,&quot;height&quot;:84}}">
 const H = '/';
 const GROUPS = [
-  ['Services', [['Audit and Assurance', '/audit-and-assurance'], ['Taxation and Tax Compliance', '/taxation-and-tax-compliance'], ['Accounting and Financial Reporting', '/accounting-and-financial-reporting'], ['Internal Audit and Risk Advisory', '/internal-audit-and-risk-advisory'], ['Business Advisory', '/business-advisory'], ['Due Diligence and Agreed-Upon Procedures', '/due-diligence-and-agreed-upon-procedures'], ['View all services', H + '#services']]],
-  ['Industries', [['Manufacturing & Trading', '/manufacturing-and-trading'], ['Cooperatives & Microfinance', '/cooperatives-and-microfinance'], ['Hospitality & Tourism', '/hospitality-and-tourism'], ['Technology & Digital Businesses', '/technology-and-digital-businesses'], ['SMEs & Family Businesses', '/smes-and-family-businesses'], ['Healthcare & Medical', '/healthcare-and-medical'], ['Education & Institutions', '/education-and-institutions']]],
-  ['About Us', [['Our firm', '/about-us'], ['Our commitments', '/our-commitments'], ['Our team', '/our-team'], ['Gallery', '/gallery'], ['Contact us', '/contact-us']]],
-  ['Careers', [['Careers overview', '/careers'], ['Qualified professionals', '/qualified-professionals'], ['Articled trainees', '/articled-trainees'], ['Students & internships', '/students-and-internships'], ['Enquire about careers', '/career-enquiry']]]
+  ['Services', [['Audit and Assurance', 'audit-and-assurance.html'], ['Taxation and Tax Compliance', 'taxation-and-tax-compliance.html'], ['Accounting and Financial Reporting', 'accounting-and-financial-reporting.html'], ['Internal Audit and Risk Advisory', 'internal-audit-and-risk-advisory.html'], ['Business Advisory', 'business-advisory.html'], ['Due Diligence and Agreed-Upon Procedures', 'due-diligence-and-agreed-upon-procedures.html'], ['View all services', H + '#services']]],
+  ['Industries', [['Manufacturing & Trading', 'manufacturing-and-trading.html'], ['Cooperatives & Microfinance', 'cooperatives-and-microfinance.html'], ['Hospitality & Tourism', 'hospitality-and-tourism.html'], ['Technology & Digital Businesses', 'technology-and-digital-businesses.html'], ['SMEs & Family Businesses', 'smes-and-family-businesses.html'], ['Healthcare & Medical', 'healthcare-and-medical.html'], ['Education & Institutions', 'education-and-institutions.html']]],
+  ['About Us', [['Our firm', 'about-us.html'], ['Our commitments', 'our-commitments.html'], ['Our team', 'our-team.html'], ['Gallery', 'gallery.html'], ['Contact us', 'contact-us.html']]],
+  ['Careers', [['Careers overview', 'careers.html'], ['Qualified professionals', 'qualified-professionals.html'], ['Articled trainees', 'articled-trainees.html'], ['Students & internships', 'students-and-internships.html'], ['Enquire about careers', 'career-enquiry.html']]]
 ];
 class Component extends DCLogic {
   state = { open: false, g: null, top: 122 };

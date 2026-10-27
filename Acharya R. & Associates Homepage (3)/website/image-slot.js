@@ -91,7 +91,7 @@
 /* END USAGE */
 
 (() => {
-  const STATE_FILE = '/image-slots.json';
+  const STATE_FILE = 'image-slots.json';
 
   // Unsplash terms require visible attribution wherever their photos
   // display, and every link back to unsplash.com must carry utm referral
@@ -1094,7 +1094,7 @@
       // data:image/ URLs from it. The `src` attribute is author-controlled
       // (Claude wrote it into the HTML) so it passes through unchanged.
       let stored = this.id ? getSlot(this.id) : this._local;
-      if (stored && stored.u && !/^(data:image\/|\/assets\/)/i.test(stored.u)) stored = null;
+      if (stored && stored.u && !/^(data:image\/|\/?assets\/)/i.test(stored.u)) stored = null;
       const srcAttr = this.getAttribute('src') || '';
       this._userUrl = (stored && stored.u) || null;
       const url = this._userUrl || srcAttr;
