@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@keyframes arRibbonScroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+@keyframes arRibbonPulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(230,199,127,.55)}50%{opacity:.55;box-shadow:0 0 0 5px rgba(230,199,127,0)}}
+@media (prefers-reduced-motion: reduce){[data-ar-track]{animation-duration:240s!important}[data-ar-pulse]{animation:none!important}}
+</style>
+</helmet>
+<section role="region" aria-label="{{ label }}" style="position:relative;display:flex;align-items:stretch;width:100%;height:{{ h }};background:{{ bg }};color:{{ fg }};border-top:1px solid {{ line }};border-bottom:1px solid {{ line }};overflow:hidden;box-sizing:border-box">
+  <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:radial-gradient(rgba(255,255,255,.07) 1px,transparent 1.2px);background-size:4px 4px"></div>
+  <div style="position:relative;z-index:2;flex:none;display:flex;align-items:center;gap:10px;padding:0 {{ padX }};background:{{ tagBg }};border-right:1px solid {{ line }}">
+    <span data-ar-pulse="" aria-hidden="true" style="width:7px;height:7px;border-radius:50%;background:{{ accent }};animation:arRibbonPulse 2.2s ease-in-out infinite"></span>
+    <sc-if value="{{ showLabel }}" hint-placeholder-val="{{ true }}"><span style="font:600 11px/1 'Public Sans',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:{{ accent }};white-space:nowrap">{{ label }}</span></sc-if>
+  </div>
+  <div data-ar-viewport="" style="position:relative;z-index:1;flex:1 1 auto;min-width:0;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 48px,#000 calc(100% - 48px),transparent 100%);mask-image:linear-gradient(90deg,transparent 0,#000 48px,#000 calc(100% - 48px),transparent 100%)" onMouseEnter="{{ hoverOn }}" onMouseLeave="{{ hoverOff }}" onFocus="{{ hoverOn }}" onBlur="{{ hoverOff }}">
+    <div data-ar-track="" style="display:flex;width:max-content;height:100%;animation:arRibbonScroll {{ dur }} linear infinite {{ play }};will-change:transform">
+      <sc-for list="{{ groups }}" as="grp" hint-placeholder-count="2">
+        <ul role="list" aria-hidden="{{ grp.hid }}" data-ar-dup="{{ grp.dup }}" style="list-style:none;margin:0;padding:0;display:flex;align-items:center;height:100%;flex:none">
+          <sc-for list="{{ grp.items }}" as="it" hint-placeholder-count="4">
+            <li style="display:flex;align-items:center;gap:14px;height:100%;padding:0 {{ itemPad }};flex:none;white-space:nowrap;transition:background .3s ease" style-hover="background:rgba(255,255,255,.05)">
+              {{ it.vidEl }}
+              <span style="font:600 11.5px/1 'Public Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:{{ accent }}">{{ it.tag }}</span>
+              <span aria-hidden="true" style="width:1px;height:14px;background:{{ line }}"></span>
+              <span style="font:400 {{ msgFs }}/1 'Newsreader',serif;letter-spacing:.005em;color:{{ fg }}">{{ it.text }}</span>
+              <sc-if value="{{ it.hasCta }}" hint-placeholder-val="{{ false }}">
+                <a href="{{ it.href }}" tabindex="{{ grp.tab }}" style="display:inline-flex;align-items:center;gap:6px;padding-bottom:2px;border-bottom:1px solid {{ accent }};font:500 12.5px/1 'Public Sans',sans-serif;letter-spacing:.04em;color:{{ accent }};transition:color .25s ease,border-color .25s ease" style-hover="color:{{ fg }};border-bottom-color:{{ fg }}">{{ it.cta }} <span aria-hidden="true">→</span></a>
+              </sc-if>
+              <span aria-hidden="true" style="margin-left:{{ itemPad }};width:5px;height:5px;transform:rotate(45deg);background:{{ accent }};opacity:.7"></span>
+            </li>
+          </sc-for>
+        </ul>
+      </sc-for>
+    </div>
+  </div>
+  <button type="button" aria-label="{{ toggleLabel }}" aria-pressed="{{ pausedAttr }}" onClick="{{ toggle }}" style="position:relative;z-index:2;flex:none;width:{{ h }};display:flex;align-items:center;justify-content:center;border:0;border-left:1px solid {{ line }};background:{{ tagBg }};color:{{ fg }};font:400 12px/1 'Public Sans',sans-serif;cursor:pointer;transition:color .25s ease" style-hover="color:{{ accent }}">{{ toggleIcon }}</button>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;1280px&quot;,&quot;height&quot;:&quot;52px&quot;},&quot;items&quot;:{&quot;editor&quot;:null,&quot;default&quot;:null,&quot;tsType&quot;:&quot;Array&lt;{tag:string,text:string,href?:string,cta?:string,video?:string}&gt;&quot;},&quot;speed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:45,&quot;min&quot;:15,&quot;max&quot;:120,&quot;step&quot;:5,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;label&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Highlights&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Content&quot;},&quot;background&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#071D41&quot;,&quot;options&quot;:[&quot;#071D41&quot;,&quot;#0B2345&quot;,&quot;#14181E&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Colours&quot;},&quot;textColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FFFFFF&quot;,&quot;options&quot;:[&quot;#FFFFFF&quot;,&quot;#F5F1E8&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Colours&quot;},&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#E6C77F&quot;,&quot;options&quot;:[&quot;#E6C77F&quot;,&quot;#D4A53A&quot;,&quot;#FFFFFF&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Colours&quot;},&quot;labelBackground&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#0B2652&quot;,&quot;options&quot;:[&quot;#0B2652&quot;,&quot;#071D41&quot;,&quot;#9A6F1E&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Colours&quot;}}">
+const AR_DEFAULTS = [
+  { tag: 'Audit & Assurance', text: 'Independent and Reliable Audit Services', href: 'audit-and-assurance.html', cta: 'Learn more' },
+  { tag: 'Tax Advisory', text: 'Stay Compliant. Plan Strategically.', href: 'taxation-and-tax-compliance.html', cta: 'Learn more' },
+  { tag: 'Business Advisory', text: 'Insights That Drive Better Decisions', href: 'business-advisory.html', cta: 'Learn more' },
+  { tag: 'Regulatory Updates', text: 'Stay Informed. Stay Ahead.' }
+];
+class Component extends DCLogic {
+  state = { paused: false, hover: false, w: 1280 };
+  componentDidMount() {
+    this.onR = () => this.setState({ w: window.innerWidth });
+    this.onR(); window.addEventListener('resize', this.onR);
+  }
+  componentWillUnmount() { window.removeEventListener('resize', this.onR); }
+  renderVals() {
+    const p = this.props, w = this.state.w, sm = w < 720;
+    const src = Array.isArray(p.items) && p.items.length ? p.items : AR_DEFAULTS;
+    const reps = Math.max(1, Math.ceil(8 / src.length));
+    const vid = v => v ? React.createElement('video', { src: v, autoPlay: true, muted: true, loop: true, playsInline: true, 'aria-hidden': true, style: { width: sm ? 48 : 64, height: sm ? 27 : 36, objectFit: 'cover', flex: 'none', border: '1px solid rgba(230,199,127,.45)', background: '#000' } }) : null;
+    const items = [];
+    for (let r = 0; r < reps; r++) src.forEach(it => items.push({ tag: it.tag || '', text: it.text || '', href: it.href || '', cta: it.cta || 'Learn more', hasCta: !!it.href, vidEl: vid(it.video) }));
+    const speed = Number(p.speed ?? 45);
+    const stopped = this.state.paused || this.state.hover;
+    return {
+      label: p.label ?? 'Highlights', showLabel: !sm,
+      bg: p.background ?? '#071D41', fg: p.textColor ?? '#FFFFFF', accent: p.accentColor ?? '#E6C77F',
+      tagBg: p.labelBackground ?? '#0B2652', line: 'rgba(230,199,127,.28)',
+      h: sm ? '44px' : '52px', padX: sm ? '14px' : '20px', itemPad: sm ? '18px' : '28px', msgFs: sm ? '15px' : '17px',
+      dur: Math.max(8, speed * reps * src.length / 4) + 's', play: stopped ? 'paused' : 'running',
+      groups: [{ hid: 'false', dup: 'false', tab: '0', items }, { hid: 'true', dup: 'true', tab: '-1', items }],
+      hoverOn: () => this.setState({ hover: true }), hoverOff: () => this.setState({ hover: false }),
+      toggle: () => this.setState(s => ({ paused: !s.paused })),
+      toggleLabel: this.state.paused ? 'Play highlights' : 'Pause highlights', pausedAttr: this.state.paused ? 'true' : 'false',
+      toggleIcon: this.state.paused ? '▶' : '❚❚'
+    };
+  }
+}
+</script>
+</body>
+</html>
