@@ -205,7 +205,7 @@ input,select,textarea,button{font-family:inherit}
       <div style="position:relative;pointer-events:none;width:100%;max-width:1536px;margin:0 auto;padding:clamp(72px,8vw,120px) clamp(20px,4vw,48px);box-sizing:border-box">
         <div style="pointer-events:auto;max-width:min(600px,max(40%,460px));display:flex;flex-direction:column;gap:30px">
           <div style="display:flex;align-items:center;gap:14px;font:600 12px/1 'Public Sans',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#D4B26A"><span style="width:36px;height:1px;background:#C9A04A"></span>Audit · Tax · Accounting · Advisory</div>
-          <h1 style="margin:0;font:400 clamp(52px,5.8vw,92px)/1.02 'Newsreader',serif;letter-spacing:-.015em;color:#FFFFFF">Clarity.<br>Confidence.<br>Trust.</h1>
+          <h1 class="notranslate" translate="no" style="margin:0;font:400 clamp(52px,5.8vw,92px)/1.02 'Newsreader',serif;letter-spacing:-.015em;color:#FFFFFF"><span>{{ heroW1 }}</span><br><span>{{ heroW2 }}</span><br><span>{{ heroW3 }}</span></h1>
           <p style="margin:0;max-width:28em;font:400 clamp(17px,1.35vw,20px)/1.55 'Public Sans',sans-serif;color:#DCE3EC;text-wrap:pretty">Independent professional services that support reliable financial reporting, regulatory compliance and informed business decisions.</p>
           <div style="display:flex;flex-wrap:wrap;gap:14px;margin-top:6px">
             <a href="#services" style="padding:18px 30px;background:#C9A04A;color:#0B2345;font:600 15px/1 'Public Sans',sans-serif" style-hover="background:#D9B460;color:#0B2345">Explore our services</a>
@@ -962,6 +962,7 @@ class Component extends DCLogic {
       langOpen: !!this.state.langOpen, langRot: this.state.langOpen ? 'rotate(180deg)' : 'none', langCode: (this.state.lang || (/googtrans=\/en\/ne/.test(document.cookie) || (window.localStorage && localStorage.getItem('ar-lang') === 'ne') ? 'ne' : 'en')) === 'ne' ? 'NE' : 'EN', langIsEn: (this.state.lang || (/googtrans=\/en\/ne/.test(document.cookie) || (window.localStorage && localStorage.getItem('ar-lang') === 'ne') ? 'ne' : 'en')) !== 'ne', langIsNe: (this.state.lang || (/googtrans=\/en\/ne/.test(document.cookie) || (window.localStorage && localStorage.getItem('ar-lang') === 'ne') ? 'ne' : 'en')) === 'ne',
       langToggle: () => this.setState(s => ({ langOpen: !s.langOpen })), langClose: () => this.setState({ langOpen: false }),
       setEn: () => this.setLang('en'), setNe: () => this.setLang('ne'),
+      ...(() => { const ne = (this.state.lang || (/googtrans=\/en\/ne/.test(document.cookie) || (window.localStorage && localStorage.getItem('ar-lang') === 'ne') ? 'ne' : 'en')) === 'ne'; return { heroW1: ne ? 'स्पष्टता।' : 'Clarity.', heroW2: ne ? 'आत्मविश्वास।' : 'Confidence.', heroW3: ne ? 'विश्वास।' : 'Trust.' }; })(),
       footGap: w >= 1180 ? 'clamp(32px,3.6vw,72px)' : '20px',
       footNameFs: w >= 1180 ? '20px' : '16px',
       footLogoDir: w >= 860 && w < 1180 ? 'column' : 'row', footLogoAlign: w >= 860 && w < 1180 ? 'flex-start' : 'center', footLogoGap: w >= 860 && w < 1180 ? '14px' : '20px',

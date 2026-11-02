@@ -72,21 +72,28 @@
   };
   var M = new Map(); Object.keys(D).forEach(function (k) { M.set(k.replace(/\s+/g, ' '), D[k]); });
   function active() { var ls = ''; try { ls = localStorage.getItem('ar-lang') || ''; } catch (e) {} if (ls === 'en') return false; return ls === 'ne' || /googtrans=\/en\/ne/.test(document.cookie) || document.documentElement.lang === 'ne' || document.documentElement.classList.contains('translated-ltr'); }
+  var busy = false, obs = null, OPTS = { subtree: true, childList: true, characterData: true };
   function apply(root) {
-    if (!root) return;
+    if (!root || busy) return;
+    busy = true;
+    if (obs) obs.disconnect();
+    try { applyInner(root); } finally { if (obs) { obs.takeRecords(); obs.observe(document.body, OPTS); } busy = false; }
+  }
+  function applyInner(root) {
     var w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT), n, hit = [];
-    while ((n = w.nextNode())) { var k = n.nodeValue && n.nodeValue.replace(/\s+/g, ' ').trim(); if (k && M.has(k)) hit.push(n); }
+    while ((n = w.nextNode())) { var k = n.nodeValue && n.nodeValue.replace(/\s+/g, ' ').trim(); if (k && M.has(k) && M.get(k) !== k) hit.push(n); }
     hit.forEach(function (n) {
       var k = n.nodeValue.replace(/\s+/g, ' ').trim(), v = M.get(k), p = n.parentNode;
-      n.nodeValue = n.nodeValue.replace(n.nodeValue.trim(), v);
+      var nv = n.nodeValue.replace(n.nodeValue.trim(), v); if (nv !== n.nodeValue) n.nodeValue = nv;
       if (p && p.classList && p.childNodes.length === 1) { p.classList.add('notranslate'); p.setAttribute('translate', 'no'); }
     });
   }
   function start() {
     if (active()) apply(document.body);
     setInterval(function () { if (active()) apply(document.body); }, 1500);
-    new MutationObserver(function (ms) { if (!active()) return; ms.forEach(function (m) { if (m.type === 'characterData') apply(m.target.parentNode); else m.addedNodes.forEach(function (a) { apply(a.nodeType === 3 ? a.parentNode : a); }); }); })
-      .observe(document.body, { subtree: true, childList: true, characterData: true });
+    obs = new MutationObserver(function (ms) { if (busy || !active()) return; ms.forEach(function (m) { if (m.type === 'characterData') apply(m.target.parentNode); else m.addedNodes.forEach(function (a) { apply(a.nodeType === 3 ? a.parentNode : a); }); }); })
+      
+    obs.observe(document.body, OPTS);
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();
