@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /AdvertisingRibbon.dc.html
+Disallow: /MobileNav.dc.html
+Sitemap: https://acharyarassociates.com.np/sitemap.xml
